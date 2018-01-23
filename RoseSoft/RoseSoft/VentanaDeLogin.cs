@@ -53,7 +53,7 @@ namespace RoseSoft
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
 
-                string usuario = "Ronald";
+                string usuario = "rosas";
                 string contraseña = "12345";
                 Menu menu = new Menu();
                 if (txtUsuario.Text == usuario & txtPassword.Text == contraseña)
