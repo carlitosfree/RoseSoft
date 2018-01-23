@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace RoseSoft
 {
-    public partial class consultarCliente : Form
+    public partial class busquedaCliente : Form
     {
-        public consultarCliente()
+        public busquedaCliente()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
