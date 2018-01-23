@@ -19,7 +19,7 @@ namespace RoseSoft
 
         private void bIngresar_Click(object sender, EventArgs e)
         {
-            string usuario = "Ronald";
+            string usuario = "rosas";
             string contraseña = "12345";
             Menu menu = new Menu();
             if (txtUsuario.Text == usuario & txtPassword.Text == contraseña)
