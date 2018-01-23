@@ -54,6 +54,12 @@
     <Compile Include="Buscar Proveedor.Designer.cs">
       <DependentUpon>Buscar Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Buscar Proveedor.resx">
       <DependentUpon>Buscar Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
