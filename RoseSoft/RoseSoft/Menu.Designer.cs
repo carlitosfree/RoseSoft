@@ -132,7 +132,7 @@
             this.comprasToolStripMenuItem,
             this.ventasToolStripMenuItem});
             this.comprasVentasToolStripMenuItem.Name = "comprasVentasToolStripMenuItem";
-            this.comprasVentasToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
+            this.comprasVentasToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
             this.comprasVentasToolStripMenuItem.Text = "Compras - Ventas";
             // 
             // comprasToolStripMenuItem
@@ -179,7 +179,7 @@
             this.actualizarProductoToolStripMenuItem,
             this.buscarProductoToolStripMenuItem});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // registrarProductoToolStripMenuItem
@@ -187,6 +187,7 @@
             this.registrarProductoToolStripMenuItem.Name = "registrarProductoToolStripMenuItem";
             this.registrarProductoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.registrarProductoToolStripMenuItem.Text = "Registrar Producto";
+            this.registrarProductoToolStripMenuItem.Click += new System.EventHandler(this.registrarProductoToolStripMenuItem_Click);
             // 
             // actualizarProductoToolStripMenuItem
             // 
