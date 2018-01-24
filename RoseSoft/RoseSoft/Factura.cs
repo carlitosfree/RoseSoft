@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace RoseSoft
 {
+
     public partial class Factura : Form
     {
+        DateTime hoy = DateTime.Now;
+        ValidarSoloLetrasSoloNumeros v = new ValidarSoloLetrasSoloNumeros();
         public Factura()
         {
             InitializeComponent();
@@ -24,12 +27,12 @@ namespace RoseSoft
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

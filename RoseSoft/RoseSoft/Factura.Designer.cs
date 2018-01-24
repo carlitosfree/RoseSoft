@@ -2,6 +2,19 @@
 {
     partial class Factura
     {
+
+        /*BLOQUE PARA VALIDAR QUE NO SE ABRA VARIAS VECES LA VENTA*/
+        public static Factura facturaInstance = null;
+
+        public static Factura Instance()
+        {
+            if (((facturaInstance == null) || (facturaInstance.IsDisposed == true)))
+            {
+                facturaInstance = new Factura();
+            }
+            facturaInstance.BringToFront();
+            return facturaInstance;
+        }
         /// <summary>
         /// Required designer variable.
         /// </summary>

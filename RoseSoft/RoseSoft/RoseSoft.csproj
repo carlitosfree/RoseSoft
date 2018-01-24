@@ -84,6 +84,7 @@
     <Compile Include="registrarCliente.Designer.cs">
       <DependentUpon>registrarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ValidarSoloLetrasSoloNumeros.cs" />
     <Compile Include="VentanaDeLogin.cs">
       <SubType>Form</SubType>
     </Compile>
