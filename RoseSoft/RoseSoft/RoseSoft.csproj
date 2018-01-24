@@ -48,17 +48,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="actualizarCliente.cs" />
+    <Compile Include="actualizarCliente.Designer.cs">
+      <DependentUpon>actualizarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActualizarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarProducto.Designer.cs">
+      <DependentUpon>ActualizarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscar Producto.Designer.cs">
+      <DependentUpon>Buscar Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Buscar Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Buscar Proveedor.Designer.cs">
       <DependentUpon>Buscar Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="busquedaCliente.cs" />
+    <Compile Include="busquedaCliente.Designer.cs">
+      <DependentUpon>busquedaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registrarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarProducto.Designer.cs">
+      <DependentUpon>registrarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registrarCliente.cs" />
+    <Compile Include="registrarCliente.Designer.cs">
+      <DependentUpon>registrarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaDeLogin.cs">
       <SubType>Form</SubType>
@@ -68,11 +98,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="actualizarCliente.resx">
+      <DependentUpon>actualizarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActualizarProducto.resx">
+      <DependentUpon>ActualizarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buscar Producto.resx">
+      <DependentUpon>Buscar Producto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Buscar Proveedor.resx">
       <DependentUpon>Buscar Proveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="busquedaCliente.resx">
+      <DependentUpon>busquedaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarProducto.resx">
+      <DependentUpon>registrarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarCliente.resx">
+      <DependentUpon>registrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaDeLogin.resx">
       <DependentUpon>VentanaDeLogin.cs</DependentUpon>
