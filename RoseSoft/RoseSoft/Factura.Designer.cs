@@ -31,6 +31,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.UnidadesFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumeroCajasFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescripcionFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BoncheCajaFacura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalBoncheFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TallosFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioUnitarioFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -43,14 +51,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.UnidadesFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumeroCajasFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescripcionFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BoncheCajaFacura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalBoncheFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TallosFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioUnitarioFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,20 +64,22 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Location = new System.Drawing.Point(30, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(944, 584);
+            this.panel1.Size = new System.Drawing.Size(1324, 718);
             this.panel1.TabIndex = 0;
             // 
             // panel4
             // 
+            this.panel4.AutoSize = true;
             this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Location = new System.Drawing.Point(297, 96);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(644, 472);
+            this.panel4.Size = new System.Drawing.Size(999, 598);
             this.panel4.TabIndex = 2;
             // 
             // dataGridView1
@@ -90,13 +96,62 @@
             this.TallosFactura,
             this.precioUnitarioFactura,
             this.TotalFactura});
-            this.dataGridView1.Location = new System.Drawing.Point(-3, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 25);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(644, 348);
+            this.dataGridView1.Size = new System.Drawing.Size(924, 545);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // UnidadesFactura
+            // 
+            this.UnidadesFactura.HeaderText = "Unidades";
+            this.UnidadesFactura.Name = "UnidadesFactura";
+            this.UnidadesFactura.Width = 77;
+            // 
+            // NumeroCajasFactura
+            // 
+            this.NumeroCajasFactura.HeaderText = "T/B";
+            this.NumeroCajasFactura.Name = "NumeroCajasFactura";
+            this.NumeroCajasFactura.Width = 51;
+            // 
+            // DescripcionFactura
+            // 
+            this.DescripcionFactura.HeaderText = "Descripción";
+            this.DescripcionFactura.Name = "DescripcionFactura";
+            this.DescripcionFactura.Width = 88;
+            // 
+            // BoncheCajaFacura
+            // 
+            this.BoncheCajaFacura.HeaderText = "Bonche/Caja";
+            this.BoncheCajaFacura.Name = "BoncheCajaFacura";
+            this.BoncheCajaFacura.Width = 95;
+            // 
+            // TotalBoncheFactura
+            // 
+            this.TotalBoncheFactura.HeaderText = "Total Bonche";
+            this.TotalBoncheFactura.Name = "TotalBoncheFactura";
+            this.TotalBoncheFactura.Width = 96;
+            // 
+            // TallosFactura
+            // 
+            this.TallosFactura.HeaderText = "# Tallos";
+            this.TallosFactura.Name = "TallosFactura";
+            this.TallosFactura.Width = 70;
+            // 
+            // precioUnitarioFactura
+            // 
+            this.precioUnitarioFactura.HeaderText = "Precio Unitario";
+            this.precioUnitarioFactura.Name = "precioUnitarioFactura";
+            this.precioUnitarioFactura.Width = 101;
+            // 
+            // TotalFactura
+            // 
+            this.TotalFactura.HeaderText = "Total";
+            this.TotalFactura.Name = "TotalFactura";
+            this.TotalFactura.Width = 56;
             // 
             // panel3
             // 
+            this.panel3.AutoSize = true;
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Location = new System.Drawing.Point(295, 8);
             this.panel3.Name = "panel3";
@@ -106,13 +161,18 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(25, 24);
+            this.comboBox1.Location = new System.Drawing.Point(35, 38);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 21);
+            this.comboBox1.Size = new System.Drawing.Size(358, 21);
             this.comboBox1.TabIndex = 0;
             // 
             // panel2
             // 
+            this.panel2.AutoSize = true;
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
@@ -122,15 +182,15 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(3, 46);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(288, 565);
+            this.panel2.Size = new System.Drawing.Size(288, 235);
             this.panel2.TabIndex = 0;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 168);
+            this.label7.Location = new System.Drawing.Point(5, 164);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 9;
@@ -139,7 +199,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 139);
+            this.label6.Location = new System.Drawing.Point(5, 135);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 8;
@@ -205,69 +265,59 @@
             this.label1.Text = "Nombre";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // UnidadesFactura
+            // textBox3
             // 
-            this.UnidadesFactura.HeaderText = "Unidades";
-            this.UnidadesFactura.Name = "UnidadesFactura";
-            this.UnidadesFactura.Width = 77;
+            this.textBox3.Location = new System.Drawing.Point(88, 69);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(165, 20);
+            this.textBox3.TabIndex = 10;
             // 
-            // NumeroCajasFactura
+            // textBox5
             // 
-            this.NumeroCajasFactura.HeaderText = "T/B";
-            this.NumeroCajasFactura.Name = "NumeroCajasFactura";
-            this.NumeroCajasFactura.Width = 51;
+            this.textBox5.Location = new System.Drawing.Point(66, 134);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(184, 20);
+            this.textBox5.TabIndex = 12;
             // 
-            // DescripcionFactura
+            // textBox4
             // 
-            this.DescripcionFactura.HeaderText = "Descripción";
-            this.DescripcionFactura.Name = "DescripcionFactura";
-            this.DescripcionFactura.Width = 88;
+            this.textBox4.Location = new System.Drawing.Point(65, 107);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(187, 20);
+            this.textBox4.TabIndex = 13;
             // 
-            // BoncheCajaFacura
+            // dateTimePicker1
             // 
-            this.BoncheCajaFacura.HeaderText = "Bonche/Caja";
-            this.BoncheCajaFacura.Name = "BoncheCajaFacura";
-            this.BoncheCajaFacura.Width = 95;
-            // 
-            // TotalBoncheFactura
-            // 
-            this.TotalBoncheFactura.HeaderText = "Total Bonche";
-            this.TotalBoncheFactura.Name = "TotalBoncheFactura";
-            this.TotalBoncheFactura.Width = 96;
-            // 
-            // TallosFactura
-            // 
-            this.TallosFactura.HeaderText = "# Tallos";
-            this.TallosFactura.Name = "TallosFactura";
-            this.TallosFactura.Width = 70;
-            // 
-            // precioUnitarioFactura
-            // 
-            this.precioUnitarioFactura.HeaderText = "Precio Unitario";
-            this.precioUnitarioFactura.Name = "precioUnitarioFactura";
-            this.precioUnitarioFactura.Width = 101;
-            // 
-            // TotalFactura
-            // 
-            this.TotalFactura.HeaderText = "Total";
-            this.TotalFactura.Name = "TotalFactura";
-            this.TotalFactura.Width = 56;
+            this.dateTimePicker1.Location = new System.Drawing.Point(51, 164);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 14;
+            this.dateTimePicker1.Value = new System.DateTime(2018, 1, 24, 0, 0, 0, 0);
             // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 582);
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.panel1);
             this.Name = "Factura";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.RightToLeftLayout = true;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factura";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -280,14 +330,14 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnidadesFactura;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumeroCajasFactura;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionFactura;
@@ -296,5 +346,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TallosFactura;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUnitarioFactura;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalFactura;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
