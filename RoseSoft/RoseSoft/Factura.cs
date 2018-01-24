@@ -31,5 +31,19 @@ namespace RoseSoft
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            busquedaCliente buscarCliente= new busquedaCliente();
+            buscarCliente.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            registrarCliente nuevoCliente = new registrarCliente();
+            nuevoCliente.Show();
+            this.Hide();
+        }
     }
 }
