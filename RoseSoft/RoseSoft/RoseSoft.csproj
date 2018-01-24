@@ -99,6 +99,9 @@
     <EmbeddedResource Include="Buscar Proveedor.resx">
       <DependentUpon>Buscar Proveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="busquedaCliente.resx">
+      <DependentUpon>busquedaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
