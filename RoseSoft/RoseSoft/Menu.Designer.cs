@@ -47,6 +47,8 @@
             this.buscarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administracciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administracciónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,18 +81,21 @@
             this.registrarClienteToolStripMenuItem.Name = "registrarClienteToolStripMenuItem";
             this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.registrarClienteToolStripMenuItem.Text = "Registrar Cliente";
+            this.registrarClienteToolStripMenuItem.Click += new System.EventHandler(this.registrarClienteToolStripMenuItem_Click);
             // 
             // actualizarClienteToolStripMenuItem
             // 
             this.actualizarClienteToolStripMenuItem.Name = "actualizarClienteToolStripMenuItem";
             this.actualizarClienteToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.actualizarClienteToolStripMenuItem.Text = "Actualizar Cliente";
+            this.actualizarClienteToolStripMenuItem.Click += new System.EventHandler(this.actualizarClienteToolStripMenuItem_Click);
             // 
             // consultarClienteToolStripMenuItem
             // 
             this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
             this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.consultarClienteToolStripMenuItem.Text = "Consultar Cliente";
+            this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
             // proveedoresToolStripMenuItem
             // 
@@ -133,13 +138,16 @@
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.comprasToolStripMenuItem.Text = "Compras";
             // 
             // ventasToolStripMenuItem
             // 
+            this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.facturaciónToolStripMenuItem,
+            this.buscarFacturaToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // inventarioToolStripMenuItem
@@ -157,7 +165,7 @@
             this.actualizarProductoToolStripMenuItem,
             this.buscarProductoToolStripMenuItem});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // registrarProductoToolStripMenuItem
@@ -191,6 +199,19 @@
             this.administracciónDeUsuariosToolStripMenuItem.Name = "administracciónDeUsuariosToolStripMenuItem";
             this.administracciónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.administracciónDeUsuariosToolStripMenuItem.Text = "Administracción de Usuarios";
+            // 
+            // facturaciónToolStripMenuItem
+            // 
+            this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.facturaciónToolStripMenuItem.Text = "Facturación";
+            this.facturaciónToolStripMenuItem.Click += new System.EventHandler(this.facturaciónToolStripMenuItem_Click);
+            // 
+            // buscarFacturaToolStripMenuItem
+            // 
+            this.buscarFacturaToolStripMenuItem.Name = "buscarFacturaToolStripMenuItem";
+            this.buscarFacturaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarFacturaToolStripMenuItem.Text = "Buscar Factura";
             // 
             // Menu
             // 
@@ -229,5 +250,7 @@
         private System.Windows.Forms.ToolStripMenuItem buscarProductoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administracciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administracciónDeUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarFacturaToolStripMenuItem;
     }
 }
