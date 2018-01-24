@@ -2,6 +2,20 @@
 {
     partial class buscarFactura
     {
+        /*BLOQUE PARA VALIDAR QUE NO SE ABRA VARIAS VECES LA VENTA*/
+        public static buscarFactura buscarFact = null;
+
+        public static buscarFactura Instance()
+        {
+            if (((buscarFact == null) || (buscarFact.IsDisposed == true)))
+            {
+                buscarFact = new buscarFactura();
+            }
+            buscarFact.BringToFront();
+            return buscarFact;
+        }
+
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -62,6 +76,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1_busqueda
             // 
