@@ -50,9 +50,10 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(54, 40);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(199, 13);
+            this.label6.Size = new System.Drawing.Size(349, 13);
             this.label6.TabIndex = 40;
-            this.label6.Text = "Buscar Producto por Número de Bonche";
+            this.label6.Text = "Buscar Producto por Número de Bonche para ACTUALIZAR el producto";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBox5
             // 
@@ -88,7 +89,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(193, 307);
+            this.button3.Location = new System.Drawing.Point(178, 304);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 35;

@@ -161,9 +161,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(45, 30);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(199, 13);
+            this.label6.Size = new System.Drawing.Size(210, 13);
             this.label6.TabIndex = 26;
-            this.label6.Text = "Buscar Producto por Número de Bonche";
+            this.label6.Text = "BUSCAR Producto por Número de Bonche";
             // 
             // Buscar_Producto
             // 
