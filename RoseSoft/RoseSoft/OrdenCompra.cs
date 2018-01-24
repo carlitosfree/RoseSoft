@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace RoseSoft
 {
-    public partial class busquedaCliente : Form
+    public partial class OrdenCompra : Form
     {
-        public busquedaCliente()
+        public OrdenCompra()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
