@@ -53,5 +53,78 @@ namespace RoseSoft
         {
 
         }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        public static int contador_fila = 0;
+        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            String selectProducto = (String)cBoxProducto.SelectedItem;
+            String selectTipoCaja = (String)cBoxTipoCaja.SelectedItem;
+            int selectTB = Convert.ToInt16(cBoxTB.SelectedItem);
+            int selectUnidades = Convert.ToInt16 (txtUnidades.Text);
+            int selectPrecio =Convert.ToInt16(txtPrecioUnitario.Text);
+            String selectEqCajas = (String)cBoxEqCaja.SelectedItem;
+            int selectBCaja = Convert.ToInt16(cBoxBoncheCaja.SelectedItem);
+            
+            int tB = (int)selectTB;
+          
+            int totalBonche = selectBCaja *(int)selectUnidades;
+            int totalTallos = tB * totalBonche;
+      
+            int total = selectPrecio * totalTallos;
+
+            bool existe = false;
+            int num_fila = 0;
+          /*  if (contador_fila == 0)
+            {
+                dataGridView1.Rows.Add(selectUnidades,selectTipoCaja,selectEqCajas,selectUnidades,
+                    selectTB,selectProducto,selectBCaja,totalBonche,totalTallos,selectPrecio,total);
+
+                contador_fila++;
+
+            }
+            else
+            {*/
+                foreach (DataGridViewRow Fila in dataGridView1.Rows)
+                {
+                    if (Fila.Cells[1].Value.ToString() == selectProducto)
+                    {
+
+                        existe = true;
+                        num_fila = Fila.Index;
+
+                    }
+
+                }
+                if (existe == true)
+                {
+
+                    dataGridView1.Rows[num_fila].Cells[0].Value = (Convert.ToDouble(selectUnidades) + Convert.ToDouble(dataGridView1.Rows[num_fila].Cells[0].Value)).ToString();
+                    double valorTotal = Convert.ToDouble(dataGridView1.Rows[num_fila].Cells[0].Value) * Convert.ToDouble(dataGridView1.Rows[num_fila].Cells[2].Value);
+
+                    dataGridView1.Rows[num_fila].Cells[3].Value = valorTotal;
+                }
+                else
+                {
+
+                    dataGridView1.Rows.Add(selectUnidades, selectTipoCaja, selectEqCajas, selectUnidades,
+                    selectTB, selectProducto, selectBCaja, totalBonche, totalTallos, selectPrecio, total);
+
+                    contador_fila++;
+                }
+
+                MessageBox.Show("Item agregado");
+
+         //   }
+
+           
+
+        }
     }
 }
