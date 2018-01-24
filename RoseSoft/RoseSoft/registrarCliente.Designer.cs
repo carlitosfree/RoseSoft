@@ -2,6 +2,20 @@
 {
     partial class registrarCliente
     {
+
+        /*BLOQUE PARA VALIDAR QUE NO SE ABRA VARIAS VECES LA VENTA*/
+        public static registrarCliente registrarClienteInstance = null;
+
+        public static registrarCliente Instance()
+        {
+            if (((registrarClienteInstance == null) || (registrarClienteInstance.IsDisposed == true)))
+            {
+                registrarClienteInstance = new registrarCliente();
+            }
+            registrarClienteInstance.BringToFront();
+            return registrarClienteInstance;
+        }
+
         /// <summary>
         /// Required designer variable.
         /// </summary>

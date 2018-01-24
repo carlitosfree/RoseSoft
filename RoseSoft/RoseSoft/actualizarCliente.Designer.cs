@@ -2,6 +2,20 @@
 {
     partial class actualizarCliente
     {
+        /*BLOQUE PARA VALIDAR QUE NO SE ABRA VARIAS VECES LA VENTA*/
+        public static actualizarCliente acturalizarClienteInstance = null;
+
+        public static actualizarCliente Instance()
+        {
+            if (((acturalizarClienteInstance == null) || (acturalizarClienteInstance.IsDisposed == true)))
+            {
+                acturalizarClienteInstance = new actualizarCliente();
+            }
+            acturalizarClienteInstance.BringToFront();
+            return acturalizarClienteInstance;
+        }
+
+
         /// <summary>
         /// Required designer variable.
         /// </summary>

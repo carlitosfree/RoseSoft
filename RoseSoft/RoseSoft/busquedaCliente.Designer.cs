@@ -2,6 +2,21 @@
 {
     partial class busquedaCliente
     {
+
+        /*BLOQUE PARA VALIDAR QUE NO SE ABRA VARIAS VECES LA VENTA*/
+        public static busquedaCliente buscarClienteInstance = null;
+
+        public static busquedaCliente Instance()
+        {
+            if (((buscarClienteInstance == null) || (buscarClienteInstance.IsDisposed == true)))
+            {
+                buscarClienteInstance = new busquedaCliente();
+            }
+            buscarClienteInstance.BringToFront();
+            return buscarClienteInstance;
+        }
+
+
         /// <summary>
         /// Required designer variable.
         /// </summary>

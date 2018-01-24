@@ -28,5 +28,35 @@ namespace RoseSoft
             proveedor.Show();
             this.Hide();
         }
+
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Factura factura = null;
+            factura = Factura.Instance();
+            factura.Show();
+            
+        }
+
+        private void registrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            registrarCliente registro = null;
+            registro = registrarCliente.Instance();
+            registro.Show();
+        }
+
+        private void actualizarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            actualizarCliente actualizar = null;
+            actualizar = actualizarCliente.Instance();
+            actualizar.Show();
+        }
+
+        private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            busquedaCliente busqueda = null;
+            busqueda = busquedaCliente.Instance();
+            busqueda.Show();
+            
+        }
     }
 }
