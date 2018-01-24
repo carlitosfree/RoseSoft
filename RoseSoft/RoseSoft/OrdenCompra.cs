@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace RoseSoft
 {
-    public partial class buscarFactura : Form
+    public partial class OrdenCompra : Form
     {
-        public buscarFactura()
+        public OrdenCompra()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -58,5 +58,12 @@ namespace RoseSoft
             busqueda.Show();
             
         }
+
+        private void buscarFacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            buscarFactura buscarFactura = null;
+            buscarFactura = buscarFactura.Instance();
+            buscarFactura.Show();
+        }
     }
 }
