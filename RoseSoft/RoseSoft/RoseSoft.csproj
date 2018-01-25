@@ -102,6 +102,12 @@
     <Compile Include="OrdenCompra.Designer.cs">
       <DependentUpon>OrdenCompra.cs</DependentUpon>
     </Compile>
+    <Compile Include="proveedorModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="proveedorModificar.Designer.cs">
+      <DependentUpon>proveedorModificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="registrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     </Compile>
     <Compile Include="registrarProducto.Designer.cs">
       <DependentUpon>registrarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registrarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarProveedor.Designer.cs">
+      <DependentUpon>registrarProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="ValidarSoloLetrasSoloNumeros.cs" />
     <Compile Include="VentanaDeLogin.cs">
@@ -150,11 +162,17 @@
     <EmbeddedResource Include="OrdenCompra.resx">
       <DependentUpon>OrdenCompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="proveedorModificar.resx">
+      <DependentUpon>proveedorModificar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="registrarCliente.resx">
       <DependentUpon>registrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="registrarProducto.resx">
       <DependentUpon>registrarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarProveedor.resx">
+      <DependentUpon>registrarProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaDeLogin.resx">
       <DependentUpon>VentanaDeLogin.cs</DependentUpon>

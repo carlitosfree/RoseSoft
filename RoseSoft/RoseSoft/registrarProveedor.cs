@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace RoseSoft
 {
-    public partial class registrarProducto : Form
+    public partial class registrarProveedor : Form
     {
-        public registrarProducto()
+        public registrarProveedor()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

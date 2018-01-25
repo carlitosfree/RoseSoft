@@ -2,6 +2,18 @@
 {
     partial class Buscar_Proveedor
     {
+        /*BLOQUE PARA VALIDAR QUE NO SE ABRA VARIAS VECES LA VENTA*/
+        public static Buscar_Proveedor buscarProveedorInstance = null;
+
+        public static Buscar_Proveedor Instance()
+        {
+            if (((buscarProveedorInstance == null) || (buscarProveedorInstance.IsDisposed == true)))
+            {
+                buscarProveedorInstance = new Buscar_Proveedor();
+            }
+            buscarProveedorInstance.BringToFront();
+            return buscarProveedorInstance;
+        }
         /// <summary>
         /// Required designer variable.
         /// </summary>

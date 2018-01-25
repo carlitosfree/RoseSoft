@@ -114,12 +114,14 @@ namespace RoseSoft
             this.registrarProveedorToolStripMenuItem.Name = "registrarProveedorToolStripMenuItem";
             this.registrarProveedorToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.registrarProveedorToolStripMenuItem.Text = "Registrar Proveedor";
+            this.registrarProveedorToolStripMenuItem.Click += new System.EventHandler(this.registrarProveedorToolStripMenuItem_Click);
             // 
             // actualizarProveedorToolStripMenuItem
             // 
             this.actualizarProveedorToolStripMenuItem.Name = "actualizarProveedorToolStripMenuItem";
             this.actualizarProveedorToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.actualizarProveedorToolStripMenuItem.Text = "Actualizar Proveedor";
+            this.actualizarProveedorToolStripMenuItem.Click += new System.EventHandler(this.actualizarProveedorToolStripMenuItem_Click);
             // 
             // buscarProveedorToolStripMenuItem
             // 
@@ -181,7 +183,7 @@ namespace RoseSoft
             this.actualizarProductoToolStripMenuItem,
             this.buscarProductoToolStripMenuItem});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // registrarProductoToolStripMenuItem

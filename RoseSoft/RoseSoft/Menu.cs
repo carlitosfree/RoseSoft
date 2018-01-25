@@ -24,9 +24,10 @@ namespace RoseSoft
 
         private void buscarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Buscar_Proveedor proveedor = new Buscar_Proveedor();
+            Buscar_Proveedor proveedor = null;
+            proveedor = Buscar_Proveedor.Instance();
             proveedor.Show();
-            this.Hide();
+            
         }
 
         private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,6 +88,20 @@ namespace RoseSoft
             buscarProducto = Buscar_Producto.Instance();
             buscarProducto.Show();
 
+        }
+
+        private void registrarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            registrarProveedor registroProveedor = null;
+            registroProveedor = registrarProveedor.Instance();
+            registroProveedor.Show();
+        }
+
+        private void actualizarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            proveedorModificar actualizarProveedor = null;
+            actualizarProveedor = proveedorModificar.Instance();
+            actualizarProveedor.Show();
         }
     }
 }

@@ -106,7 +106,7 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Location = new System.Drawing.Point(15, 7);
+            this.panel1.Location = new System.Drawing.Point(3, 7);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1320, 685);
             this.panel1.TabIndex = 1;
@@ -209,7 +209,7 @@
             this.TallosFactura,
             this.precioUnitarioFactura,
             this.TotalFactura});
-            this.dataGridView1.Location = new System.Drawing.Point(17, 19);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 19);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
