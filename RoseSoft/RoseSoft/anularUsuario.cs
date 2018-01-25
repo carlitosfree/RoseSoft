@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace RoseSoft
 {
-    public partial class registrarProveedor : Form
+    public partial class anularUsuario : Form
     {
-        public registrarProveedor()
+        public anularUsuario()
         {
             InitializeComponent();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Menu menu = new Menu();
-            menu.Show();
-            this.Hide();
         }
     }
 }

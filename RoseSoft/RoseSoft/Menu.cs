@@ -103,5 +103,27 @@ namespace RoseSoft
             actualizarProveedor = proveedorModificar.Instance();
             actualizarProveedor.Show();
         }
+
+        private void registrarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            registrarUsuario registroUsuario = null;
+            registroUsuario = registrarUsuario.Instance();
+            registroUsuario.Show();
+
+        }
+
+        private void actualizarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            actualizarUsuario actualizarUsu = null;
+            actualizarUsu = actualizarUsuario.Instance();
+            actualizarUsu.Show();
+        }
+
+        private void anularUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            anularUsuario anularUsu = null;
+            anularUsu = anularUsuario.Instance();
+            anularUsu.Show();
+        }
     }
 }

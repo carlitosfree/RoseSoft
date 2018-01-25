@@ -203,7 +203,7 @@
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Location = new System.Drawing.Point(527, 38);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(367, 361);
+            this.groupBox2.Size = new System.Drawing.Size(353, 361);
             this.groupBox2.TabIndex = 63;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Proveedor";
@@ -373,7 +373,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 416);
+            this.ClientSize = new System.Drawing.Size(902, 423);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);

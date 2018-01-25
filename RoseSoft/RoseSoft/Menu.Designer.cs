@@ -51,6 +51,9 @@ namespace RoseSoft
             this.buscarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administracciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administracciónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anularUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -217,9 +220,34 @@ namespace RoseSoft
             // 
             // administracciónDeUsuariosToolStripMenuItem
             // 
+            this.administracciónDeUsuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarUsuariosToolStripMenuItem,
+            this.actualizarUsuarioToolStripMenuItem,
+            this.anularUsuarioToolStripMenuItem});
             this.administracciónDeUsuariosToolStripMenuItem.Name = "administracciónDeUsuariosToolStripMenuItem";
             this.administracciónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.administracciónDeUsuariosToolStripMenuItem.Text = "Administracción de Usuarios";
+            // 
+            // registrarUsuariosToolStripMenuItem
+            // 
+            this.registrarUsuariosToolStripMenuItem.Name = "registrarUsuariosToolStripMenuItem";
+            this.registrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.registrarUsuariosToolStripMenuItem.Text = "Registrar Usuarios";
+            this.registrarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.registrarUsuariosToolStripMenuItem_Click);
+            // 
+            // actualizarUsuarioToolStripMenuItem
+            // 
+            this.actualizarUsuarioToolStripMenuItem.Name = "actualizarUsuarioToolStripMenuItem";
+            this.actualizarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.actualizarUsuarioToolStripMenuItem.Text = "Actualizar Usuario";
+            this.actualizarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.actualizarUsuarioToolStripMenuItem_Click);
+            // 
+            // anularUsuarioToolStripMenuItem
+            // 
+            this.anularUsuarioToolStripMenuItem.Name = "anularUsuarioToolStripMenuItem";
+            this.anularUsuarioToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.anularUsuarioToolStripMenuItem.Text = "Anular Usuario";
+            this.anularUsuarioToolStripMenuItem.Click += new System.EventHandler(this.anularUsuarioToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -264,5 +292,8 @@ namespace RoseSoft
         private System.Windows.Forms.ToolStripMenuItem administracciónDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarFacturaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actualizarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem anularUsuarioToolStripMenuItem;
     }
 }
