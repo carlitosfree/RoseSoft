@@ -90,6 +90,12 @@
     <Compile Include="buscarFactura.Designer.cs">
       <DependentUpon>buscarFactura.cs</DependentUpon>
     </Compile>
+    <Compile Include="buscarOrdenC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscarOrdenC.Designer.cs">
+      <DependentUpon>buscarOrdenC.cs</DependentUpon>
+    </Compile>
     <Compile Include="busquedaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="buscarFactura.resx">
       <DependentUpon>buscarFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscarOrdenC.resx">
+      <DependentUpon>buscarOrdenC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="busquedaCliente.resx">
       <DependentUpon>busquedaCliente.cs</DependentUpon>

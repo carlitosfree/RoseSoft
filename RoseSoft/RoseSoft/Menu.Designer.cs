@@ -54,6 +54,8 @@ namespace RoseSoft
             this.registrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anularUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarOrdenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,8 +146,11 @@ namespace RoseSoft
             // 
             // comprasToolStripMenuItem
             // 
+            this.comprasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ordenDeCompraToolStripMenuItem,
+            this.buscarOrdenDeCompraToolStripMenuItem});
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.comprasToolStripMenuItem.Text = "Compras";
             // 
             // ventasToolStripMenuItem
@@ -249,6 +254,20 @@ namespace RoseSoft
             this.anularUsuarioToolStripMenuItem.Text = "Anular Usuario";
             this.anularUsuarioToolStripMenuItem.Click += new System.EventHandler(this.anularUsuarioToolStripMenuItem_Click);
             // 
+            // ordenDeCompraToolStripMenuItem
+            // 
+            this.ordenDeCompraToolStripMenuItem.Name = "ordenDeCompraToolStripMenuItem";
+            this.ordenDeCompraToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.ordenDeCompraToolStripMenuItem.Text = "Orden de Compra";
+            this.ordenDeCompraToolStripMenuItem.Click += new System.EventHandler(this.ordenDeCompraToolStripMenuItem_Click);
+            // 
+            // buscarOrdenDeCompraToolStripMenuItem
+            // 
+            this.buscarOrdenDeCompraToolStripMenuItem.Name = "buscarOrdenDeCompraToolStripMenuItem";
+            this.buscarOrdenDeCompraToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.buscarOrdenDeCompraToolStripMenuItem.Text = "Buscar Orden de Compra";
+            this.buscarOrdenDeCompraToolStripMenuItem.Click += new System.EventHandler(this.buscarOrdenDeCompraToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,5 +314,7 @@ namespace RoseSoft
         private System.Windows.Forms.ToolStripMenuItem registrarUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anularUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ordenDeCompraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarOrdenDeCompraToolStripMenuItem;
     }
 }
