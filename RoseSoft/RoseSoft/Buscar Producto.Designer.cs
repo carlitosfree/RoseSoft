@@ -2,6 +2,18 @@
 {
     partial class Buscar_Producto
     {
+        /*BLOQUE PARA VALIDAR QUE NO SE ABRA VARIAS VECES LA VENTA*/
+        public static Buscar_Producto bProductoInstance = null;
+
+        public static Buscar_Producto Instance()
+        {
+            if (((bProductoInstance == null) || (bProductoInstance.IsDisposed == true)))
+            {
+                bProductoInstance = new Buscar_Producto();
+            }
+            bProductoInstance.BringToFront();
+            return bProductoInstance;
+        }
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -28,164 +40,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBox1_Buscar = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1_Buscar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1_Producto = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Producto)).BeginInit();
             this.SuspendLayout();
             // 
-            // button3
+            // groupBox3
             // 
-            this.button3.Location = new System.Drawing.Point(270, 243);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.comboBox1_Buscar);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.textBox1_Buscar);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Location = new System.Drawing.Point(25, 67);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(368, 81);
+            this.groupBox3.TabIndex = 17;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Busqueda";
             // 
-            // button2
+            // comboBox1_Buscar
             // 
-            this.button2.Location = new System.Drawing.Point(60, 243);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 23);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Buscar Nuevo Producto";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.comboBox1_Buscar.FormattingEnabled = true;
+            this.comboBox1_Buscar.Items.AddRange(new object[] {
+            "NOMBRE",
+            "NÚMERO DE CÉDULA",
+            "PROVINCIA",
+            "CUIDAD"});
+            this.comboBox1_Buscar.Location = new System.Drawing.Point(15, 45);
+            this.comboBox1_Buscar.Name = "comboBox1_Buscar";
+            this.comboBox1_Buscar.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1_Buscar.TabIndex = 9;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(270, 65);
+            this.button1.Location = new System.Drawing.Point(283, 43);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Buscar Producto";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBox1_Buscar
             // 
-            this.textBox1.Location = new System.Drawing.Point(159, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 18;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 160);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 13);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Tamaño de Bonche";
+            this.textBox1_Buscar.Location = new System.Drawing.Point(142, 45);
+            this.textBox1_Buscar.Name = "textBox1_Buscar";
+            this.textBox1_Buscar.Size = new System.Drawing.Size(135, 20);
+            this.textBox1_Buscar.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 193);
+            this.label4.Location = new System.Drawing.Point(12, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Fecha de Ingreso";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Buscar por:";
             // 
-            // label3
+            // groupBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 13);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Tamaño del Tallo ";
+            this.groupBox1.Controls.Add(this.dataGridView1_Producto);
+            this.groupBox1.Location = new System.Drawing.Point(24, 164);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(549, 208);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Resultados de busqueda";
             // 
-            // label2
+            // dataGridView1_Producto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Nombre de Rosa";
+            this.dataGridView1_Producto.AllowUserToAddRows = false;
+            this.dataGridView1_Producto.AllowUserToDeleteRows = false;
+            this.dataGridView1_Producto.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1_Producto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1_Producto.Location = new System.Drawing.Point(15, 26);
+            this.dataGridView1_Producto.Name = "dataGridView1_Producto";
+            this.dataGridView1_Producto.ReadOnly = true;
+            this.dataGridView1_Producto.RowHeadersVisible = false;
+            this.dataGridView1_Producto.Size = new System.Drawing.Size(508, 167);
+            this.dataGridView1_Producto.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 72);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Número de Bonche";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(159, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(134, 20);
-            this.textBox2.TabIndex = 22;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(159, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 23;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(159, 157);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 24;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(159, 190);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 25;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(45, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(210, 13);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "BUSCAR Producto por Número de Bonche";
+            this.label1.Size = new System.Drawing.Size(120, 18);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Buscar Producto";
             // 
             // Buscar_Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 337);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(595, 393);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "Buscar_Producto";
             this.Text = "Buscar Producto";
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Producto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,19 +160,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox comboBox1_Buscar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1_Buscar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dataGridView1_Producto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
     }
 }

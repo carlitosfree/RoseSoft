@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -54,6 +54,18 @@
     <Compile Include="actualizarCliente.Designer.cs">
       <DependentUpon>actualizarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActualizarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarProducto.Designer.cs">
+      <DependentUpon>ActualizarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscar Producto.Designer.cs">
+      <DependentUpon>Buscar Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Buscar Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,12 @@
     <Compile Include="registrarCliente.Designer.cs">
       <DependentUpon>registrarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="registrarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarProducto.Designer.cs">
+      <DependentUpon>registrarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="ValidarSoloLetrasSoloNumeros.cs" />
     <Compile Include="VentanaDeLogin.cs">
       <SubType>Form</SubType>
@@ -107,6 +125,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="actualizarCliente.resx">
       <DependentUpon>actualizarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActualizarProducto.resx">
+      <DependentUpon>ActualizarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buscar Producto.resx">
+      <DependentUpon>Buscar Producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Buscar Proveedor.resx">
       <DependentUpon>Buscar Proveedor.cs</DependentUpon>
@@ -128,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="registrarCliente.resx">
       <DependentUpon>registrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarProducto.resx">
+      <DependentUpon>registrarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaDeLogin.resx">
       <DependentUpon>VentanaDeLogin.cs</DependentUpon>
@@ -158,8 +185,3 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
-
-    © 2018 GitHub, Inc.
-    Terms
-    Privacy
-    Security
