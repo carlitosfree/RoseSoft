@@ -41,7 +41,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -306,14 +306,15 @@
             this.TallosFactura,
             this.precioUnitarioFactura,
             this.TotalFactura});
-            this.dataGridView1.Location = new System.Drawing.Point(17, 19);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 19);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Size = new System.Drawing.Size(964, 545);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // UnidadesFactura
             // 
@@ -570,12 +571,13 @@
             // button3
             // 
             this.button3.AllowDrop = true;
-            this.button3.Location = new System.Drawing.Point(943, 49);
+            this.button3.Location = new System.Drawing.Point(929, 49);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 21);
+            this.button3.Size = new System.Drawing.Size(64, 29);
             this.button3.TabIndex = 16;
-            this.button3.Text = "Eliminar";
+            this.button3.Text = "Regresar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
             // 
