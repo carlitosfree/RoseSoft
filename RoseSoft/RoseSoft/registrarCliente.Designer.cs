@@ -129,9 +129,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(14, 201);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 13);
+            this.label10.Size = new System.Drawing.Size(111, 13);
             this.label10.TabIndex = 54;
-            this.label10.Text = "Ciudad";
+            this.label10.Text = "Ciudad de Residencia";
             // 
             // txtPais
             // 
@@ -146,9 +146,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(14, 175);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.Size = new System.Drawing.Size(100, 13);
             this.label8.TabIndex = 52;
-            this.label8.Text = "País";
+            this.label8.Text = "País de Residencia";
             // 
             // txtEmail
             // 
@@ -249,9 +249,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 13);
+            this.label2.Size = new System.Drawing.Size(125, 13);
             this.label2.TabIndex = 40;
-            this.label2.Text = "Número de Identifación";
+            this.label2.Text = "Número de Identificación";
             // 
             // comboBox1
             // 
@@ -291,6 +291,7 @@
             this.button2.TabIndex = 59;
             this.button2.Text = "Limpiar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 

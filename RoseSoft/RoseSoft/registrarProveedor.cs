@@ -71,5 +71,18 @@ namespace RoseSoft
             textBox9.Text = "";
             MessageBox.Show("Producto agregado");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+        }
     }
 }
