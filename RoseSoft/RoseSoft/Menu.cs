@@ -28,5 +28,10 @@ namespace RoseSoft
             proveedor.Show();
             this.Hide();
         }
+
+        private void registrarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

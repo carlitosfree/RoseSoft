@@ -107,6 +107,7 @@
             this.registrarProveedorToolStripMenuItem.Name = "registrarProveedorToolStripMenuItem";
             this.registrarProveedorToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.registrarProveedorToolStripMenuItem.Text = "Registrar Proveedor";
+            this.registrarProveedorToolStripMenuItem.Click += new System.EventHandler(this.registrarProveedorToolStripMenuItem_Click);
             // 
             // actualizarProveedorToolStripMenuItem
             // 
@@ -127,7 +128,7 @@
             this.comprasToolStripMenuItem,
             this.ventasToolStripMenuItem});
             this.comprasVentasToolStripMenuItem.Name = "comprasVentasToolStripMenuItem";
-            this.comprasVentasToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
+            this.comprasVentasToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
             this.comprasVentasToolStripMenuItem.Text = "Compras - Ventas";
             // 
             // comprasToolStripMenuItem

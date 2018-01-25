@@ -10,21 +10,30 @@ using System.Windows.Forms;
 
 namespace RoseSoft
 {
-    public partial class Buscar_Proveedor : Form
+    public partial class regProveedor : Form
     {
-        public Buscar_Proveedor()
+        public regProveedor()
         {
             InitializeComponent();
         }
-        BaseDeDatos bd = new BaseDeDatos();
-        private void Buscar_Proveedor_Load(object sender, EventArgs e)
+
+        private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void bBuscar_Click(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
-            //dataGridView1.DataSource = bd.SelectDataTable("Select * from PROVEEDOR");
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             Menu frm = new Menu();
 
             frm.Show();
