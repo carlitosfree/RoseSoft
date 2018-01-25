@@ -41,6 +41,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -57,10 +61,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -96,6 +96,38 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Proveedor";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(215, 267);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(121, 20);
+            this.textBox4.TabIndex = 79;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(15, 267);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(168, 13);
+            this.label9.TabIndex = 78;
+            this.label9.Text = "Catidad de Producto Internacional";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(215, 240);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(121, 20);
+            this.textBox3.TabIndex = 77;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 240);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(149, 13);
+            this.label4.TabIndex = 76;
+            this.label4.Text = "Catidad de Producto Nacional";
             // 
             // textBox9
             // 
@@ -226,38 +258,6 @@
             this.label1.TabIndex = 58;
             this.label1.Text = "Tipo de documento de identificación";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(215, 240);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 20);
-            this.textBox3.TabIndex = 77;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 240);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 13);
-            this.label4.TabIndex = 76;
-            this.label4.Text = "Catidad de Producto Nacional";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(215, 267);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 20);
-            this.textBox4.TabIndex = 79;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 267);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(168, 13);
-            this.label9.TabIndex = 78;
-            this.label9.Text = "Catidad de Producto Internacional";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -277,6 +277,7 @@
             this.button3.TabIndex = 63;
             this.button3.Text = "Anular";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -300,7 +301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 427);
+            this.ClientSize = new System.Drawing.Size(394, 417);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

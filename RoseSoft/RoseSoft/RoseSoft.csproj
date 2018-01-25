@@ -60,6 +60,18 @@
     <Compile Include="ActualizarProducto.Designer.cs">
       <DependentUpon>ActualizarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="actualizarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actualizarUsuario.Designer.cs">
+      <DependentUpon>actualizarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="anularUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="anularUsuario.Designer.cs">
+      <DependentUpon>anularUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Buscar Producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +138,12 @@
     <Compile Include="registrarProveedor.Designer.cs">
       <DependentUpon>registrarProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="registrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarUsuario.Designer.cs">
+      <DependentUpon>registrarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ValidarSoloLetrasSoloNumeros.cs" />
     <Compile Include="VentanaDeLogin.cs">
       <SubType>Form</SubType>
@@ -140,6 +158,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ActualizarProducto.resx">
       <DependentUpon>ActualizarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actualizarUsuario.resx">
+      <DependentUpon>actualizarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="anularUsuario.resx">
+      <DependentUpon>anularUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Buscar Producto.resx">
       <DependentUpon>Buscar Producto.cs</DependentUpon>
@@ -173,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="registrarProveedor.resx">
       <DependentUpon>registrarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarUsuario.resx">
+      <DependentUpon>registrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaDeLogin.resx">
       <DependentUpon>VentanaDeLogin.cs</DependentUpon>
