@@ -125,5 +125,20 @@ namespace RoseSoft
             anularUsu = anularUsuario.Instance();
             anularUsu.Show();
         }
+
+        private void ordenDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrdenCompra orden = null;
+            orden = OrdenCompra.Instance();
+            orden.Show();
+        }
+
+        private void buscarOrdenDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            buscarOrdenC buscar = null;
+            buscar = buscarOrdenC.Instance();
+            buscar.Show();
+
+        }
     }
 }
