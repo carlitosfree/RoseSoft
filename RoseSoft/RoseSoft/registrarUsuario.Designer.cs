@@ -102,6 +102,10 @@
             // comboBoxCargoUsuario
             // 
             this.comboBoxCargoUsuario.FormattingEnabled = true;
+            this.comboBoxCargoUsuario.Items.AddRange(new object[] {
+            "Administrador",
+            "Gerente",
+            "Usuarios"});
             this.comboBoxCargoUsuario.Location = new System.Drawing.Point(138, 98);
             this.comboBoxCargoUsuario.Name = "comboBoxCargoUsuario";
             this.comboBoxCargoUsuario.Size = new System.Drawing.Size(185, 21);

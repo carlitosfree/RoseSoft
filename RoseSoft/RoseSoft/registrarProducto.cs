@@ -12,6 +12,7 @@ namespace RoseSoft
 {
     public partial class registrarProducto : Form
     {
+        ValidarSoloLetrasSoloNumeros v = new ValidarSoloLetrasSoloNumeros();
         public registrarProducto()
         {
             InitializeComponent();
@@ -19,14 +20,28 @@ namespace RoseSoft
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = "";
+            MessageBox.Show("Producto agregado");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
-            menu.Show();
-            this.Hide();
+            this.Dispose();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.SoloNumeros(e);
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.SoloLetras(e);
         }
     }
 }
