@@ -24,7 +24,7 @@ namespace RoseSoft
 
         private void bBuscar_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bd.SelectDataTable("Select * from PROVEEDOR");
+           
         }
     }
 }

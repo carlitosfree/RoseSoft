@@ -1,4 +1,6 @@
-﻿namespace RoseSoft
+﻿using System;
+
+namespace RoseSoft
 {
     partial class Menu
     {
@@ -62,7 +64,7 @@
             this.administracciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(523, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(685, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -132,13 +134,13 @@
             this.comprasToolStripMenuItem,
             this.ventasToolStripMenuItem});
             this.comprasVentasToolStripMenuItem.Name = "comprasVentasToolStripMenuItem";
-            this.comprasVentasToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+            this.comprasVentasToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
             this.comprasVentasToolStripMenuItem.Text = "Compras - Ventas";
             // 
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.comprasToolStripMenuItem.Text = "Compras";
             // 
             // ventasToolStripMenuItem
@@ -147,20 +149,20 @@
             this.facturaciónToolStripMenuItem,
             this.buscarFacturaToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // facturaciónToolStripMenuItem
             // 
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
             this.facturaciónToolStripMenuItem.Click += new System.EventHandler(this.facturaciónToolStripMenuItem_Click);
             // 
             // buscarFacturaToolStripMenuItem
             // 
             this.buscarFacturaToolStripMenuItem.Name = "buscarFacturaToolStripMenuItem";
-            this.buscarFacturaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarFacturaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.buscarFacturaToolStripMenuItem.Text = "Buscar Factura";
             this.buscarFacturaToolStripMenuItem.Click += new System.EventHandler(this.buscarFacturaToolStripMenuItem_Click);
             // 
@@ -194,12 +196,14 @@
             this.actualizarProductoToolStripMenuItem.Name = "actualizarProductoToolStripMenuItem";
             this.actualizarProductoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.actualizarProductoToolStripMenuItem.Text = "Actualizar Producto";
+            this.actualizarProductoToolStripMenuItem.Click += new System.EventHandler(this.actualizarProductoToolStripMenuItem_Click);
             // 
             // buscarProductoToolStripMenuItem
             // 
             this.buscarProductoToolStripMenuItem.Name = "buscarProductoToolStripMenuItem";
             this.buscarProductoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.buscarProductoToolStripMenuItem.Text = "Buscar Producto";
+            this.buscarProductoToolStripMenuItem.Click += new System.EventHandler(this.buscarProductoToolStripMenuItem_Click);
             // 
             // administracciónToolStripMenuItem
             // 
@@ -219,17 +223,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 309);
+            this.ClientSize = new System.Drawing.Size(685, 425);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
-            this.Text = "Menu";
+            this.Text = "RoseSoft";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
+        
 
         #endregion
 

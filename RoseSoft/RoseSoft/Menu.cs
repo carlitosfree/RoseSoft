@@ -65,5 +65,28 @@ namespace RoseSoft
             buscarFactura = buscarFactura.Instance();
             buscarFactura.Show();
         }
+
+        private void registrarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            registrarProducto registroProducto = null;
+            registroProducto = registrarProducto.Instance();
+            registroProducto.Show();
+        
+        }
+
+        private void actualizarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActualizarProducto actualizarProducto = null;
+            actualizarProducto = ActualizarProducto.Instance();
+            actualizarProducto.Show();
+        }
+
+        private void buscarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Buscar_Producto buscarProducto = null;
+            buscarProducto = Buscar_Producto.Instance();
+            buscarProducto.Show();
+
+        }
     }
 }
