@@ -103,6 +103,18 @@ namespace RoseSoft
             txtEmail.Text = "";
             MessageBox.Show("Cliente agregado");
         }
-       
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtIdentificacion.Text = "";
+            txtApellidos.Text = "";
+            txtNombre.Text = "";
+            txtCiudad.Text = "";
+            txtDireccion.Text = "";
+            txtNacionalidad.Text = "";
+            txtPais.Text = "";
+            txtTelefono.Text = "";
+            txtEmail.Text = "";
+        }
     }
 }
