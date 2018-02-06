@@ -21,5 +21,11 @@ namespace RoseSoft
         {
             this.Dispose();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //SELECT* FROM ordenCompra WHERE numCedula=textBox1_busqueda.Text;
+            //SELECT* FROM ordenCompra WHERE ruc=textBox1_busqueda.Text;
+        }
     }
 }

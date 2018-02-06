@@ -15,6 +15,19 @@ namespace RoseSoft
         public registrarUsuario()
         {
             InitializeComponent();
+            //SELECT* FROM Customers
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /* INSERT INTO usuario(nombreUsuario, contraseña, cargo)
+               VALUES(txtBox1.Text, txtBox2.Text,  comboBoxCargoUsuario.Text);*/
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";         
+            comboBoxCargoUsuario.Text = "";
+
+            //SELECT * FROM usuario
         }
     }
 }

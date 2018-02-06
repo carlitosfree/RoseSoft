@@ -275,9 +275,9 @@
             this.label11.Location = new System.Drawing.Point(14, 27);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(133, 18);
+            this.label11.Size = new System.Drawing.Size(141, 18);
             this.label11.TabIndex = 42;
-            this.label11.Text = "Registrar Producto";
+            this.label11.Text = "Registrar Proveedor";
             // 
             // button3
             // 

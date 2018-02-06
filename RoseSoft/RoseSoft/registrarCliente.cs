@@ -92,6 +92,7 @@ namespace RoseSoft
 
         private void button1_Click(object sender, EventArgs e)
         {
+            comboBox1.Text = "";
             txtIdentificacion.Text = "";
             txtApellidos.Text = "";
             txtNombre.Text = "";
@@ -101,11 +102,21 @@ namespace RoseSoft
             txtPais.Text = "";
             txtTelefono.Text = "";
             txtEmail.Text = "";
+
+
+            /* INSERT INTO cliente(tipoIdentificacion, numIdentificacion, nombres, apellidos, nacionalidad, paisResidencia, ciudadResistencia, direccion,numTelefono,email)
+            VALUES( comboBox1.Text,  txtIdentificacion.Text ,txtApellidos.Text,  txtNombre.Text, txtCiudad.Text, txtDireccion.Text ,txtNacionalidad.Text,  txtPais.Text ,  txtTelefono.Text,  txtEmail.Text);*/
+
+
+
+
+
             MessageBox.Show("Cliente agregado");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            comboBox1.Text = "";
             txtIdentificacion.Text = "";
             txtApellidos.Text = "";
             txtNombre.Text = "";

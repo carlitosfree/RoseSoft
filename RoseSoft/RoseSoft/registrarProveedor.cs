@@ -60,6 +60,7 @@ namespace RoseSoft
 
         private void button1_Click(object sender, EventArgs e)
         {
+            comboBox1.Text = "";
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
@@ -69,11 +70,19 @@ namespace RoseSoft
             textBox7.Text = "";
             textBox8.Text = "";
             textBox9.Text = "";
+            /* INSERT INTO proveedor(tipoIdentificacion, numIdentificacion, nombres, pais, ciudad, direccion, numTelefono, email, cantidadProductoNacional, cantidadProductoInternacional)
+             VALUES( comboBox1.Text, textBox1.Text,  textBox2.Text, textBox3.Text,  textBox4.Text,  textBox5.Text, textBox6.Text,
+              textBox7.Text,  textBox8.Text,  textBox9.Text);*/
+
+
+            //SELECT * FROM proveedor
+
             MessageBox.Show("Producto agregado");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            comboBox1.Text = "";
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";

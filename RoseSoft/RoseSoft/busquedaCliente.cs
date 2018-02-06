@@ -31,5 +31,50 @@ namespace RoseSoft
         {
             this.Dispose();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (comboBox1_Buscar.Text == "NOMBRE")
+            {
+                MessageBox.Show("nombres");
+                /*
+                                SELECT * from CLIENTE
+                WHERE nombre = textBox1_Buscar.Text*/
+
+            }
+            else if (comboBox1_Buscar.Text == "NÚMERO DE CÉDULA")
+            {
+                MessageBox.Show("numcedula");
+                /*
+                SELECT * from cliente
+              WHERE numIdentificacion = textBox1_Buscar.Text */
+
+           
+            }
+            else if (comboBox1_Buscar.Text == "PROVINCIA")
+            {
+                MessageBox.Show("provincia");
+
+
+                /*
+               SELECT * from cliente
+             WHERE nacionalidad = textBox1_Buscar.Text */
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("ciudad");
+
+                /*
+                SELECT * from cliente
+              WHERE apellidos = textBox1_Buscar.Text */
+
+
+            }
+
+        }
     }
 }

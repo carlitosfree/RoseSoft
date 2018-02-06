@@ -19,9 +19,24 @@ namespace RoseSoft
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        { MessageBox.Show("Producto agregado");
+
             textBox1.Text = "";
-            MessageBox.Show("Producto agregado");
+            comboBox1.Text = "";
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            comboBox1.Text = "";
+            comboBox2.Text = "";
+            comboBox3.Text = "";
+            dateTimePicker1.Text = "";
+
+            /* INSERT INTO producto(numBonche, variedad, tamanoTallo, tallosBonche, stock, fechaIngreso, mercado)
+             VALUES( textBox1.Text, textBox2.Text,  comboBox1.Text, comboBox2.Text,  textBox3.Text,  dateTimePicker1.Text, comboBox3.Text);*/
+
+
+            //SELECT * FROM producto
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -47,6 +62,19 @@ namespace RoseSoft
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
+            comboBox1.Text = "";
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            comboBox1.Text = "";
+            comboBox2.Text = "";
+            comboBox3.Text = "";
+            dateTimePicker1.Text = "";
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -19,7 +19,8 @@ namespace RoseSoft
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            //SELECT* FROM factura WHERE numCedula=textBox1_busqueda.Text;
+            //SELECT* FROM factura WHERE ruc=textBox1_busqueda.Text;
         }
 
         private void button2_Click(object sender, EventArgs e)

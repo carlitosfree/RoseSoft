@@ -140,5 +140,17 @@ namespace RoseSoft
             buscar.Show();
 
         }
+
+        private void buscarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            busquedaCliente buscar = null;
+            buscar = busquedaCliente.Instance();
+            buscar.Show();
+
+
+        }
+
+
     }
 }
