@@ -41,7 +41,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -310,8 +310,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(964, 545);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -560,9 +560,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(943, 13);
+            this.button2.Location = new System.Drawing.Point(929, 13);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 21);
+            this.button2.Size = new System.Drawing.Size(64, 27);
             this.button2.TabIndex = 15;
             this.button2.Text = "Agregar";
             this.button2.UseVisualStyleBackColor = true;

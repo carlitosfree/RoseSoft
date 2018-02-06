@@ -54,6 +54,12 @@
     <Compile Include="actualizarCliente.Designer.cs">
       <DependentUpon>actualizarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="actualizarClienteJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actualizarClienteJ.Designer.cs">
+      <DependentUpon>actualizarClienteJ.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActualizarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     <Compile Include="Buscar Proveedor.Designer.cs">
       <DependentUpon>Buscar Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="buscarClienteJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscarClienteJ.Designer.cs">
+      <DependentUpon>buscarClienteJ.cs</DependentUpon>
+    </Compile>
     <Compile Include="buscarFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     </Compile>
     <Compile Include="Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ingresarClienteJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ingresarClienteJ.Designer.cs">
+      <DependentUpon>ingresarClienteJ.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -162,6 +180,9 @@
     <EmbeddedResource Include="actualizarCliente.resx">
       <DependentUpon>actualizarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="actualizarClienteJ.resx">
+      <DependentUpon>actualizarClienteJ.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActualizarProducto.resx">
       <DependentUpon>ActualizarProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +198,9 @@
     <EmbeddedResource Include="Buscar Proveedor.resx">
       <DependentUpon>Buscar Proveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="buscarClienteJ.resx">
+      <DependentUpon>buscarClienteJ.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="buscarFactura.resx">
       <DependentUpon>buscarFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ingresarClienteJ.resx">
+      <DependentUpon>ingresarClienteJ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

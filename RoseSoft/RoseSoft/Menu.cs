@@ -40,16 +40,12 @@ namespace RoseSoft
 
         private void registrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            registrarCliente registro = null;
-            registro = registrarCliente.Instance();
-            registro.Show();
+        
         }
 
         private void actualizarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            actualizarCliente actualizar = null;
-            actualizar = actualizarCliente.Instance();
-            actualizar.Show();
+            
         }
 
         private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -138,6 +134,90 @@ namespace RoseSoft
             buscarOrdenC buscar = null;
             buscar = buscarOrdenC.Instance();
             buscar.Show();
+
+        }
+
+        private void registrarClienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            registrarCliente registrar = null;
+            registrar = registrarCliente.Instance();
+            registrar.Show();
+        }
+
+        private void actualizarClienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            actualizarCliente actualizar = null;
+            actualizar = actualizarCliente.Instance();
+            actualizar.Show();
+         
+        }
+
+        private void buscarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            busquedaCliente busqueda = null;
+            busqueda = busquedaCliente.Instance();
+            busqueda.Show();
+        }
+
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrdenCompra orden = null;
+            orden = OrdenCompra.Instance();
+            orden.Show();
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            buscarOrdenC buscar = null;
+            buscar = buscarOrdenC.Instance();
+            buscar.Show();
+
+        }
+
+        private void buscarFacturaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            buscarFactura buscar = null;
+            buscar = buscarFactura.Instance();
+            buscar.Show();
+        }
+
+        private void registrarFacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Factura factura = null;
+            factura = Factura.Instance();
+            factura.Show();
+        }
+
+        private void buscarProveedorToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Buscar_Proveedor buscar = null;
+            buscar = Buscar_Proveedor.Instance();
+            buscar.Show();
+        }
+
+        private void registrarClienteToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ingresarClienteJ ingresar = null;
+            ingresar = ingresarClienteJ.Instance();
+            ingresar.Show();
+        }
+
+        private void actualizarClienteToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            actualizarClienteJ actualizar = null;
+            actualizar = actualizarClienteJ.Instance();
+            actualizar.Show();
+        }
+
+        private void buscarClienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            buscarClienteJ buscar = null;
+            buscar = buscarClienteJ.Instance();
+            buscar.Show();
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

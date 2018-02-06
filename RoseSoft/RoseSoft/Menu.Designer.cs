@@ -33,7 +33,13 @@ namespace RoseSoft
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarClienteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarClienteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,6 +47,9 @@ namespace RoseSoft
             this.comprasVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarFacturaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,15 +60,7 @@ namespace RoseSoft
             this.registrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anularUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.facturaciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarFacturaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarClienteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizarClienteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.parametrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,6 +99,27 @@ namespace RoseSoft
             this.registrarClienteToolStripMenuItem.Text = "Persona Natural";
             this.registrarClienteToolStripMenuItem.Click += new System.EventHandler(this.registrarClienteToolStripMenuItem_Click);
             // 
+            // registrarClienteToolStripMenuItem1
+            // 
+            this.registrarClienteToolStripMenuItem1.Name = "registrarClienteToolStripMenuItem1";
+            this.registrarClienteToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
+            this.registrarClienteToolStripMenuItem1.Text = "Registrar Cliente";
+            this.registrarClienteToolStripMenuItem1.Click += new System.EventHandler(this.registrarClienteToolStripMenuItem1_Click);
+            // 
+            // actualizarClienteToolStripMenuItem1
+            // 
+            this.actualizarClienteToolStripMenuItem1.Name = "actualizarClienteToolStripMenuItem1";
+            this.actualizarClienteToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
+            this.actualizarClienteToolStripMenuItem1.Text = "Actualizar Cliente";
+            this.actualizarClienteToolStripMenuItem1.Click += new System.EventHandler(this.actualizarClienteToolStripMenuItem1_Click);
+            // 
+            // buscarClienteToolStripMenuItem
+            // 
+            this.buscarClienteToolStripMenuItem.Name = "buscarClienteToolStripMenuItem";
+            this.buscarClienteToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.buscarClienteToolStripMenuItem.Text = "Buscar Cliente";
+            this.buscarClienteToolStripMenuItem.Click += new System.EventHandler(this.buscarClienteToolStripMenuItem_Click);
+            // 
             // actualizarClienteToolStripMenuItem
             // 
             this.actualizarClienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -108,6 +130,27 @@ namespace RoseSoft
             this.actualizarClienteToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.actualizarClienteToolStripMenuItem.Text = "Persona Jurídica";
             this.actualizarClienteToolStripMenuItem.Click += new System.EventHandler(this.actualizarClienteToolStripMenuItem_Click);
+            // 
+            // registrarClienteToolStripMenuItem2
+            // 
+            this.registrarClienteToolStripMenuItem2.Name = "registrarClienteToolStripMenuItem2";
+            this.registrarClienteToolStripMenuItem2.Size = new System.Drawing.Size(166, 22);
+            this.registrarClienteToolStripMenuItem2.Text = "Registrar Cliente";
+            this.registrarClienteToolStripMenuItem2.Click += new System.EventHandler(this.registrarClienteToolStripMenuItem2_Click);
+            // 
+            // actualizarClienteToolStripMenuItem2
+            // 
+            this.actualizarClienteToolStripMenuItem2.Name = "actualizarClienteToolStripMenuItem2";
+            this.actualizarClienteToolStripMenuItem2.Size = new System.Drawing.Size(166, 22);
+            this.actualizarClienteToolStripMenuItem2.Text = "Actualizar Cliente";
+            this.actualizarClienteToolStripMenuItem2.Click += new System.EventHandler(this.actualizarClienteToolStripMenuItem2_Click);
+            // 
+            // buscarClienteToolStripMenuItem1
+            // 
+            this.buscarClienteToolStripMenuItem1.Name = "buscarClienteToolStripMenuItem1";
+            this.buscarClienteToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
+            this.buscarClienteToolStripMenuItem1.Text = "Buscar Cliente";
+            this.buscarClienteToolStripMenuItem1.Click += new System.EventHandler(this.buscarClienteToolStripMenuItem1_Click);
             // 
             // proveedoresToolStripMenuItem
             // 
@@ -123,7 +166,7 @@ namespace RoseSoft
             // 
             this.registrarProveedorToolStripMenuItem.Name = "registrarProveedorToolStripMenuItem";
             this.registrarProveedorToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.registrarProveedorToolStripMenuItem.Text = "Registrar Proveedor";
+            this.registrarProveedorToolStripMenuItem.Text = "Ingresar Proveedor";
             this.registrarProveedorToolStripMenuItem.Click += new System.EventHandler(this.registrarProveedorToolStripMenuItem_Click);
             // 
             // actualizarProveedorToolStripMenuItem
@@ -138,7 +181,7 @@ namespace RoseSoft
             this.buscarProveedorToolStripMenuItem.Name = "buscarProveedorToolStripMenuItem";
             this.buscarProveedorToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.buscarProveedorToolStripMenuItem.Text = "Buscar Proveedor";
-            this.buscarProveedorToolStripMenuItem.Click += new System.EventHandler(this.buscarProveedorToolStripMenuItem_Click);
+            this.buscarProveedorToolStripMenuItem.Click += new System.EventHandler(this.buscarProveedorToolStripMenuItem_Click_1);
             // 
             // comprasVentasToolStripMenuItem
             // 
@@ -154,12 +197,37 @@ namespace RoseSoft
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.comprasToolStripMenuItem.Text = "Orden de Compra";
+            this.comprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.ventasToolStripMenuItem.Text = "Buscar Orden de Compra";
+            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
+            // 
+            // facturaciónToolStripMenuItem1
+            // 
+            this.facturaciónToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarFacturaToolStripMenuItem,
+            this.buscarFacturaToolStripMenuItem1});
+            this.facturaciónToolStripMenuItem1.Name = "facturaciónToolStripMenuItem1";
+            this.facturaciónToolStripMenuItem1.Size = new System.Drawing.Size(81, 20);
+            this.facturaciónToolStripMenuItem1.Text = "Facturación";
+            // 
+            // registrarFacturaToolStripMenuItem
+            // 
+            this.registrarFacturaToolStripMenuItem.Name = "registrarFacturaToolStripMenuItem";
+            this.registrarFacturaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.registrarFacturaToolStripMenuItem.Text = "Registrar Factura";
+            this.registrarFacturaToolStripMenuItem.Click += new System.EventHandler(this.registrarFacturaToolStripMenuItem_Click);
+            // 
+            // buscarFacturaToolStripMenuItem1
+            // 
+            this.buscarFacturaToolStripMenuItem1.Name = "buscarFacturaToolStripMenuItem1";
+            this.buscarFacturaToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
+            this.buscarFacturaToolStripMenuItem1.Text = "Buscar Factura";
+            this.buscarFacturaToolStripMenuItem1.Click += new System.EventHandler(this.buscarFacturaToolStripMenuItem1_Click);
             // 
             // inventarioToolStripMenuItem
             // 
@@ -176,8 +244,9 @@ namespace RoseSoft
             this.actualizarProductoToolStripMenuItem,
             this.buscarProductoToolStripMenuItem});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.productosToolStripMenuItem.Text = "Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // registrarProductoToolStripMenuItem
             // 
@@ -203,7 +272,8 @@ namespace RoseSoft
             // administracciónToolStripMenuItem
             // 
             this.administracciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.administracciónDeUsuariosToolStripMenuItem});
+            this.administracciónDeUsuariosToolStripMenuItem,
+            this.parametrosToolStripMenuItem});
             this.administracciónToolStripMenuItem.Name = "administracciónToolStripMenuItem";
             this.administracciónToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.administracciónToolStripMenuItem.Text = "Administracción";
@@ -239,62 +309,11 @@ namespace RoseSoft
             this.anularUsuarioToolStripMenuItem.Text = "Anular Usuario";
             this.anularUsuarioToolStripMenuItem.Click += new System.EventHandler(this.anularUsuarioToolStripMenuItem_Click);
             // 
-            // facturaciónToolStripMenuItem1
+            // parametrosToolStripMenuItem
             // 
-            this.facturaciónToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarFacturaToolStripMenuItem,
-            this.buscarFacturaToolStripMenuItem1});
-            this.facturaciónToolStripMenuItem1.Name = "facturaciónToolStripMenuItem1";
-            this.facturaciónToolStripMenuItem1.Size = new System.Drawing.Size(81, 20);
-            this.facturaciónToolStripMenuItem1.Text = "Facturación";
-            // 
-            // registrarFacturaToolStripMenuItem
-            // 
-            this.registrarFacturaToolStripMenuItem.Name = "registrarFacturaToolStripMenuItem";
-            this.registrarFacturaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.registrarFacturaToolStripMenuItem.Text = "Registrar Factura";
-            // 
-            // buscarFacturaToolStripMenuItem1
-            // 
-            this.buscarFacturaToolStripMenuItem1.Name = "buscarFacturaToolStripMenuItem1";
-            this.buscarFacturaToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
-            this.buscarFacturaToolStripMenuItem1.Text = "Buscar Factura";
-            // 
-            // registrarClienteToolStripMenuItem1
-            // 
-            this.registrarClienteToolStripMenuItem1.Name = "registrarClienteToolStripMenuItem1";
-            this.registrarClienteToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
-            this.registrarClienteToolStripMenuItem1.Text = "Registrar Cliente";
-            // 
-            // actualizarClienteToolStripMenuItem1
-            // 
-            this.actualizarClienteToolStripMenuItem1.Name = "actualizarClienteToolStripMenuItem1";
-            this.actualizarClienteToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
-            this.actualizarClienteToolStripMenuItem1.Text = "Actualizar Cliente";
-            // 
-            // buscarClienteToolStripMenuItem
-            // 
-            this.buscarClienteToolStripMenuItem.Name = "buscarClienteToolStripMenuItem";
-            this.buscarClienteToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.buscarClienteToolStripMenuItem.Text = "Buscar Cliente";
-            // 
-            // registrarClienteToolStripMenuItem2
-            // 
-            this.registrarClienteToolStripMenuItem2.Name = "registrarClienteToolStripMenuItem2";
-            this.registrarClienteToolStripMenuItem2.Size = new System.Drawing.Size(166, 22);
-            this.registrarClienteToolStripMenuItem2.Text = "Registrar Cliente";
-            // 
-            // actualizarClienteToolStripMenuItem2
-            // 
-            this.actualizarClienteToolStripMenuItem2.Name = "actualizarClienteToolStripMenuItem2";
-            this.actualizarClienteToolStripMenuItem2.Size = new System.Drawing.Size(166, 22);
-            this.actualizarClienteToolStripMenuItem2.Text = "Actualizar Cliente";
-            // 
-            // buscarClienteToolStripMenuItem1
-            // 
-            this.buscarClienteToolStripMenuItem1.Name = "buscarClienteToolStripMenuItem1";
-            this.buscarClienteToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
-            this.buscarClienteToolStripMenuItem1.Text = "Buscar Cliente";
+            this.parametrosToolStripMenuItem.Name = "parametrosToolStripMenuItem";
+            this.parametrosToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.parametrosToolStripMenuItem.Text = "Parametros";
             // 
             // Menu
             // 
@@ -325,7 +344,6 @@ namespace RoseSoft
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarProveedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizarProveedorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarProveedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
@@ -348,5 +366,7 @@ namespace RoseSoft
         private System.Windows.Forms.ToolStripMenuItem registrarClienteToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem actualizarClienteToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem buscarClienteToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem parametrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarProveedorToolStripMenuItem;
     }
 }
