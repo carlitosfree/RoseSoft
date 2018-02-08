@@ -38,13 +38,13 @@ namespace RoseSoft
             {
             }
         }
-  
+
 
         public void SoloNumeros(KeyPressEventArgs e)
         {
             try
             {
-                if (Char.IsNumber(e.KeyChar) )
+                if (Char.IsNumber(e.KeyChar))
                 {
                     e.Handled = false; // escribe
 
@@ -66,7 +66,7 @@ namespace RoseSoft
             }
             catch (Exception)
             {
-               
+
             }
 
         }
@@ -80,7 +80,7 @@ namespace RoseSoft
                     V.Handled = false; // escribe
 
                 }
-                else if (Char.IsSeparator(V.KeyChar)) 
+                else if (Char.IsSeparator(V.KeyChar))
                 {
                     V.Handled = false;
                 }
@@ -135,6 +135,10 @@ namespace RoseSoft
 
             return false;
 
+        }
+        public bool verificarRuc (string ruc)
+        {
+            return true;
         }
 
     }
