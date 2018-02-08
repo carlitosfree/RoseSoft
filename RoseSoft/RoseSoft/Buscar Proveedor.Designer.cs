@@ -46,12 +46,12 @@
             this.textBox1_Buscar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1_Producto = new System.Windows.Forms.DataGridView();
+            this.dataGridView1_Proveedor = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Producto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Proveedor)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -90,6 +90,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1_Buscar
             // 
@@ -97,6 +98,7 @@
             this.textBox1_Buscar.Name = "textBox1_Buscar";
             this.textBox1_Buscar.Size = new System.Drawing.Size(135, 20);
             this.textBox1_Buscar.TabIndex = 6;
+            this.textBox1_Buscar.TextChanged += new System.EventHandler(this.textBox1_Buscar_TextChanged);
             // 
             // label4
             // 
@@ -109,7 +111,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1_Producto);
+            this.groupBox1.Controls.Add(this.dataGridView1_Proveedor);
             this.groupBox1.Location = new System.Drawing.Point(28, 148);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(549, 208);
@@ -117,18 +119,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resultados de busqueda";
             // 
-            // dataGridView1_Producto
+            // dataGridView1_Proveedor
             // 
-            this.dataGridView1_Producto.AllowUserToAddRows = false;
-            this.dataGridView1_Producto.AllowUserToDeleteRows = false;
-            this.dataGridView1_Producto.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1_Producto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1_Producto.Location = new System.Drawing.Point(15, 26);
-            this.dataGridView1_Producto.Name = "dataGridView1_Producto";
-            this.dataGridView1_Producto.ReadOnly = true;
-            this.dataGridView1_Producto.RowHeadersVisible = false;
-            this.dataGridView1_Producto.Size = new System.Drawing.Size(508, 167);
-            this.dataGridView1_Producto.TabIndex = 0;
+            this.dataGridView1_Proveedor.AllowUserToAddRows = false;
+            this.dataGridView1_Proveedor.AllowUserToDeleteRows = false;
+            this.dataGridView1_Proveedor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1_Proveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1_Proveedor.Location = new System.Drawing.Point(15, 26);
+            this.dataGridView1_Proveedor.Name = "dataGridView1_Proveedor";
+            this.dataGridView1_Proveedor.ReadOnly = true;
+            this.dataGridView1_Proveedor.RowHeadersVisible = false;
+            this.dataGridView1_Proveedor.Size = new System.Drawing.Size(508, 167);
+            this.dataGridView1_Proveedor.TabIndex = 0;
             // 
             // label1
             // 
@@ -165,7 +167,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Producto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Proveedor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,7 +181,7 @@
         private System.Windows.Forms.TextBox textBox1_Buscar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1_Producto;
+        private System.Windows.Forms.DataGridView dataGridView1_Proveedor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
     }

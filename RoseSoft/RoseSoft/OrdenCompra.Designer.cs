@@ -40,11 +40,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
@@ -62,7 +63,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button6 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -163,6 +163,15 @@
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 74;
             this.label5.Text = "Ciudad";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(208, 211);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(50, 20);
+            this.button6.TabIndex = 15;
+            this.button6.Text = "Nuevo";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // textBox5
             // 
@@ -310,15 +319,6 @@
             this.dateTimePicker1.TabIndex = 16;
             this.dateTimePicker1.Value = new System.DateTime(2018, 1, 24, 0, 0, 0, 0);
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(208, 211);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(50, 20);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Nuevo";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -378,8 +378,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(964, 545);
             this.dataGridView1.TabIndex = 11;
             // 
@@ -617,6 +617,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Cancelar";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 

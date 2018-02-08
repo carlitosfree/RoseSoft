@@ -26,7 +26,7 @@ namespace RoseSoft
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (validar.VerificarCedula(txtIdentificacion.Text) == true)
+            if (validar.verificarRuc(txtIdentificacion.Text) == true)
             {
                 string consutar = bd.selectstring("select Cedula from ClienteJ WHERE Cedula =" + txtIdentificacion.Text + "");
                 string agregar = "INSERT INTO ClienteJ (ruc, nombreEmpresa,rasonSocial,paisCJ,ciudadCJ, direccionCJ,telefonoCJ,emailCJ ) VALUES ('" + txtIdentificacion.Text + "','" + txtNombre.Text + "','" + txtApellidos.Text + "','" + txtPais.Text + "','" + txtCiudad.Text + "','" + txtDireccion.Text + "','" + txtTelefono.Text + "','" + txtEmail.Text + "')";
