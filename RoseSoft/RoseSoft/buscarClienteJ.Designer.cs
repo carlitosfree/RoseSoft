@@ -84,7 +84,7 @@
             this.comboBox1_Buscar.Items.AddRange(new object[] {
             "NOMBRE",
             "NÚMERO DE CÉDULA",
-            "PROVINCIA",
+            "PAÍS",
             "CUIDAD"});
             this.comboBox1_Buscar.Location = new System.Drawing.Point(15, 45);
             this.comboBox1_Buscar.Name = "comboBox1_Buscar";
@@ -99,6 +99,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1_Buscar
             // 
@@ -106,6 +107,7 @@
             this.textBox1_Buscar.Name = "textBox1_Buscar";
             this.textBox1_Buscar.Size = new System.Drawing.Size(135, 20);
             this.textBox1_Buscar.TabIndex = 6;
+            this.textBox1_Buscar.TextChanged += new System.EventHandler(this.textBox1_Buscar_TextChanged);
             // 
             // label4
             // 
@@ -160,6 +162,7 @@
             this.Controls.Add(this.label1);
             this.Name = "buscarClienteJ";
             this.Text = "buscarClienteJ";
+            this.Load += new System.EventHandler(this.buscarClienteJ_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
