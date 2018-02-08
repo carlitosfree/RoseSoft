@@ -62,6 +62,7 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "Regresar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox3
             // 
@@ -82,10 +83,10 @@
             // 
             this.comboBox1_Buscar.FormattingEnabled = true;
             this.comboBox1_Buscar.Items.AddRange(new object[] {
-            "NOMBRE",
-            "NÚMERO DE CÉDULA",
+            "NOMBRE EMPRESA",
+            "RUC",
             "PAÍS",
-            "CUIDAD"});
+            "CIUDAD"});
             this.comboBox1_Buscar.Location = new System.Drawing.Point(15, 45);
             this.comboBox1_Buscar.Name = "comboBox1_Buscar";
             this.comboBox1_Buscar.Size = new System.Drawing.Size(121, 21);

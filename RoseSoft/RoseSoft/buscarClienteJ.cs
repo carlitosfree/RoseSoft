@@ -110,12 +110,12 @@ namespace RoseSoft
 
         private void textBox1_Buscar_TextChanged(object sender, EventArgs e)
         {
-            if (comboBox1_Buscar.Text.Equals("NOMBRE"))
+            if (comboBox1_Buscar.Text.Equals("NOMBRE EMPRESA"))
             {
 
                 string sql;
                 //SELECT * FROM CLIENTE WHERE NOMBRE LIKE 'C%';
-                sql = "SELECT * FROM CLIENTEJ WHERE nombres LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM CLIENTEJ WHERE nombreEmpresa LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
             }
@@ -145,6 +145,11 @@ namespace RoseSoft
 
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
