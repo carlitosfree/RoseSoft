@@ -788,8 +788,9 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(106, 28);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Anular";
+            this.button5.Text = "Cancelar";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
