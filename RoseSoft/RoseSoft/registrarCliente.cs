@@ -160,5 +160,10 @@ namespace RoseSoft
             txtTelefono.Text = "";
             txtEmail.Text = "";
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
