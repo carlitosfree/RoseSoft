@@ -41,6 +41,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdenCompra));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -120,7 +121,7 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Location = new System.Drawing.Point(10, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1320, 685);
+            this.panel1.Size = new System.Drawing.Size(1320, 684);
             this.panel1.TabIndex = 1;
             // 
             // groupBox1
@@ -374,13 +375,13 @@
             this.totalTP,
             this.totalTI,
             this.TotalOC});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 19);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 19);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Size = new System.Drawing.Size(964, 545);
+            this.dataGridView1.Size = new System.Drawing.Size(974, 464);
             this.dataGridView1.TabIndex = 11;
             // 
             // TallosFactura
@@ -634,7 +635,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 699);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OrdenCompra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrdenCompra";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

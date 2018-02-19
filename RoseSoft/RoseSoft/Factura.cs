@@ -141,5 +141,10 @@ namespace RoseSoft
         {
             this.Dispose();
         }
+
+        private void Factura_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
