@@ -16,7 +16,7 @@ namespace RoseSoft
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new registrarProveedor());
+            Application.Run(new proveedorModificar());
         }
     }
 }

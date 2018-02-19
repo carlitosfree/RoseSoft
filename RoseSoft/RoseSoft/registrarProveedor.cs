@@ -46,17 +46,17 @@ namespace RoseSoft
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validar.SoloNumeros(e);
+            
         }
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validar.SoloNumeros(e);
+            validar.SoloLetras(e);
         }
 
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validar.SoloNumeros(e);
+            validar.SoloLetras(e);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -242,20 +242,31 @@ namespace RoseSoft
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             textBox1.MaxLength = 10;
-            if (textBox1.TextLength == 10)
+            if (textBox1.TextLength==10)       
             {
-                if (validar.VerificarCedula(textBox1.Text) == true)
-                {
+               
+                    if (validar.VerificarCedula(textBox1.Text) == true)
+                    {
 
 
-                }
-                else
-                {
-                    MessageBox.Show("Cédula de identidad no válida");
-                    textBox1.Text = "";
-                }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cédula de identidad no válida");
+                        textBox1.Text = "";
+                    }
+
+                
+                
 
             }
+            
+           
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.SoloNumeros(e);
         }
     }
 }

@@ -36,7 +36,7 @@ namespace RoseSoft
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBox1_Buscar.Text.Equals("") || textBox1_Buscar.Text.Equals(""))
+            if (comboBox1_buscar.Text.Equals("") || textBox9_Buscar.Text.Equals(""))
             {
                 MessageBox.Show("Ingrese parametros de busqueda");
             }
@@ -47,32 +47,32 @@ namespace RoseSoft
         }
         public void buscar()
         {
-            if (comboBox1_Buscar.Text.Equals("NÚMERO DE CÉDULA"))
+            if (comboBox1_buscar.Text.Equals("NÚMERO DE CÉDULA"))
             {
                 string sql;
-                sql = "SELECT * FROM Proveedor WHERE cedulaP='" + textBox1_Buscar.Text + "'";
+                sql = "SELECT * FROM Proveedor WHERE cedulaP='" + textBox9_Buscar.Text + "'";
                 dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
             }
-            else if (comboBox1_Buscar.Text.Equals("NOMBRE"))
+            else if (comboBox1_buscar.Text.Equals("NOMBRE"))
             {
                 string sql;
-                sql = "SELECT * FROM Proveedor WHERE nombresP='" + textBox1_Buscar.Text + "'";
-                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
-
-
-            }
-            else if (comboBox1_Buscar.Text.Equals("PAÍS"))
-            {
-                string sql;
-                sql = "SELECT * FROM Proveedor WHERE paisP='" + textBox1_Buscar.Text + "'";
+                sql = "SELECT * FROM Proveedor WHERE nombresP='" + textBox9_Buscar.Text + "'";
                 dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
 
 
             }
-            else if (comboBox1_Buscar.Text.Equals("CIUDAD"))
+            else if (comboBox1_buscar.Text.Equals("PAÍS"))
             {
                 string sql;
-                sql = "SELECT * FROM Proveedor WHERE ciudadP='" + textBox1_Buscar.Text + "'";
+                sql = "SELECT * FROM Proveedor WHERE paisP='" + textBox9_Buscar.Text + "'";
+                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
+
+
+            }
+            else if (comboBox1_buscar.Text.Equals("CIUDAD"))
+            {
+                string sql;
+                sql = "SELECT * FROM Proveedor WHERE ciudadP='" + textBox9_Buscar.Text + "'";
                 dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
 
 
@@ -81,40 +81,57 @@ namespace RoseSoft
 
         private void textBox1_Buscar_TextChanged(object sender, EventArgs e)
         {
-            if (comboBox1_Buscar.Text.Equals("NOMBRE"))
+            if (comboBox1_buscar.Text.Equals("NOMBRE"))
             {
 
                 string sql;
                 //SELECT * FROM CLIENTE WHERE NOMBRE LIKE 'C%';
-                sql = "SELECT * FROM Proveedor WHERE nombresP LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM Proveedor WHERE nombresP LIKE '" + textBox9_Buscar.Text + "%'";
                 dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
 
             }
-            else if (comboBox1_Buscar.Text.Equals("NÚMERO DE CÉDULA"))
+            else if (comboBox1_buscar.Text.Equals("NÚMERO DE CÉDULA"))
             {
                 string sql;
-                sql = "SELECT * FROM Proveedor WHERE cedulaP LIKE '" + textBox1_Buscar.Text + "%'";
-                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
-
-
-            }
-            else if (comboBox1_Buscar.Text.Equals("PAÍS"))
-            {
-
-                string sql;
-                sql = "SELECT * FROM Proveedor WHERE paisP LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM Proveedor WHERE cedulaP LIKE '" + textBox9_Buscar.Text + "%'";
                 dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
 
 
             }
-
-            else if (comboBox1_Buscar.Text.Equals("CUIDAD"))
+            else if (comboBox1_buscar.Text.Equals("PAÍS"))
             {
+
                 string sql;
-                sql = "SELECT * FROM Proveedor WHERE ciudadP LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM Proveedor WHERE paisP LIKE '" + textBox9_Buscar.Text + "%'";
                 dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
 
 
+            }
+
+            else if (comboBox1_buscar.Text.Equals("CUIDAD"))
+            {
+                string sql;
+                sql = "SELECT * FROM Proveedor WHERE ciudadP LIKE '" + textBox9_Buscar.Text + "%'";
+                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
+
+
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (comboBox1_buscar.Text.Equals("") || textBox9_Buscar.Text.Equals(""))
+            {
+                MessageBox.Show("Ingrese parametros de busqueda");
+            }
+            else
+            {
+                buscar();
             }
         }
     }
