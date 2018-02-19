@@ -134,5 +134,30 @@ namespace RoseSoft
                 buscar();
             }
         }
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(79, 55);
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(73, 49);
+        }
+
+     
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.Size = new Size(79, 55);
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.Size = new Size(73, 49);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
