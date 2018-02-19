@@ -43,19 +43,20 @@ namespace RoseSoft
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             txtIdentificacion.MaxLength = 10;
-            if (txtIdentificacion.TextLength == 10) { 
-            if (validar.VerificarCedula(txtIdentificacion.Text) == true)
-            {
+            if (txtIdentificacion.TextLength == 10)
+            { 
+                if (validar.VerificarCedula(txtIdentificacion.Text) == true)
+                {
 
+
+                }
+                else
+                {
+                     MessageBox.Show("Cédula de identidad no válida");
+                     txtIdentificacion.Text = "";
+                }
 
             }
-            else
-            {
-                MessageBox.Show("Cédula de identidad no válida");
-                    txtIdentificacion.Text = "";
-            }
-
-        }
         }
 
         private void txtIdentificacion_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -190,8 +191,19 @@ namespace RoseSoft
                     idCliente = idcli.ToString();
                     
                 }
-                
-             
+                string localidad = bd.selectstring("SELECT LOCALIDADID FROM LOCALIDAD WHERE CLIENTEID = (SELECT MAX(LOCALIDADID) from LOCALIDAD);");
+                if (localidad == null)
+                {
+                    localidad = "1";
+
+                }
+                else
+                {
+                    int idloc = Int32.Parse(localidad);
+                    idloc = idloc + 1;
+                    localidad = idloc.ToString();
+
+                }
 
                 string consutar = bd.selectstring("select cedula from CLIENTEN WHERE cedula =" + txtIdentificacion.Text + "");
                 string agregar = "INSERT INTO CLIENTEN (cedula, nombres, apellidos, nacionalidad, paisCN, ciudadCN, direccionCN, telefonoCN, emailCN ) VALUES ('" + txtIdentificacion.Text + "','" + txtNombre.Text + "','" + txtApellidos.Text + "','" + txtPais.Text + "','" + txtCiudad.Text + "','" + txtDireccion.Text + "','" + txtTelefono.Text + "','" + txtEmail.Text + "')";
