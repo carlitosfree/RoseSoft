@@ -35,13 +35,13 @@ namespace RoseSoft
             {
                 string sql;
                 sql = "SELECT * FROM CLIENTEJ WHERE ruc='" + textBox9_Buscar.Text + "'";
-                dataGridView1.DataSource = bd.SelectDataTable(sql);
+                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
             }
             else if (comboBox1_buscar.Text.Equals("NOMBRE"))
             {
                 string sql;
                 sql = "SELECT * FROM CLIENTEJ WHERE nombreEmpresa='" + textBox9_Buscar.Text + "'";
-                dataGridView1.DataSource = bd.SelectDataTable(sql);
+                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
 
             }
         }
@@ -53,7 +53,7 @@ namespace RoseSoft
 
                 string sql;
                 sql = "SELECT * FROM CLIENTEJ WHERE nombreEmpresa LIKE '" + textBox9_Buscar.Text + "%'";
-                dataGridView1.DataSource = bd.SelectDataTable(sql);
+                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
             }
 
             else if (comboBox1_buscar.Text.Equals("RUC"))
@@ -61,42 +61,29 @@ namespace RoseSoft
 
                 string sql;
                 sql = "SELECT* FROM CLIENTEJ WHERE ruc LIKE '" + textBox9_Buscar.Text + "%'";
-                dataGridView1.DataSource = bd.SelectDataTable(sql);
+                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
 
 
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string actualizarCliente = "UPDATE CLIENTEJ set nombreEmpresa ='" + txt2.Text + "' ,rasonSocial ='" + txt3.Text + "',paisCJ='" + txt4.Text + "', ciudadCJ = '" + txt5.Text + "', direccionCJ='" + txt6.Text + "', telefonoCJ='" + txt7.Text + "', emailCJ='" + txt8.Text + "' where ruc = " + txt1.Text + "";
-
-            if (bd.executecommand(actualizarCliente))
-            {
-                MessageBox.Show("Datos actualizados exitosamente");
-                dataGridView1.DataSource = bd.SelectDataTable("select * FROM CLIENTEJ");
-            }
-            else
-            {
-                MessageBox.Show("Error al actualizar");
-            }
-        }
+      
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            DataGridViewRow dgv = dataGridView1.Rows[e.RowIndex];
-            txt1.Text = dgv.Cells[0].Value.ToString();
-            txt2.Text = dgv.Cells[1].Value.ToString();
-            txt3.Text = dgv.Cells[2].Value.ToString();
-            txt4.Text = dgv.Cells[3].Value.ToString();
-            txt5.Text = dgv.Cells[4].Value.ToString();
-            txt6.Text = dgv.Cells[5].Value.ToString();
-            txt7.Text = dgv.Cells[6].Value.ToString();
-            txt8.Text = dgv.Cells[7].Value.ToString();
+            DataGridViewRow dgv = dataGridView1_Proveedor.Rows[e.RowIndex];
+            txtIdentificacion.Text = dgv.Cells[0].Value.ToString();
+            txtApellidos.Text = dgv.Cells[1].Value.ToString();
+            txtNombre.Text = dgv.Cells[2].Value.ToString();
+            txtCiudad.Text = dgv.Cells[3].Value.ToString();
+            txtDireccion.Text = dgv.Cells[4].Value.ToString();
+            txtPais.Text = dgv.Cells[5].Value.ToString();
+            txtTelefono.Text = dgv.Cells[6].Value.ToString();
+            txtEmail.Text = dgv.Cells[7].Value.ToString();
             // comboBox1_TipoCLiente.Text = dgv.Cells[8].Value.ToString();
             // textBox1_Nombre.Enabled = false;
-            txt1.Enabled = false;
+            txtIdentificacion.Enabled = false;
         }
 
         private void txt2_KeyPress(object sender, KeyPressEventArgs e)
@@ -132,6 +119,39 @@ namespace RoseSoft
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(79, 55);
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(73, 49);
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox3.Size = new Size(79, 55);
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox3.Size = new Size(73, 49);
+        }
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.Size = new Size(79, 55);
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.Size = new Size(73, 49);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

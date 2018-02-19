@@ -315,5 +315,23 @@
   <ItemGroup>
     <None Include="Resources\buscarCliente.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizarCliente.2png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizarUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizarUsuario1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anularUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -121,17 +121,7 @@ namespace RoseSoft
             validar.SoloNumeros(e);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            txtIdentificacion.Text = "";
-            txtApellidos.Text = "";
-            txtNombre.Text = "";
-            txtCiudad.Text = "";
-            txtDireccion.Text = "";
-            txtPais.Text = "";
-            txtTelefono.Text = "";
-            txtEmail.Text = "";
-        }
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -179,6 +169,19 @@ namespace RoseSoft
 
         private void txtIdentificacion_TextChanged_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            txtIdentificacion.Text = "";
+            txtApellidos.Text = "";
+            txtNombre.Text = "";
+            txtCiudad.Text = "";
+            txtDireccion.Text = "";
+            txtPais.Text = "";
+            txtTelefono.Text = "";
+            txtEmail.Text = "";
 
         }
     }
