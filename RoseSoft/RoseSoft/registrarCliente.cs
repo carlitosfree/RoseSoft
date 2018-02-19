@@ -36,13 +36,26 @@ namespace RoseSoft
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            
            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            txtIdentificacion.MaxLength = 10;
+            if (txtIdentificacion.TextLength == 10) { 
+            if (validar.VerificarCedula(txtIdentificacion.Text) == true)
+            {
 
+
+            }
+            else
+            {
+                MessageBox.Show("Cédula de identidad no válida");
+                    txtIdentificacion.Text = "";
+            }
+
+        }
         }
 
         private void txtIdentificacion_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -93,12 +106,97 @@ namespace RoseSoft
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            txtIdentificacion.Text = "";
+            txtApellidos.Text = "";
+            txtNombre.Text = "";
+            txtCiudad.Text = "";
+            txtDireccion.Text = "";
+            txtPais.Text = "";
+            txtTelefono.Text = "";
+            txtEmail.Text = "";
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(79,55);
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(73,49);
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox3.Size = new Size(79, 55);
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox3.Size = new Size(73, 49);
+        }
+
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.Size = new Size(79, 55);
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.Size = new Size(73, 49);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
             if (validar.VerificarCedula(txtIdentificacion.Text) == true)
             {
-                string consutar = bd.selectstring("select cedula from CLIENTEN WHERE cedula =" + txtIdentificacion.Text + "");
-                string agregar = "INSERT INTO CLIENTEN (cedula, nombres, apellidos, nacionalidad, paisCN, ciudadCN, direccionCN, telefonoCN, emailCN ) VALUES ('" + txtIdentificacion.Text + "','" + txtNombre.Text + "','" + txtApellidos.Text + "','" + txtNacionalidad.Text + "','" + txtPais.Text + "','" + txtCiudad.Text + "','" + txtDireccion.Text + "','" + txtTelefono.Text + "','" + txtEmail.Text + "')";
+                string idCliente = bd.selectstring("SELECT CLIENTEID FROM CLIENTE WHERE CLIENTEID = (SELECT MAX(CLIENTEID) from CLIENTE);");
+               
+                if (idCliente == null)
+                {
+                    idCliente = "1";
+                    
+                }
+                else
+                {
+                    int idcli = Int32.Parse(idCliente);
+                    idcli = idcli + 1;
+                    idCliente = idcli.ToString();
+                    
+                }
+                
+             
 
-                if (txtNombre.Text.Equals("") || txtIdentificacion.Text.Equals("") || txtNacionalidad.Text.Equals("") || txtEmail.Text.Equals("")||
+                string consutar = bd.selectstring("select cedula from CLIENTEN WHERE cedula =" + txtIdentificacion.Text + "");
+                string agregar = "INSERT INTO CLIENTEN (cedula, nombres, apellidos, nacionalidad, paisCN, ciudadCN, direccionCN, telefonoCN, emailCN ) VALUES ('" + txtIdentificacion.Text + "','" + txtNombre.Text + "','" + txtApellidos.Text + "','" + txtPais.Text + "','" + txtCiudad.Text + "','" + txtDireccion.Text + "','" + txtTelefono.Text + "','" + txtEmail.Text + "')";
+
+                if (txtNombre.Text.Equals("") || txtIdentificacion.Text.Equals("") ||  txtEmail.Text.Equals("") ||
                 txtApellidos.Text.Equals("") || txtPais.Text.Equals("") || txtCiudad.Text.Equals("") || txtDireccion.Text.Equals("") || txtTelefono.Text.Equals(""))
                 {
                     MessageBox.Show("Error uno o mas campos vacios");
@@ -115,20 +213,18 @@ namespace RoseSoft
                     {
                         if (bd.executecommand(agregar))
                         {
+
                             
-                            string strDate = DateTime.Now.ToString("yyyy-MM-dd");
                             MessageBox.Show("Registrado");
                             txtIdentificacion.Text = "";
                             txtApellidos.Text = "";
                             txtNombre.Text = "";
                             txtCiudad.Text = "";
                             txtDireccion.Text = "";
-                            txtNacionalidad.Text = "";
                             txtPais.Text = "";
                             txtTelefono.Text = "";
                             txtEmail.Text = "";
-                            string nuevo = bd.selectstring(" INSERT INTO CLIENTENUEVO (fechaEmision) VALUES  ('" + strDate + "')");
-
+                         
 
                         }
                         else
@@ -143,22 +239,8 @@ namespace RoseSoft
             }
             else
             {
-                MessageBox.Show("cedula de identidad no valida");
+                MessageBox.Show("Cédula de identidad no válida");
             }
-           
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            txtIdentificacion.Text = "";
-            txtApellidos.Text = "";
-            txtNombre.Text = "";
-            txtCiudad.Text = "";
-            txtDireccion.Text = "";
-            txtNacionalidad.Text = "";
-            txtPais.Text = "";
-            txtTelefono.Text = "";
-            txtEmail.Text = "";
         }
     }
 }

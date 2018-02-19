@@ -128,5 +128,10 @@ namespace RoseSoft
             textBox8.Text = "";
             textBox9.Text = "";
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
