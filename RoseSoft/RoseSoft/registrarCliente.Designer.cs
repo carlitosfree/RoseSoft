@@ -63,7 +63,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -111,7 +110,7 @@
             this.txtCiudad.Location = new System.Drawing.Point(206, 152);
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(121, 21);
-            this.txtCiudad.TabIndex = 55;
+            this.txtCiudad.TabIndex = 49;
             this.txtCiudad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCiudad_KeyPress);
             // 
             // label10
@@ -132,7 +131,7 @@
             this.txtPais.Location = new System.Drawing.Point(206, 126);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(121, 21);
-            this.txtPais.TabIndex = 53;
+            this.txtPais.TabIndex = 48;
             this.txtPais.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPais_KeyPress);
             // 
             // label8
@@ -153,7 +152,7 @@
             this.txtEmail.Location = new System.Drawing.Point(206, 230);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(121, 21);
-            this.txtEmail.TabIndex = 51;
+            this.txtEmail.TabIndex = 52;
             // 
             // label5
             // 
@@ -173,7 +172,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(206, 178);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(121, 21);
-            this.txtDireccion.TabIndex = 49;
+            this.txtDireccion.TabIndex = 50;
             // 
             // txtTelefono
             // 
@@ -182,7 +181,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(206, 204);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(121, 21);
-            this.txtTelefono.TabIndex = 48;
+            this.txtTelefono.TabIndex = 51;
             this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
@@ -297,18 +296,6 @@
             this.pictureBox1.TabIndex = 61;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(218, 402);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
-            this.button1.TabIndex = 58;
-            this.button1.Text = "    Registrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
@@ -367,7 +354,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "registrarCliente";
@@ -387,7 +374,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtCiudad;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtPais;
