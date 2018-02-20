@@ -118,9 +118,7 @@ namespace RoseSoft
         {
             
             Menu menu = new Menu();
-            menu.Show();
-            this.Hide();/*
-            string usuario = (bd.selectstring("select USUARIO FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text +  "';"));
+                       string usuario = (bd.selectstring("select USUARIO FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text +  "';"));
             if (txtUsuario.Text == usuario)
             {
                 string contraseña = (bd.selectstring("select CONTRASENA FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
@@ -141,7 +139,7 @@ namespace RoseSoft
                 MessageBox.Show("Usuario no existe");
                 txtUsuario.Text = "";
                 txtPassword.Text = "";
-            }*/
+            }
               
         }
 
