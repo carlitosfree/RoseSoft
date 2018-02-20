@@ -330,6 +330,7 @@ namespace RoseSoft
             this.Name = "Menu";
             this.Text = "RoseSoft";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

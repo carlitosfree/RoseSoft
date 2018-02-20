@@ -49,13 +49,13 @@ namespace RoseSoft
             if (comboBox1_Buscar.Text.Equals("NÚMERO DE CÉDULA"))
             {
                 string sql;
-                sql = "SELECT * FROM CLienteN WHERE cedula='" + textBox1_Buscar.Text + "'";
+                sql = "SELECT * FROM PERSONANATURAL WHERE CEDULACN='" + textBox1_Buscar.Text + "'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
             }
             else if (comboBox1_Buscar.Text.Equals("NOMBRE"))
             {
                 string sql;
-                sql = "SELECT * FROM CLienteN WHERE nombres='" + textBox1_Buscar.Text + "'";
+                sql = "SELECT * FROM PERSONANATURAL WHERE NOMBRESCN='" + textBox1_Buscar.Text + "'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -63,7 +63,7 @@ namespace RoseSoft
             else if (comboBox1_Buscar.Text.Equals("PAÍS"))
             {
                 string sql;
-                sql = "SELECT * FROM CLienteN WHERE paisCN='" + textBox1_Buscar.Text + "'";
+                sql = "SELECT * FROM PERSONANATURAL WHERE PAISCN='" + textBox1_Buscar.Text + "'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -71,7 +71,7 @@ namespace RoseSoft
             else if (comboBox1_Buscar.Text.Equals("CIUDAD"))
             {
                 string sql;
-                sql = "SELECT * FROM CLienteN WHERE ciudadCN='" + textBox1_Buscar.Text + "'";
+                sql = "SELECT * FROM PERSONANATURAL WHERE CIUDADCN='" + textBox1_Buscar.Text + "'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -81,7 +81,7 @@ namespace RoseSoft
         private void busquedaCliente_Load(object sender, EventArgs e)
         {
             dataGridView1_Cliente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1_Cliente.DataSource = bd.SelectDataTable("select * from ClienteN");
+            dataGridView1_Cliente.DataSource = bd.SelectDataTable("select * from PERSONANATURAL");
         }
 
         private void textBox1_Buscar_TextChanged(object sender, EventArgs e)
@@ -91,14 +91,14 @@ namespace RoseSoft
 
                 string sql;
                 //SELECT * FROM CLIENTE WHERE NOMBRE LIKE 'C%';
-                sql = "SELECT * FROM CLIENTEN WHERE nombres LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONANATURAL WHERE NOMBRESCN LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
             }
             else if (comboBox1_Buscar.Text.Equals("NÚMERO DE CÉDULA"))
             {
                 string sql;
-                sql = "SELECT * FROM CLIENTEN WHERE cedula LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONANATURAL WHERE CEDULACN LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -107,7 +107,7 @@ namespace RoseSoft
             {
 
                 string sql;
-                sql = "SELECT * FROM CLIENTEN WHERE paisCN LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONANATURAL WHERE paisCN LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -116,7 +116,7 @@ namespace RoseSoft
             else if (comboBox1_Buscar.Text.Equals("CUIDAD"))
             {
                 string sql;
-                sql = "SELECT * FROM CLIENTEN WHERE ciudadCN LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONANATURAL WHERE ciudadCN LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 

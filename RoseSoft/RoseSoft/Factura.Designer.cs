@@ -656,6 +656,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 80;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
             this.pictureBox3.DoubleClick += new System.EventHandler(this.pictureBox3_Click);
             this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
             this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
@@ -889,7 +890,7 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
-            this.pictureBox5.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+            this.pictureBox5.MouseHover += new System.EventHandler(this.pictureBox5_MouseHover);
             // 
             // Factura
             // 

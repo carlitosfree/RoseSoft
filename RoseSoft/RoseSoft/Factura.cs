@@ -205,7 +205,7 @@ namespace RoseSoft
         }
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
+            this.Dispose();
         }
         private void pictureBox4_MouseHover(object sender, EventArgs e)
         {
@@ -228,6 +228,11 @@ namespace RoseSoft
         private void pictureBox5_MouseLeave(object sender, EventArgs e)
         {
             pictureBox2.Size = new Size(73, 49);
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

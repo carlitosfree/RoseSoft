@@ -43,6 +43,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(busquedaCliente));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBox1_Buscar = new System.Windows.Forms.ComboBox();
@@ -50,16 +52,16 @@
             this.textBox1_Buscar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1_Cliente = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.dataGridView1_Cliente = new System.Windows.Forms.DataGridView();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Cliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Cliente)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -139,19 +141,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resultados de busqueda";
             // 
-            // dataGridView1_Cliente
-            // 
-            this.dataGridView1_Cliente.AllowUserToAddRows = false;
-            this.dataGridView1_Cliente.AllowUserToDeleteRows = false;
-            this.dataGridView1_Cliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1_Cliente.Location = new System.Drawing.Point(15, 26);
-            this.dataGridView1_Cliente.Name = "dataGridView1_Cliente";
-            this.dataGridView1_Cliente.ReadOnly = true;
-            this.dataGridView1_Cliente.RowHeadersVisible = false;
-            this.dataGridView1_Cliente.Size = new System.Drawing.Size(508, 167);
-            this.dataGridView1_Cliente.TabIndex = 0;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -188,6 +177,37 @@
             this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
             this.pictureBox4.MouseHover += new System.EventHandler(this.pictureBox4_MouseHover);
             // 
+            // dataGridView1_Cliente
+            // 
+            this.dataGridView1_Cliente.AllowUserToAddRows = false;
+            this.dataGridView1_Cliente.AllowUserToDeleteRows = false;
+            this.dataGridView1_Cliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1_Cliente.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1_Cliente.Location = new System.Drawing.Point(12, 20);
+            this.dataGridView1_Cliente.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1_Cliente.Name = "dataGridView1_Cliente";
+            this.dataGridView1_Cliente.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1_Cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1_Cliente.RowHeadersVisible = false;
+            this.dataGridView1_Cliente.RowTemplate.Height = 24;
+            this.dataGridView1_Cliente.Size = new System.Drawing.Size(516, 183);
+            this.dataGridView1_Cliente.TabIndex = 0;
+            // 
             // busquedaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,9 +231,9 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Cliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_Cliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,10 +246,10 @@
         private System.Windows.Forms.TextBox textBox1_Buscar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1_Cliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridView dataGridView1_Cliente;
     }
 }
