@@ -24,13 +24,13 @@ namespace RoseSoft
             if (comboBox1_Buscar.Text.Equals("RUC"))
             {
                 string sql;
-                sql = "SELECT * FROM CLienteJ WHERE ruc='" + textBox1_Buscar.Text + "'";
+                sql = "SELECT * FROM PERSONAJURIDICA  WHERE RUCCJ='" + textBox1_Buscar.Text + "'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
             }
-            else if (comboBox1_Buscar.Text.Equals("NOMBRE"))
+            else if (comboBox1_Buscar.Text.Equals("RAZÓN SOCIAL"))
             {
                 string sql;
-                sql = "SELECT * FROM CLienteJ WHERE nombres='" + textBox1_Buscar.Text + "'";
+                sql = "SELECT * FROM PERSONAJURIDICA  WHERE NOMBRESCJ='" + textBox1_Buscar.Text + "'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -38,7 +38,7 @@ namespace RoseSoft
             else if (comboBox1_Buscar.Text.Equals("PAÍS"))
             {
                 string sql;
-                sql = "SELECT * FROM CLientJ WHERE paisCJ='" + textBox1_Buscar.Text + "'";
+                sql = "SELECT * FROM PERSONAJURIDICA  WHERE PAISCJ='" + textBox1_Buscar.Text + "'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -46,7 +46,7 @@ namespace RoseSoft
             else if (comboBox1_Buscar.Text.Equals("CIUDAD"))
             {
                 string sql;
-                sql = "SELECT * FROM CLienteJ WHERE ciudadCJ='" + textBox1_Buscar.Text + "'";
+                sql = "SELECT * FROM PERSONAJURIDICA  WHERE CIUDADCJ='" + textBox1_Buscar.Text + "'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -55,7 +55,7 @@ namespace RoseSoft
         private void buscarClienteJ_Load(object sender, EventArgs e)
         {
             dataGridView1_Cliente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1_Cliente.DataSource = bd.SelectDataTable("select * from ClienteJ");
+            dataGridView1_Cliente.DataSource = bd.SelectDataTable("select * from PERSONAJURIDICA ");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -71,19 +71,19 @@ namespace RoseSoft
         }
         private void textBox1_Cedula_TextChanged(object sender, EventArgs e)
         {
-            if (comboBox1_Buscar.Text.Equals("NOMBRE"))
+            if (comboBox1_Buscar.Text.Equals("RAZÓN SOCIAL"))
             {
 
                 string sql;
                 //SELECT * FROM CLIENTE WHERE NOMBRE LIKE 'C%';
-                sql = "SELECT * FROM ClienteJ WHERE nombre LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONAJURIDICA  WHERE RAZONSOCIALCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
             }
             else if (comboBox1_Buscar.Text.Equals("RUC"))
             {
                 string sql;
-                sql = "SELECT * FROM CLienteJ WHERE ruc LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONAJURIDICA  WHERE RUCCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -92,16 +92,16 @@ namespace RoseSoft
             {
 
                 string sql;
-                sql = "SELECT * FROM CLienteJ WHERE paisCJ LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONAJURIDICA WHERE PAISCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
             }
 
-            else if (comboBox1_Buscar.Text.Equals("CUIDAD"))
+            else if (comboBox1_Buscar.Text.Equals("CIUDAD"))
             {
                 string sql;
-                sql = "SELECT * FROM CLienteJ WHERE ciudadCJ LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONAJURIDICA WHERE CIUDADCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -110,19 +110,19 @@ namespace RoseSoft
 
         private void textBox1_Buscar_TextChanged(object sender, EventArgs e)
         {
-            if (comboBox1_Buscar.Text.Equals("NOMBRE EMPRESA"))
+            if (comboBox1_Buscar.Text.Equals("RAZÓN SOCIAL"))
             {
 
                 string sql;
                 //SELECT * FROM CLIENTE WHERE NOMBRE LIKE 'C%';
-                sql = "SELECT * FROM CLIENTEJ WHERE nombreEmpresa LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONAJURIDICA WHERE RAZONSOCIALCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
             }
             else if (comboBox1_Buscar.Text.Equals("RUC"))
             {
                 string sql;
-                sql = "SELECT * FROM CLIENTEJ WHERE ruc LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONAJURIDICA WHERE RUCCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -131,16 +131,16 @@ namespace RoseSoft
             {
 
                 string sql;
-                sql = "SELECT * FROM CLIENTEJ WHERE paisCJ LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONAJURIDICA WHERE PAISCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
             }
 
-            else if (comboBox1_Buscar.Text.Equals("CUIDAD"))
+            else if (comboBox1_Buscar.Text.Equals("CIUDAD"))
             {
                 string sql;
-                sql = "SELECT * FROM CLIENTEJ WHERE ciudadCJ LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONAJURIDICA WHERE CIUDADCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -187,6 +187,11 @@ namespace RoseSoft
         private void pictureBox4_MouseLeave(object sender, EventArgs e)
         {
             pictureBox4.Size = new Size(73, 49);
+        }
+
+        private void textBox1_Buscar_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

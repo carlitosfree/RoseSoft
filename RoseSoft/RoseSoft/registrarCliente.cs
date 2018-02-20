@@ -47,8 +47,6 @@ namespace RoseSoft
             { 
                 if (validar.VerificarCedula(txtIdentificacion.Text) == true)
                 {
-
-
                 }
                 else
                 {
@@ -177,38 +175,15 @@ namespace RoseSoft
         {
             if (validar.VerificarCedula(txtIdentificacion.Text) == true)
             {
-                string idCliente = bd.selectstring("SELECT CLIENTEID FROM CLIENTE WHERE CLIENTEID = (SELECT MAX(CLIENTEID) from CLIENTE);");
-               
-                if (idCliente == null)
-                {
-                    idCliente = "1";
-                    
-                }
-                else
-                {
-                    int idcli = Int32.Parse(idCliente);
-                    idcli = idcli + 1;
-                    idCliente = idcli.ToString();
-                    
-                }
-                string localidad = bd.selectstring("SELECT LOCALIDADID FROM LOCALIDAD WHERE CLIENTEID = (SELECT MAX(LOCALIDADID) from LOCALIDAD);");
-                if (localidad == null)
-                {
-                    localidad = "1";
+                string consutar = bd.selectstring("select CEDULACN from PERSONANATURAL WHERE CEDULACN =" + txtIdentificacion.Text + "");
 
-                }
-                else
-                {
-                    int idloc = Int32.Parse(localidad);
-                    idloc = idloc + 1;
-                    localidad = idloc.ToString();
-
-                }
-
-                string consutar = bd.selectstring("select cedula from CLIENTEN WHERE cedula =" + txtIdentificacion.Text + "");
-                string agregar = "INSERT INTO CLIENTEN (cedula, nombres, apellidos, nacionalidad, paisCN, ciudadCN, direccionCN, telefonoCN, emailCN ) VALUES ('" + txtIdentificacion.Text + "','" + txtNombre.Text + "','" + txtApellidos.Text + "','" + txtPais.Text + "','" + txtCiudad.Text + "','" + txtDireccion.Text + "','" + txtTelefono.Text + "','" + txtEmail.Text + "')";
-
-                if (txtNombre.Text.Equals("") || txtIdentificacion.Text.Equals("") ||  txtEmail.Text.Equals("") ||
+                string agregar = "INSERT INTO PERSONANATURAL (CEDULACN, NOMBRESCN, APELLIDOSCN, DIRECCIONCN, NUMEROTELEFONOCN, EMAILCN, CIUDADCN, PAISCN) VALUES " +
+                " (" + txtIdentificacion.Text + ",'" +
+                txtNombre.Text + "','" + txtApellidos.Text + "','" + txtDireccion.Text +
+                "','" + txtTelefono.Text + "','" + txtEmail.Text + "','" + txtCiudad.Text + "','" + txtPais.Text + "' )";
+                
+                MessageBox.Show(agregar);
+                if (txtNombre.Text.Equals("") || txtIdentificacion.Text.Equals("") || txtEmail.Text.Equals("") ||
                 txtApellidos.Text.Equals("") || txtPais.Text.Equals("") || txtCiudad.Text.Equals("") || txtDireccion.Text.Equals("") || txtTelefono.Text.Equals(""))
                 {
                     MessageBox.Show("Error uno o mas campos vacios");
@@ -218,15 +193,13 @@ namespace RoseSoft
                 {
                     if (consutar == txtIdentificacion.Text)
                     {
-
                         MessageBox.Show("DATOS YA REGISTRADOS");
                     }
                     else
                     {
+                        MessageBox.Show(bd.executecommand(agregar) + "..");
                         if (bd.executecommand(agregar))
                         {
-
-                            
                             MessageBox.Show("Registrado");
                             txtIdentificacion.Text = "";
                             txtApellidos.Text = "";
@@ -236,14 +209,10 @@ namespace RoseSoft
                             txtPais.Text = "";
                             txtTelefono.Text = "";
                             txtEmail.Text = "";
-                         
-
                         }
                         else
                         {
-
                             MessageBox.Show("Error al agregar");
-
                         }
                     }
                 }
@@ -253,11 +222,21 @@ namespace RoseSoft
             {
                 MessageBox.Show("Cédula de identidad no válida");
             }
+
         }
 
         private void registrarCliente_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtIdentificacion_Leave(object sender, EventArgs e)
+        {
+            if (txtIdentificacion.TextLength != 10)
+            {
+                MessageBox.Show("Cédula de identidad no válida");
+                txtIdentificacion.Text = "";
+            }
         }
     }
 }

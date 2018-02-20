@@ -106,7 +106,7 @@
             this.comboBox1_Buscar.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1_Buscar.FormattingEnabled = true;
             this.comboBox1_Buscar.Items.AddRange(new object[] {
-            "NOMBRE",
+            "RAZÓN SOCIAL",
             "RUC",
             "PAÍS",
             "CUIDAD"});
@@ -136,6 +136,7 @@
             this.textBox1_Buscar.Name = "textBox1_Buscar";
             this.textBox1_Buscar.Size = new System.Drawing.Size(202, 27);
             this.textBox1_Buscar.TabIndex = 6;
+            this.textBox1_Buscar.TextChanged += new System.EventHandler(this.textBox1_Buscar_TextChanged);
             // 
             // label4
             // 
