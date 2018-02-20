@@ -20,16 +20,6 @@ namespace RoseSoft
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             
@@ -143,6 +133,104 @@ namespace RoseSoft
         }
 
         private void Factura_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(79, 55);
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(73, 49);
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(79, 55);
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(73, 49);
+        }
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(79, 55);
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(73, 49);
+        }
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void pictureBox5_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(79, 55);
+        }
+
+        private void pictureBox5_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Size = new Size(73, 49);
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
         {
 
         }

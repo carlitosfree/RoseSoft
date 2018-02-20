@@ -78,6 +78,12 @@
     <Compile Include="anularUsuario.Designer.cs">
       <DependentUpon>anularUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="bounchePorCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bounchePorCaja.Designer.cs">
+      <DependentUpon>bounchePorCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Buscar Producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     <Compile Include="Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
     <Compile Include="ingresarClienteJ.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,12 @@
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mercado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mercado.Designer.cs">
+      <DependentUpon>mercado.cs</DependentUpon>
     </Compile>
     <Compile Include="OrdenCompra.cs">
       <SubType>Form</SubType>
@@ -173,6 +191,24 @@
     <Compile Include="registrarUsuario.Designer.cs">
       <DependentUpon>registrarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="tallosPorBounche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tallosPorBounche.Designer.cs">
+      <DependentUpon>tallosPorBounche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tamañosDelTallo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tamañosDelTallo.Designer.cs">
+      <DependentUpon>tamañosDelTallo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tiposDeCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tiposDeCaja.Designer.cs">
+      <DependentUpon>tiposDeCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="ValidarSoloLetrasSoloNumeros.cs" />
     <Compile Include="VentanaDeLogin.cs">
       <SubType>Form</SubType>
@@ -197,6 +233,9 @@
     <EmbeddedResource Include="anularUsuario.resx">
       <DependentUpon>anularUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="bounchePorCaja.resx">
+      <DependentUpon>bounchePorCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Buscar Producto.resx">
       <DependentUpon>Buscar Producto.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,11 +257,17 @@
     <EmbeddedResource Include="Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ingresarClienteJ.resx">
       <DependentUpon>ingresarClienteJ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mercado.resx">
+      <DependentUpon>mercado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrdenCompra.resx">
       <DependentUpon>OrdenCompra.cs</DependentUpon>
@@ -245,6 +290,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="registrarUsuario.resx">
       <DependentUpon>registrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tallosPorBounche.resx">
+      <DependentUpon>tallosPorBounche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tamañosDelTallo.resx">
+      <DependentUpon>tamañosDelTallo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tiposDeCaja.resx">
+      <DependentUpon>tiposDeCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaDeLogin.resx">
       <DependentUpon>VentanaDeLogin.cs</DependentUpon>
@@ -299,6 +353,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizarCliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscarCliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizarCliente.2png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizarUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizarUsuario1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anularUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\308827.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maspro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rosa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoseSoft.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

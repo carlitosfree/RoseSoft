@@ -46,17 +46,17 @@ namespace RoseSoft
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validar.SoloNumeros(e);
+            
         }
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validar.SoloNumeros(e);
+            validar.SoloLetras(e);
         }
 
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validar.SoloNumeros(e);
+            validar.SoloLetras(e);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -179,22 +179,10 @@ namespace RoseSoft
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             if (validar.VerificarCedula(textBox1.Text) == true) { 
-            string localidad = bd.selectstring("SELECT LOCALIDADID FROM LOCALIDAD WHERE CLIENTEID = (SELECT MAX(LOCALIDADID) from LOCALIDAD);");
-            if (localidad == null)
-            {
-                localidad = "1";
-
-            }
-            else
-            {
-                int idloc = Int32.Parse(localidad);
-                idloc = idloc + 1;
-                localidad = idloc.ToString();
-
-            }
+           
             string consultarLocalidad = bd.selectstring("SELECT LOCALIDADID FROM LOCALIDAD WHERE PAIS=" + textBox3 + "AND CIUDAD=" + textBox4 + ";");
             string consultarCedula = bd.selectstring("SELECT CEDULAP FROM PROVEEDOR WHERE CEDULAP="+textBox1+";");
-            string registrar = "INSERT INTO PROVEEDOR (CEDULAP, LOCALIDAID, NOMBREP, DIRECCIONP,NUMEROTELEFONOP,EMAILP)VALUES ("+textBox1+ "," + localidad+ "," + textBox2+ "','" + textBox5+ "','" + textBox6+ "','"+textBox7+"')";
+            string registrar = "INSERT INTO PROVEEDOR (CEDULAP, LOCALIDAID, NOMBREP, DIRECCIONP,NUMEROTELEFONOP,EMAILP)VALUES ("+textBox1+  "," + textBox2+ "','" + textBox5+ "','" + textBox6+ "','"+textBox7+"')";
                 if (textBox1.Equals("") || textBox2.Equals("") || textBox3.Equals("") || textBox4.Equals("") ||
                     textBox5.Equals("") || textBox6.Equals("") || textBox7.Equals("")) 
                 {
@@ -256,6 +244,17 @@ namespace RoseSoft
                 }
 
             }
+
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.SoloNumeros(e);
+        }
+
+        private void textBox1_TabIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

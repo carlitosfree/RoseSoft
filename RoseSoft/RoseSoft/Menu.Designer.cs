@@ -62,6 +62,13 @@ namespace RoseSoft
             this.actualizarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anularUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tamañosDelTalloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tamañoPorBoncheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bonchePorCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mercadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeRoseSoftToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +80,8 @@ namespace RoseSoft
             this.comprasVentasToolStripMenuItem,
             this.facturaciónToolStripMenuItem1,
             this.inventarioToolStripMenuItem,
-            this.administracciónToolStripMenuItem});
+            this.administracciónToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(685, 24);
@@ -245,7 +253,7 @@ namespace RoseSoft
             this.actualizarProductoToolStripMenuItem,
             this.buscarProductoToolStripMenuItem});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
@@ -276,8 +284,8 @@ namespace RoseSoft
             this.administracciónDeUsuariosToolStripMenuItem,
             this.parametrosToolStripMenuItem});
             this.administracciónToolStripMenuItem.Name = "administracciónToolStripMenuItem";
-            this.administracciónToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.administracciónToolStripMenuItem.Text = "Administracción";
+            this.administracciónToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.administracciónToolStripMenuItem.Text = "Administración";
             // 
             // administracciónDeUsuariosToolStripMenuItem
             // 
@@ -286,8 +294,8 @@ namespace RoseSoft
             this.actualizarUsuarioToolStripMenuItem,
             this.anularUsuarioToolStripMenuItem});
             this.administracciónDeUsuariosToolStripMenuItem.Name = "administracciónDeUsuariosToolStripMenuItem";
-            this.administracciónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.administracciónDeUsuariosToolStripMenuItem.Text = "Administracción de Usuarios";
+            this.administracciónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.administracciónDeUsuariosToolStripMenuItem.Text = "Administración de Usuarios";
             // 
             // registrarUsuariosToolStripMenuItem
             // 
@@ -312,9 +320,59 @@ namespace RoseSoft
             // 
             // parametrosToolStripMenuItem
             // 
+            this.parametrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tiposDeCajaToolStripMenuItem,
+            this.tamañosDelTalloToolStripMenuItem,
+            this.tamañoPorBoncheToolStripMenuItem,
+            this.bonchePorCajaToolStripMenuItem,
+            this.mercadoToolStripMenuItem});
             this.parametrosToolStripMenuItem.Name = "parametrosToolStripMenuItem";
-            this.parametrosToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.parametrosToolStripMenuItem.Text = "Parametros";
+            this.parametrosToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.parametrosToolStripMenuItem.Text = "Parámetros";
+            // 
+            // tiposDeCajaToolStripMenuItem
+            // 
+            this.tiposDeCajaToolStripMenuItem.Name = "tiposDeCajaToolStripMenuItem";
+            this.tiposDeCajaToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.tiposDeCajaToolStripMenuItem.Text = "Tipos de Caja";
+            // 
+            // tamañosDelTalloToolStripMenuItem
+            // 
+            this.tamañosDelTalloToolStripMenuItem.Name = "tamañosDelTalloToolStripMenuItem";
+            this.tamañosDelTalloToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.tamañosDelTalloToolStripMenuItem.Text = "Tamaños del Tallo";
+            // 
+            // tamañoPorBoncheToolStripMenuItem
+            // 
+            this.tamañoPorBoncheToolStripMenuItem.Name = "tamañoPorBoncheToolStripMenuItem";
+            this.tamañoPorBoncheToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.tamañoPorBoncheToolStripMenuItem.Text = "Tamaño por Bonche";
+            // 
+            // bonchePorCajaToolStripMenuItem
+            // 
+            this.bonchePorCajaToolStripMenuItem.Name = "bonchePorCajaToolStripMenuItem";
+            this.bonchePorCajaToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.bonchePorCajaToolStripMenuItem.Text = "Bonche por Caja ";
+            // 
+            // mercadoToolStripMenuItem
+            // 
+            this.mercadoToolStripMenuItem.Name = "mercadoToolStripMenuItem";
+            this.mercadoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.mercadoToolStripMenuItem.Text = "Mercado";
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.acercaDeRoseSoftToolStripMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // acercaDeRoseSoftToolStripMenuItem
+            // 
+            this.acercaDeRoseSoftToolStripMenuItem.Name = "acercaDeRoseSoftToolStripMenuItem";
+            this.acercaDeRoseSoftToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.acercaDeRoseSoftToolStripMenuItem.Text = "Acerca de RoseSoft";
             // 
             // Menu
             // 
@@ -330,6 +388,7 @@ namespace RoseSoft
             this.Name = "Menu";
             this.Text = "RoseSoft";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -372,5 +431,12 @@ namespace RoseSoft
         private System.Windows.Forms.ToolStripMenuItem buscarClienteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem parametrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarProveedorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeCajaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tamañosDelTalloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tamañoPorBoncheToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bonchePorCajaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mercadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeRoseSoftToolStripMenuItem;
     }
 }

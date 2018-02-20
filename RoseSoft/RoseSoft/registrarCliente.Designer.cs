@@ -216,6 +216,7 @@
             this.txtIdentificacion.TabIndex = 45;
             this.txtIdentificacion.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentificacion_KeyPress_1);
+            this.txtIdentificacion.Leave += new System.EventHandler(this.txtIdentificacion_Leave);
             // 
             // label7
             // 
@@ -360,6 +361,7 @@
             this.Name = "registrarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Cliente";
+            this.Load += new System.EventHandler(this.registrarCliente_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

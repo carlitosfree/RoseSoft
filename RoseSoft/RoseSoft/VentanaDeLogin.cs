@@ -116,7 +116,10 @@ namespace RoseSoft
         
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            
             Menu menu = new Menu();
+            menu.Show();
+            this.Hide();/*
             string usuario = (bd.selectstring("select USUARIO FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text +  "';"));
             if (txtUsuario.Text == usuario)
             {
@@ -138,7 +141,7 @@ namespace RoseSoft
                 MessageBox.Show("Usuario no existe");
                 txtUsuario.Text = "";
                 txtPassword.Text = "";
-            }
+            }*/
               
         }
 

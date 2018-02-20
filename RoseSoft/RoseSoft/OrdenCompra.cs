@@ -21,5 +21,25 @@ namespace RoseSoft
         {
             this.Dispose();
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OrdenCompra_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
