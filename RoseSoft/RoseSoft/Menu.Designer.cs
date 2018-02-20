@@ -245,7 +245,7 @@ namespace RoseSoft
             this.actualizarProductoToolStripMenuItem,
             this.buscarProductoToolStripMenuItem});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
@@ -276,8 +276,8 @@ namespace RoseSoft
             this.administracciónDeUsuariosToolStripMenuItem,
             this.parametrosToolStripMenuItem});
             this.administracciónToolStripMenuItem.Name = "administracciónToolStripMenuItem";
-            this.administracciónToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.administracciónToolStripMenuItem.Text = "Administracción";
+            this.administracciónToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.administracciónToolStripMenuItem.Text = "Administración";
             // 
             // administracciónDeUsuariosToolStripMenuItem
             // 
@@ -286,8 +286,8 @@ namespace RoseSoft
             this.actualizarUsuarioToolStripMenuItem,
             this.anularUsuarioToolStripMenuItem});
             this.administracciónDeUsuariosToolStripMenuItem.Name = "administracciónDeUsuariosToolStripMenuItem";
-            this.administracciónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.administracciónDeUsuariosToolStripMenuItem.Text = "Administracción de Usuarios";
+            this.administracciónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.administracciónDeUsuariosToolStripMenuItem.Text = "Administración de Usuarios";
             // 
             // registrarUsuariosToolStripMenuItem
             // 
@@ -313,8 +313,8 @@ namespace RoseSoft
             // parametrosToolStripMenuItem
             // 
             this.parametrosToolStripMenuItem.Name = "parametrosToolStripMenuItem";
-            this.parametrosToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.parametrosToolStripMenuItem.Text = "Parametros";
+            this.parametrosToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.parametrosToolStripMenuItem.Text = "Parámetros";
             // 
             // Menu
             // 
