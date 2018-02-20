@@ -118,7 +118,7 @@ namespace RoseSoft
         {
             
             Menu menu = new Menu();
-                       string usuario = (bd.selectstring("select USUARIO FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text +  "';"));
+            string usuario = (bd.selectstring("select USUARIO FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text +  "';"));
             if (txtUsuario.Text == usuario)
             {
                 string contraseña = (bd.selectstring("select CONTRASENA FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
