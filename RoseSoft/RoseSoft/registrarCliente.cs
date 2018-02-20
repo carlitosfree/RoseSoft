@@ -175,14 +175,15 @@ namespace RoseSoft
         {
             if (validar.VerificarCedula(txtIdentificacion.Text) == true)
             {
-                string consutar = bd.selectstring("select CEDULACN from PERSONANATURAL WHERE CEDULACN =" + txtIdentificacion.Text + "");
+                string consutar = bd.selectstring("select CEDULACN from PERSONANATURAL WHERE CEDULACN =" + 
+                    txtIdentificacion.Text + "");
 
                 string agregar = "INSERT INTO PERSONANATURAL (CEDULACN, NOMBRESCN, APELLIDOSCN, DIRECCIONCN, NUMEROTELEFONOCN, EMAILCN, CIUDADCN, PAISCN) VALUES " +
                 " (" + txtIdentificacion.Text + ",'" +
                 txtNombre.Text + "','" + txtApellidos.Text + "','" + txtDireccion.Text +
                 "','" + txtTelefono.Text + "','" + txtEmail.Text + "','" + txtCiudad.Text + "','" + txtPais.Text + "' )";
                 
-                MessageBox.Show(agregar);
+               // MessageBox.Show(agregar);
                 if (txtNombre.Text.Equals("") || txtIdentificacion.Text.Equals("") || txtEmail.Text.Equals("") ||
                 txtApellidos.Text.Equals("") || txtPais.Text.Equals("") || txtCiudad.Text.Equals("") || txtDireccion.Text.Equals("") || txtTelefono.Text.Equals(""))
                 {
@@ -197,7 +198,7 @@ namespace RoseSoft
                     }
                     else
                     {
-                        MessageBox.Show(bd.executecommand(agregar) + "..");
+                      //  MessageBox.Show(bd.executecommand(agregar) + "..");
                         if (bd.executecommand(agregar))
                         {
                             MessageBox.Show("Registrado");
