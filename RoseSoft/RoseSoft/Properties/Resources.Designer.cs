@@ -63,6 +63,16 @@ namespace RoseSoft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _308827 {
+            get {
+                object obj = ResourceManager.GetObject("308827", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap actualizar {
             get {
                 object obj = ResourceManager.GetObject("actualizar", resourceCulture);
@@ -116,6 +126,16 @@ namespace RoseSoft.Properties {
         internal static System.Drawing.Bitmap anularUsuario {
             get {
                 object obj = ResourceManager.GetObject("anularUsuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap borrar {
+            get {
+                object obj = ResourceManager.GetObject("borrar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +273,26 @@ namespace RoseSoft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mas {
+            get {
+                object obj = ResourceManager.GetObject("mas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maspro {
+            get {
+                object obj = ResourceManager.GetObject("maspro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nuevo {
             get {
                 object obj = ResourceManager.GetObject("nuevo", resourceCulture);
@@ -266,6 +306,16 @@ namespace RoseSoft.Properties {
         internal static System.Drawing.Bitmap producto {
             get {
                 object obj = ResourceManager.GetObject("producto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rosa {
+            get {
+                object obj = ResourceManager.GetObject("rosa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

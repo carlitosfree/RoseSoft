@@ -78,6 +78,12 @@
     <Compile Include="anularUsuario.Designer.cs">
       <DependentUpon>anularUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="bounchePorCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bounchePorCaja.Designer.cs">
+      <DependentUpon>bounchePorCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Buscar Producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,24 @@
     <Compile Include="registrarUsuario.Designer.cs">
       <DependentUpon>registrarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="tallosPorBounche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tallosPorBounche.Designer.cs">
+      <DependentUpon>tallosPorBounche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tamañosDelTallo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tamañosDelTallo.Designer.cs">
+      <DependentUpon>tamañosDelTallo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tiposDeCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tiposDeCaja.Designer.cs">
+      <DependentUpon>tiposDeCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="ValidarSoloLetrasSoloNumeros.cs" />
     <Compile Include="VentanaDeLogin.cs">
       <SubType>Form</SubType>
@@ -196,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="anularUsuario.resx">
       <DependentUpon>anularUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bounchePorCaja.resx">
+      <DependentUpon>bounchePorCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Buscar Producto.resx">
       <DependentUpon>Buscar Producto.cs</DependentUpon>
@@ -245,6 +272,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="registrarUsuario.resx">
       <DependentUpon>registrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tallosPorBounche.resx">
+      <DependentUpon>tallosPorBounche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tamañosDelTallo.resx">
+      <DependentUpon>tamañosDelTallo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tiposDeCaja.resx">
+      <DependentUpon>tiposDeCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaDeLogin.resx">
       <DependentUpon>VentanaDeLogin.cs</DependentUpon>
@@ -332,6 +368,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\308827.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maspro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rosa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

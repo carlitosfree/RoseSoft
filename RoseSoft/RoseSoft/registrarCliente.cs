@@ -254,5 +254,10 @@ namespace RoseSoft
                 MessageBox.Show("Cédula de identidad no válida");
             }
         }
+
+        private void registrarCliente_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
