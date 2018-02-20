@@ -143,6 +143,7 @@
             this.textBox9_Buscar.Name = "textBox9_Buscar";
             this.textBox9_Buscar.Size = new System.Drawing.Size(216, 23);
             this.textBox9_Buscar.TabIndex = 6;
+            this.textBox9_Buscar.TextChanged += new System.EventHandler(this.textBox9_Buscar_TextChanged);
             // 
             // label2
             // 
@@ -200,6 +201,7 @@
             this.dataGridView1_Proveedor.RowTemplate.Height = 24;
             this.dataGridView1_Proveedor.Size = new System.Drawing.Size(472, 228);
             this.dataGridView1_Proveedor.TabIndex = 0;
+            this.dataGridView1_Proveedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
