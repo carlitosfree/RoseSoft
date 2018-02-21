@@ -168,7 +168,7 @@ namespace RoseSoft
 
         private void txtIdentificacion_TextChanged_1(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -195,7 +195,7 @@ namespace RoseSoft
                 " (" + txtIdentificacion.Text + ",'" +
                 txtApellidos.Text + "','" + txtTelefono.Text +
                 "','" + txtEmail.Text + "','" + txtDireccion.Text + "','" + txtCiudad.Text + "','" + txtPais.Text + "')";
-                MessageBox.Show(agregar);
+              //  MessageBox.Show(agregar);
                 if (txtIdentificacion.Text.Equals("") || txtEmail.Text.Equals("") ||
                 txtApellidos.Text.Equals("") || txtPais.Text.Equals("") || txtCiudad.Text.Equals("") || txtDireccion.Text.Equals("") || txtTelefono.Text.Equals(""))
                 {
@@ -211,7 +211,7 @@ namespace RoseSoft
                     }
                     else
                     {
-                        MessageBox.Show(bd.executecommand(agregar) + "..");
+                        //MessageBox.Show(bd.executecommand(agregar) + "..");
                         if (bd.executecommand(agregar))
                         {
                             MessageBox.Show("Registrado");
@@ -240,12 +240,50 @@ namespace RoseSoft
         private void txtIdentificacion_Leave(object sender, EventArgs e)
         {
             string cadena = txtIdentificacion.Text;
-            String aux = cadena.Substring(10, 3);
-            string parte1 = cadena.Substring(0, 10);
-            if (txtIdentificacion.TextLength != 13 || aux.Length != 3 || !aux.Contains("001") || !validar.VerificarCedula(parte1))
+            if (txtIdentificacion.TextLength == 13)
             {
-                MessageBox.Show("RUC no válida");
+                String aux = cadena.Substring(10, 3);
+                string parte1 = cadena.Substring(0, 10);
+                if (txtIdentificacion.TextLength != 13 || aux.Length != 3 || !aux.Contains("001") || !validar.VerificarCedula(parte1))
+                {
+                    MessageBox.Show("RUC no válido");
+                }
             }
+            else
+            {
+                MessageBox.Show("Faltan dígitos del RUC");
+                txtIdentificacion.Text = "";
+            }
+        }
+
+        private void txtIdentificacion_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            validar.SoloNumeros(e);
+        }
+
+        private void txtPais_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            validar.SoloLetras(e);
+        }
+
+        private void txtCiudad_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            validar.SoloLetras(e);
+        }
+
+        private void txtTelefono_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            validar.SoloNumeros(e);
+        }
+
+        private void txtTelefono_TextChanged_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

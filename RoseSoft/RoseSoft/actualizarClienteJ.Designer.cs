@@ -41,8 +41,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(actualizarClienteJ));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -106,7 +104,7 @@
             this.groupBox3.Size = new System.Drawing.Size(508, 87);
             this.groupBox3.TabIndex = 71;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Busqueda";
+            this.groupBox3.Text = "Búsqueda";
             // 
             // pictureBox2
             // 
@@ -127,8 +125,8 @@
             this.comboBox1_buscar.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1_buscar.FormattingEnabled = true;
             this.comboBox1_buscar.Items.AddRange(new object[] {
-            "NOMBRE",
-            "NÚMERO DE CÉDULA"});
+            "RAZÓN SOCIAL",
+            "RUC"});
             this.comboBox1_buscar.Location = new System.Drawing.Point(19, 40);
             this.comboBox1_buscar.Name = "comboBox1_buscar";
             this.comboBox1_buscar.Size = new System.Drawing.Size(158, 29);
@@ -144,6 +142,7 @@
             this.textBox9_Buscar.Size = new System.Drawing.Size(216, 23);
             this.textBox9_Buscar.TabIndex = 6;
             this.textBox9_Buscar.TextChanged += new System.EventHandler(this.textBox9_Buscar_TextChanged);
+            this.textBox9_Buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_Buscar_KeyPress);
             // 
             // label2
             // 
@@ -176,23 +175,7 @@
             this.dataGridView1_Proveedor.AllowUserToAddRows = false;
             this.dataGridView1_Proveedor.AllowUserToDeleteRows = false;
             this.dataGridView1_Proveedor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1_Proveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1_Proveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1_Proveedor.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1_Proveedor.Location = new System.Drawing.Point(19, 25);
             this.dataGridView1_Proveedor.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1_Proveedor.Name = "dataGridView1_Proveedor";
@@ -233,7 +216,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::RoseSoft.Properties.Resources.Home_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(802, 402);
+            this.pictureBox4.Location = new System.Drawing.Point(962, 398);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(73, 49);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -263,7 +246,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(540, 108);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(348, 271);
+            this.groupBox2.Size = new System.Drawing.Size(511, 271);
             this.groupBox2.TabIndex = 81;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Cliente";
@@ -275,8 +258,9 @@
             this.txtCiudad.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCiudad.Location = new System.Drawing.Point(214, 126);
             this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(121, 20);
+            this.txtCiudad.Size = new System.Drawing.Size(281, 20);
             this.txtCiudad.TabIndex = 64;
+            this.txtCiudad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCiudad_KeyPress);
             // 
             // label10
             // 
@@ -296,8 +280,9 @@
             this.txtPais.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPais.Location = new System.Drawing.Point(214, 100);
             this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(121, 20);
+            this.txtPais.Size = new System.Drawing.Size(281, 20);
             this.txtPais.TabIndex = 63;
+            this.txtPais.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPais_KeyPress);
             // 
             // label8
             // 
@@ -317,7 +302,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(214, 204);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(121, 20);
+            this.txtEmail.Size = new System.Drawing.Size(281, 20);
             this.txtEmail.TabIndex = 69;
             // 
             // label5
@@ -338,7 +323,7 @@
             this.txtDireccion.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(214, 152);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(121, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(281, 20);
             this.txtDireccion.TabIndex = 66;
             // 
             // txtTelefono
@@ -348,8 +333,9 @@
             this.txtTelefono.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(214, 178);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(121, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(281, 20);
             this.txtTelefono.TabIndex = 67;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtApellidos
             // 
@@ -358,8 +344,9 @@
             this.txtApellidos.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos.Location = new System.Drawing.Point(214, 72);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(121, 20);
+            this.txtApellidos.Size = new System.Drawing.Size(281, 20);
             this.txtApellidos.TabIndex = 62;
+            this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidos_KeyPress);
             // 
             // txtIdentificacion
             // 
@@ -368,7 +355,7 @@
             this.txtIdentificacion.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdentificacion.Location = new System.Drawing.Point(214, 43);
             this.txtIdentificacion.Name = "txtIdentificacion";
-            this.txtIdentificacion.Size = new System.Drawing.Size(121, 20);
+            this.txtIdentificacion.Size = new System.Drawing.Size(281, 20);
             this.txtIdentificacion.TabIndex = 60;
             // 
             // label7
@@ -421,7 +408,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RoseSoft.Properties.Resources.img_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(900, 459);
+            this.ClientSize = new System.Drawing.Size(1063, 459);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);

@@ -51,27 +51,41 @@ namespace RoseSoft
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
             IsKeyLocked(Keys.CapsLock);
-
-
-
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            if (e.KeyChar== Convert.ToChar(Keys.Enter))
             {
-
-                string usuario = "rosas1";
-                string contraseña = "12345";
-                Menu menu = new Menu();
-                if (txtUsuario.Text == usuario & txtPassword.Text == contraseña)
+                if (txtUsuario.Text.Equals("") && txtPassword.Text.Equals(""))
                 {
-                    menu.Show();
-                    this.Hide();
+                    MessageBox.Show("Ingrese sus credenciales");
                 }
                 else
                 {
-                    MessageBox.Show("Datos Incorrectos");
-                    txtUsuario.Text = "";
-                    txtPassword.Text = "";
+                    Menu menu = new Menu();
+                    string usuario = (bd.selectstring("select USUARIO FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
+                    
+                    if (txtUsuario.Text == usuario)
+                    {
+                        string contraseña = (bd.selectstring("select CONTRASENA FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
+                       
+                        if (txtPassword.Text == contraseña)
+                        {
+                            menu.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Contraseña Incorrecta");
+                            txtPassword.Text = "";
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario no existe");
+                        txtUsuario.Text = "";
+                        txtPassword.Text = "";
+                    }
                 }
             }
+            
         }
 
         private void txtPassword_TextChanged_1(object sender, EventArgs e)
@@ -116,31 +130,37 @@ namespace RoseSoft
         
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
-            Menu menu = new Menu();
-            string usuario = (bd.selectstring("select USUARIO FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text +  "';"));
-            if (txtUsuario.Text == usuario)
+            if (txtUsuario.Text.Equals("") && txtPassword.Text.Equals(""))
             {
-                string contraseña = (bd.selectstring("select CONTRASENA FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
-
-                if (txtPassword.Text == contraseña)
-                {
-                    menu.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Contraseña Incorrecta");
-                    txtPassword.Text = "";
-                }
+                MessageBox.Show("Ingrese sus credenciales");
             }
             else
             {
-                MessageBox.Show("Usuario no existe");
-                txtUsuario.Text = "";
-                txtPassword.Text = "";
-            }
-              
+                Menu menu = new Menu();
+                string usuario = (bd.selectstring("select USUARIO FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
+                MessageBox.Show(usuario);
+                if (txtUsuario.Text == usuario)
+                {
+                    string contraseña = (bd.selectstring("select CONTRASENA FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
+                    MessageBox.Show(contraseña);
+                    if (txtPassword.Text == contraseña)
+                    {
+                        menu.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña Incorrecta");
+                        txtPassword.Text = "";
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no existe");
+                    txtUsuario.Text = "";
+                    txtPassword.Text = "";
+                }
+            } 
         }
 
         private void pictureBox2_MouseMove(object sender, MouseEventArgs e)

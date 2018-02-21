@@ -132,11 +132,20 @@ namespace RoseSoft
         {
             if (comboBox1_Buscar.Text.Equals("") || textBox1_Buscar.Text.Equals(""))
             {
-                MessageBox.Show("Ingrese parametros de busqueda");
+                MessageBox.Show("Ingrese datos a buscar");
             }
             else
             {
-                buscar();
+                string consultar = bd.selectstring("select RAZONSOCIALCJ from PERSONAJURIDICA where RAZONSOCIALCJ ='" + textBox1_Buscar.Text + "'");
+                if (consultar.Equals(textBox1_Buscar.Text))
+                {
+                    buscar();
+                }
+                else
+                {
+                    MessageBox.Show("Dato no encontrado");
+                }
+
             }
         }
 
@@ -159,6 +168,20 @@ namespace RoseSoft
         private void pictureBox4_MouseLeave(object sender, EventArgs e)
         {
             pictureBox4.Size = new Size(73, 49);
+        }
+
+        private void textBox1_Buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarSoloLetrasSoloNumeros validar = new ValidarSoloLetrasSoloNumeros();
+
+            if (comboBox1_Buscar.Text.Equals("NOMBRE"))
+            {
+                validar.SoloLetras(e);
+            }
+            if (comboBox1_Buscar.Text.Equals("NÚMERO DE CÉDULA"))
+            {
+                validar.SoloNumeros(e);
+            }
         }
     }
 }
