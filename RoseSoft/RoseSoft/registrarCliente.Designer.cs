@@ -97,7 +97,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox1.Location = new System.Drawing.Point(12, 78);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(467, 292);
+            this.groupBox1.Size = new System.Drawing.Size(501, 292);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Cliente";
@@ -106,10 +106,10 @@
             // txtCiudad
             // 
             this.txtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCiudad.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiudad.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCiudad.Location = new System.Drawing.Point(206, 152);
             this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(240, 21);
+            this.txtCiudad.Size = new System.Drawing.Size(289, 20);
             this.txtCiudad.TabIndex = 49;
             this.txtCiudad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCiudad_KeyPress);
             // 
@@ -127,10 +127,10 @@
             // txtPais
             // 
             this.txtPais.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPais.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPais.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPais.Location = new System.Drawing.Point(206, 126);
             this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(240, 21);
+            this.txtPais.Size = new System.Drawing.Size(289, 20);
             this.txtPais.TabIndex = 48;
             this.txtPais.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPais_KeyPress);
             // 
@@ -148,10 +148,10 @@
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(206, 230);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(240, 21);
+            this.txtEmail.Size = new System.Drawing.Size(289, 20);
             this.txtEmail.TabIndex = 52;
             // 
             // label5
@@ -168,19 +168,19 @@
             // txtDireccion
             // 
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDireccion.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(206, 178);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(240, 21);
+            this.txtDireccion.Size = new System.Drawing.Size(289, 20);
             this.txtDireccion.TabIndex = 50;
             // 
             // txtTelefono
             // 
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTelefono.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(206, 204);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(240, 21);
+            this.txtTelefono.Size = new System.Drawing.Size(289, 20);
             this.txtTelefono.TabIndex = 51;
             this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
@@ -188,10 +188,10 @@
             // txtApellidos
             // 
             this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtApellidos.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos.Location = new System.Drawing.Point(206, 100);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(240, 21);
+            this.txtApellidos.Size = new System.Drawing.Size(289, 20);
             this.txtApellidos.TabIndex = 47;
             this.txtApellidos.TextChanged += new System.EventHandler(this.txtApellidos_TextChanged);
             this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidos_KeyPress);
@@ -199,20 +199,20 @@
             // txtNombre
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(206, 74);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(240, 21);
+            this.txtNombre.Size = new System.Drawing.Size(289, 20);
             this.txtNombre.TabIndex = 46;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtIdentificacion
             // 
             this.txtIdentificacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIdentificacion.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdentificacion.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdentificacion.Location = new System.Drawing.Point(206, 48);
             this.txtIdentificacion.Name = "txtIdentificacion";
-            this.txtIdentificacion.Size = new System.Drawing.Size(240, 21);
+            this.txtIdentificacion.Size = new System.Drawing.Size(289, 20);
             this.txtIdentificacion.TabIndex = 45;
             this.txtIdentificacion.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentificacion_KeyPress_1);
@@ -301,7 +301,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::RoseSoft.Properties.Resources.guardar;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 390);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 376);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(73, 49);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -316,7 +316,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::RoseSoft.Properties.Resources.clean;
-            this.pictureBox3.Location = new System.Drawing.Point(218, 390);
+            this.pictureBox3.Location = new System.Drawing.Point(218, 376);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(73, 49);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -331,7 +331,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::RoseSoft.Properties.Resources.Home_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(406, 390);
+            this.pictureBox4.Location = new System.Drawing.Point(406, 376);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(73, 49);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -348,7 +348,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RoseSoft.Properties.Resources.img_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(491, 453);
+            this.ClientSize = new System.Drawing.Size(525, 435);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);

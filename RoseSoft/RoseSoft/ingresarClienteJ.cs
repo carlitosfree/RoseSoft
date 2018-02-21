@@ -199,7 +199,7 @@ namespace RoseSoft
                 if (txtIdentificacion.Text.Equals("") || txtEmail.Text.Equals("") ||
                 txtApellidos.Text.Equals("") || txtPais.Text.Equals("") || txtCiudad.Text.Equals("") || txtDireccion.Text.Equals("") || txtTelefono.Text.Equals(""))
                 {
-                    MessageBox.Show("Error uno o mas campos vacios");
+                    MessageBox.Show("Error uno o más campos vácios");
                 }
 
                 else

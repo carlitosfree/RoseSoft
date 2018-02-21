@@ -75,7 +75,6 @@ namespace RoseSoft
             {
 
                 string sql;
-                //SELECT * FROM CLIENTE WHERE NOMBRE LIKE 'C%';
                 sql = "SELECT * FROM PERSONAJURIDICA  WHERE RAZONSOCIALCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
@@ -88,24 +87,7 @@ namespace RoseSoft
 
 
             }
-            else if (comboBox1_Buscar.Text.Equals("PAÍS"))
-            {
-
-                string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA WHERE PAISCJ LIKE '" + textBox1_Buscar.Text + "%'";
-                dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
-
-
-            }
-
-            else if (comboBox1_Buscar.Text.Equals("CIUDAD"))
-            {
-                string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA WHERE CIUDADCJ LIKE '" + textBox1_Buscar.Text + "%'";
-                dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
-
-
-            }
+            
         }
 
         private void textBox1_Buscar_TextChanged(object sender, EventArgs e)
@@ -114,33 +96,17 @@ namespace RoseSoft
             {
 
                 string sql;
-                //SELECT * FROM CLIENTE WHERE NOMBRE LIKE 'C%';
                 sql = "SELECT * FROM PERSONAJURIDICA WHERE RAZONSOCIALCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
+
             }
+
             else if (comboBox1_Buscar.Text.Equals("RUC"))
             {
-                string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA WHERE RUCCJ LIKE '" + textBox1_Buscar.Text + "%'";
-                dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
-
-
-            }
-            else if (comboBox1_Buscar.Text.Equals("PAÍS"))
-            {
 
                 string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA WHERE PAISCJ LIKE '" + textBox1_Buscar.Text + "%'";
-                dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
-
-
-            }
-
-            else if (comboBox1_Buscar.Text.Equals("CIUDAD"))
-            {
-                string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA WHERE CIUDADCJ LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT* FROM PERSONAJURIDICA WHERE RUCCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 

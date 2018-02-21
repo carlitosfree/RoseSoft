@@ -43,6 +43,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(busquedaCliente));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBox1_Buscar = new System.Windows.Forms.ComboBox();
@@ -54,6 +57,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -74,10 +78,10 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(533, 89);
+            this.groupBox3.Size = new System.Drawing.Size(710, 89);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Busqueda";
+            this.groupBox3.Text = "Búsqueda";
             // 
             // comboBox1_Buscar
             // 
@@ -95,12 +99,13 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::RoseSoft.Properties.Resources.buscar;
-            this.pictureBox2.Location = new System.Drawing.Point(455, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(632, 23);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(73, 49);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 78;
             this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, "Buscar");
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
@@ -110,7 +115,7 @@
             this.textBox1_Buscar.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1_Buscar.Location = new System.Drawing.Point(247, 49);
             this.textBox1_Buscar.Name = "textBox1_Buscar";
-            this.textBox1_Buscar.Size = new System.Drawing.Size(202, 27);
+            this.textBox1_Buscar.Size = new System.Drawing.Size(379, 27);
             this.textBox1_Buscar.TabIndex = 6;
             this.textBox1_Buscar.TextChanged += new System.EventHandler(this.textBox1_Buscar_TextChanged);
             this.textBox1_Buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_Buscar_KeyPress);
@@ -133,24 +138,41 @@
             this.groupBox1.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 166);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(534, 208);
+            this.groupBox1.Size = new System.Drawing.Size(709, 235);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Resultados de busqueda";
+            this.groupBox1.Text = "Resultados de búsqueda";
             // 
             // dataGridView1_Cliente
             // 
             this.dataGridView1_Cliente.AllowUserToAddRows = false;
             this.dataGridView1_Cliente.AllowUserToDeleteRows = false;
             this.dataGridView1_Cliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1_Cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1_Cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1_Cliente.Location = new System.Drawing.Point(12, 20);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1_Cliente.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1_Cliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1_Cliente.Location = new System.Drawing.Point(3, 29);
             this.dataGridView1_Cliente.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1_Cliente.Name = "dataGridView1_Cliente";
             this.dataGridView1_Cliente.ReadOnly = true;
             this.dataGridView1_Cliente.RowHeadersVisible = false;
             this.dataGridView1_Cliente.RowTemplate.Height = 24;
-            this.dataGridView1_Cliente.Size = new System.Drawing.Size(516, 183);
+            this.dataGridView1_Cliente.Size = new System.Drawing.Size(703, 203);
             this.dataGridView1_Cliente.TabIndex = 0;
             // 
             // label1
@@ -158,7 +180,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Forte", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(192, 12);
+            this.label1.Location = new System.Drawing.Point(295, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 30);
             this.label1.TabIndex = 12;
@@ -179,12 +201,13 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::RoseSoft.Properties.Resources.Home_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(467, 12);
+            this.pictureBox4.Location = new System.Drawing.Point(645, 12);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(73, 49);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 77;
             this.pictureBox4.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox4, "Regresar");
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
             this.pictureBox4.MouseHover += new System.EventHandler(this.pictureBox4_MouseHover);
@@ -195,7 +218,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RoseSoft.Properties.Resources.img_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(564, 386);
+            this.ClientSize = new System.Drawing.Size(733, 413);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
@@ -232,5 +255,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dataGridView1_Cliente;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
