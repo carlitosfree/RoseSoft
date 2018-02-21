@@ -101,5 +101,10 @@ namespace RoseSoft
 
             }
         }
+
+        private void Buscar_Producto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

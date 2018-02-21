@@ -171,6 +171,11 @@ namespace RoseSoft
         {
 
         }
+
+        private void VentanaDeLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
  
