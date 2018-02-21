@@ -82,9 +82,8 @@ namespace RoseSoft
             else if (comboBox1_Buscar.Text.Equals("RUC"))
             {
                 string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA  WHERE RUCCJ LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONAJURIDICA WHERE RUCCJ= " + textBox1_Buscar.Text + "";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
-
 
             }
             
@@ -106,7 +105,7 @@ namespace RoseSoft
             {
 
                 string sql;
-                sql = "SELECT* FROM PERSONAJURIDICA WHERE RUCCJ LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONAJURIDICA WHERE RUCCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 

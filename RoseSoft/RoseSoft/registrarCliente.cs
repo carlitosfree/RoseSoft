@@ -175,49 +175,55 @@ namespace RoseSoft
         {
             if (validar.VerificarCedula(txtIdentificacion.Text) == true)
             {
-                string consutar = bd.selectstring("select CEDULACN from PERSONANATURAL WHERE CEDULACN =" + 
-                    txtIdentificacion.Text + "");
-
-                string agregar = "INSERT INTO PERSONANATURAL (CEDULACN, NOMBRESCN, APELLIDOSCN, DIRECCIONCN, NUMEROTELEFONOCN, EMAILCN, CIUDADCN, PAISCN) VALUES " +
-                " (" + txtIdentificacion.Text + ",'" +
-                txtNombre.Text + "','" + txtApellidos.Text + "','" + txtDireccion.Text +
-                "','" + txtTelefono.Text + "','" + txtEmail.Text + "','" + txtCiudad.Text + "','" + txtPais.Text + "' )";
-                
-               // MessageBox.Show(agregar);
-                if (txtNombre.Text.Equals("") || txtIdentificacion.Text.Equals("") || txtEmail.Text.Equals("") ||
-                txtApellidos.Text.Equals("") || txtPais.Text.Equals("") || txtCiudad.Text.Equals("") || txtDireccion.Text.Equals("") || txtTelefono.Text.Equals(""))
+                if (validar.validarEmail(txtEmail.Text) == true)
                 {
-                    MessageBox.Show("Error uno o más campos vácios");
-                }
 
-                else
-                {
-                    if (consutar == txtIdentificacion.Text)
+
+                    string consutar = bd.selectstring("select CEDULACN from PERSONANATURAL WHERE CEDULACN =" +
+                        txtIdentificacion.Text + "");
+
+                    string agregar = "INSERT INTO PERSONANATURAL (CEDULACN, NOMBRESCN, APELLIDOSCN, DIRECCIONCN, NUMEROTELEFONOCN, EMAILCN, CIUDADCN, PAISCN) VALUES " +
+                    " (" + txtIdentificacion.Text + ",'" +
+                    txtNombre.Text + "','" + txtApellidos.Text + "','" + txtDireccion.Text +
+                    "','" + txtTelefono.Text + "','" + txtEmail.Text + "','" + txtCiudad.Text + "','" + txtPais.Text + "' )";
+
+                    // MessageBox.Show(agregar);
+                    if (txtNombre.Text.Equals("") || txtIdentificacion.Text.Equals("") || txtEmail.Text.Equals("") ||
+                    txtApellidos.Text.Equals("") || txtPais.Text.Equals("") || txtCiudad.Text.Equals("") || txtDireccion.Text.Equals("") || txtTelefono.Text.Equals(""))
                     {
-                        MessageBox.Show("DATOS YA REGISTRADOS");
+                        MessageBox.Show("Error uno o más campos vacíos");
                     }
+
                     else
                     {
-                      //  MessageBox.Show(bd.executecommand(agregar) + "..");
-                        if (bd.executecommand(agregar))
+                        if (consutar == txtIdentificacion.Text)
                         {
-                            MessageBox.Show("Registrado");
-                            txtIdentificacion.Text = "";
-                            txtApellidos.Text = "";
-                            txtNombre.Text = "";
-                            txtCiudad.Text = "";
-                            txtDireccion.Text = "";
-                            txtPais.Text = "";
-                            txtTelefono.Text = "";
-                            txtEmail.Text = "";
+                            MessageBox.Show("DATOS YA REGISTRADOS");
                         }
                         else
                         {
-                            MessageBox.Show("Error al agregar");
+                            //  MessageBox.Show(bd.executecommand(agregar) + "..");
+                            if (bd.executecommand(agregar))
+                            {
+                                MessageBox.Show("Registrado");
+                                txtIdentificacion.Text = "";
+                                txtApellidos.Text = "";
+                                txtNombre.Text = "";
+                                txtCiudad.Text = "";
+                                txtDireccion.Text = "";
+                                txtPais.Text = "";
+                                txtTelefono.Text = "";
+                                txtEmail.Text = "";
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error al agregar");
+                            }
                         }
-                    }
-                }
 
+                    }
+                    MessageBox.Show("Email incorrecto");
+                }
             }
             else
             {
@@ -238,6 +244,33 @@ namespace RoseSoft
                 MessageBox.Show("Cédula de identidad no válida");
                 txtIdentificacion.Text = "";
             }
+        }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            if (e.KeyChar== Convert.ToChar(Keys.Enter)|| e.KeyChar == Convert.ToChar(Keys.Tab))
+            {
+                if (validar.validarEmail(txtEmail.Text))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Email no válido");
+                }
+            }
+        
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtEmail_TabIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

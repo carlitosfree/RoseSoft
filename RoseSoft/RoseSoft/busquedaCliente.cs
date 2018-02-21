@@ -90,33 +90,15 @@ namespace RoseSoft
             {
 
                 string sql;
-                //SELECT * FROM CLIENTE WHERE NOMBRE LIKE 'C%';
                 sql = "SELECT * FROM PERSONANATURAL WHERE NOMBRESCN LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
-
             }
+
             else if (comboBox1_Buscar.Text.Equals("NÚMERO DE CÉDULA"))
             {
-                string sql;
-                sql = "SELECT * FROM PERSONANATURAL WHERE CEDULACN LIKE '" + textBox1_Buscar.Text + "%'";
-                dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
-
-
-            }
-            else if (comboBox1_Buscar.Text.Equals("PAÍS"))
-            {
 
                 string sql;
-                sql = "SELECT * FROM PERSONANATURAL WHERE paisCN LIKE '" + textBox1_Buscar.Text + "%'";
-                dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
-
-
-            }
-
-            else if (comboBox1_Buscar.Text.Equals("CUIDAD"))
-            {
-                string sql;
-                sql = "SELECT * FROM PERSONANATURAL WHERE ciudadCN LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT* FROM PERSONANATURAL WHERE CEDULACN LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 

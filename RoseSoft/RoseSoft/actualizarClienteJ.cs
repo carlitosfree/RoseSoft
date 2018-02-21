@@ -44,11 +44,10 @@ namespace RoseSoft
 
             else if (comboBox1_buscar.Text.Equals("RUC"))
             {
-                
-                    string sql;
-                    sql = "SELECT* FROM PERSONAJURIDICA WHERE RUCCJ LIKE '" + textBox9_Buscar.Text + "%'";
-                    dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
-                
+
+                string sql;
+                sql = "SELECT * FROM PERSONAJURIDICA WHERE RUCCJ= "+textBox9_Buscar.Text+"";
+                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
 
             }
 
@@ -60,7 +59,7 @@ namespace RoseSoft
             {
                 
                     string sql;
-                    sql = "SELECT * FROM PERSONAJURIDICA WHERE RAZONSOCIALCJ LIKE '" + textBox9_Buscar.Text + "%'";
+                    sql = "SELECT * FROM PERSONAJURIDICA WHERE RAZONSOCIALCJ LIKE'" + textBox9_Buscar.Text + "%'";
                     dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
                
 
@@ -68,11 +67,11 @@ namespace RoseSoft
 
             else if (comboBox1_buscar.Text.Equals("RUC"))
             {
-                
-                    string sql;
-                    sql = "SELECT* FROM PERSONAJURIDICA WHERE RUCCJ LIKE '" + textBox9_Buscar.Text + "%'";
-                    dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
-              
+
+                string sql;
+                sql = "SELECT * FROM PERSONAJURIDICA WHERE RUCCJ LIKE'" + textBox9_Buscar.Text + "%'";
+                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
+
 
             }
         }
@@ -227,6 +226,21 @@ namespace RoseSoft
             if (comboBox1_buscar.Text.Equals("RUC"))
             {
                 validar.SoloNumeros(e);
+            }
+        }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) || e.KeyChar == Convert.ToChar(Keys.Tab))
+            {
+                if (validar.validarEmail(txtEmail.Text))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Email no válido");
+                }
             }
         }
     }

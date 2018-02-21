@@ -56,7 +56,7 @@ namespace RoseSoft
             {
 
                 string sql;
-                sql = "SELECT * FROM PERSONANATURAL WHERE NOMBRESCN LIKE '" + textBox9_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONANATURAL WHERE NOMBRESCN LIKE '" + textBox9_Buscar.Text +"%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
             }
 
@@ -64,7 +64,7 @@ namespace RoseSoft
             {
 
                 string sql;
-                sql = "SELECT* FROM PERSONANATURAL WHERE CEDULACN LIKE '" + textBox9_Buscar.Text + "%'";
+                sql = "SELECT* FROM PERSONANATURAL WHERE CEDULACN LIKE'"+ textBox9_Buscar.Text+"%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -191,6 +191,26 @@ namespace RoseSoft
             {
                 validar.SoloNumeros(e);
             }
+        }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) || e.KeyChar == Convert.ToChar(Keys.Tab))
+            {
+                if (validar.validarEmail(txtEmail.Text))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Email no válido");
+                }
+            }
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

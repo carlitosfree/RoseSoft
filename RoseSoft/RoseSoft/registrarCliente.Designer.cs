@@ -153,6 +153,9 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(289, 20);
             this.txtEmail.TabIndex = 52;
+            this.txtEmail.TabIndexChanged += new System.EventHandler(this.txtEmail_TabIndexChanged);
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // label5
             // 
