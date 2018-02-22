@@ -234,5 +234,11 @@ namespace RoseSoft
         {
 
         }
+
+        private void groupBox2_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

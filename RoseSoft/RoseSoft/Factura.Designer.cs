@@ -41,6 +41,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
@@ -111,6 +112,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -122,6 +126,8 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -292,7 +298,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.DarkRed;
             this.groupBox3.Location = new System.Drawing.Point(347, 235);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(933, 366);
+            this.groupBox3.Size = new System.Drawing.Size(967, 366);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalle Factura";
@@ -308,7 +314,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Forte", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -333,7 +339,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Size = new System.Drawing.Size(879, 321);
+            this.dataGridView1.Size = new System.Drawing.Size(932, 321);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -406,6 +412,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.pictureBox6);
+            this.groupBox2.Controls.Add(this.pictureBox7);
             this.groupBox2.Controls.Add(this.cBoxEqCaja);
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.txtPrecioUnitario);
@@ -425,10 +433,11 @@
             this.groupBox2.ForeColor = System.Drawing.Color.DarkRed;
             this.groupBox2.Location = new System.Drawing.Point(734, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(546, 210);
+            this.groupBox2.Size = new System.Drawing.Size(574, 210);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Productos";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter_1);
             // 
             // cBoxEqCaja
             // 
@@ -439,7 +448,7 @@
             "1,00",
             "0,50",
             "0,25"});
-            this.cBoxEqCaja.Location = new System.Drawing.Point(392, 134);
+            this.cBoxEqCaja.Location = new System.Drawing.Point(440, 133);
             this.cBoxEqCaja.Name = "cBoxEqCaja";
             this.cBoxEqCaja.Size = new System.Drawing.Size(89, 27);
             this.cBoxEqCaja.TabIndex = 28;
@@ -449,7 +458,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label23.Location = new System.Drawing.Point(245, 134);
+            this.label23.Location = new System.Drawing.Point(311, 134);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(100, 26);
             this.label23.TabIndex = 27;
@@ -458,7 +467,7 @@
             // txtPrecioUnitario
             // 
             this.txtPrecioUnitario.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioUnitario.Location = new System.Drawing.Point(392, 88);
+            this.txtPrecioUnitario.Location = new System.Drawing.Point(440, 87);
             this.txtPrecioUnitario.Name = "txtPrecioUnitario";
             this.txtPrecioUnitario.Size = new System.Drawing.Size(89, 27);
             this.txtPrecioUnitario.TabIndex = 26;
@@ -468,7 +477,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label13.Location = new System.Drawing.Point(244, 88);
+            this.label13.Location = new System.Drawing.Point(284, 88);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(127, 26);
             this.label13.TabIndex = 25;
@@ -495,7 +504,7 @@
             "18",
             "19",
             "20"});
-            this.cBoxBoncheCaja.Location = new System.Drawing.Point(392, 171);
+            this.cBoxBoncheCaja.Location = new System.Drawing.Point(440, 168);
             this.cBoxBoncheCaja.Name = "cBoxBoncheCaja";
             this.cBoxBoncheCaja.Size = new System.Drawing.Size(89, 27);
             this.cBoxBoncheCaja.TabIndex = 24;
@@ -505,7 +514,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label12.Location = new System.Drawing.Point(245, 171);
+            this.label12.Location = new System.Drawing.Point(293, 166);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(108, 26);
             this.label12.TabIndex = 23;
@@ -656,6 +665,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 80;
             this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "Nuevo");
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
             this.pictureBox3.DoubleClick += new System.EventHandler(this.pictureBox3_Click);
             this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
@@ -671,6 +681,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 79;
             this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, "Buscar");
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
@@ -868,12 +879,13 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::RoseSoft.Properties.Resources.Home_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(45, 541);
+            this.pictureBox4.Location = new System.Drawing.Point(213, 533);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(73, 49);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 83;
             this.pictureBox4.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox4, "Regresar");
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
             this.pictureBox4.MouseHover += new System.EventHandler(this.pictureBox4_MouseHover);
@@ -882,15 +894,38 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::RoseSoft.Properties.Resources.guardar;
-            this.pictureBox5.Location = new System.Drawing.Point(201, 541);
+            this.pictureBox5.Location = new System.Drawing.Point(42, 533);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(73, 49);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 84;
             this.pictureBox5.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox5, "Guardar");
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
             this.pictureBox5.MouseHover += new System.EventHandler(this.pictureBox5_MouseHover);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = global::RoseSoft.Properties.Resources.borrar;
+            this.pictureBox6.Location = new System.Drawing.Point(473, 28);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(56, 41);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 84;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = global::RoseSoft.Properties.Resources.maspro;
+            this.pictureBox7.Location = new System.Drawing.Point(371, 26);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(56, 41);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 83;
+            this.pictureBox7.TabStop = false;
             // 
             // Factura
             // 
@@ -901,7 +936,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::RoseSoft.Properties.Resources.img_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1308, 613);
+            this.ClientSize = new System.Drawing.Size(1326, 613);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
@@ -935,6 +970,8 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1009,5 +1046,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

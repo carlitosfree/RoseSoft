@@ -63,6 +63,16 @@ namespace RoseSoft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _28235760_1908947449176994_805060585_n {
+            get {
+                object obj = ResourceManager.GetObject("28235760_1908947449176994_805060585_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _308827 {
             get {
                 object obj = ResourceManager.GetObject("308827", resourceCulture);
@@ -346,6 +356,16 @@ namespace RoseSoft.Properties {
         internal static System.Drawing.Bitmap salir {
             get {
                 object obj = ResourceManager.GetObject("salir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Soft {
+            get {
+                object obj = ResourceManager.GetObject("Soft", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

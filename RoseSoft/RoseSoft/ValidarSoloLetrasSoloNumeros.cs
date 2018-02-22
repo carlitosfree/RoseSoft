@@ -136,11 +136,13 @@ namespace RoseSoft
             return false;
 
         }
-        public bool verificarRuc (string ruc)
+        public bool verificarRuc(string ruc)
         {
             return true;
         }
-        public  bool validarEmail(string email)
+
+        public bool validarEmail(string email)
+
         {
             string expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
 
