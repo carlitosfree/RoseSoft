@@ -1,4 +1,6 @@
-﻿namespace RoseSoft
+﻿using System;
+
+namespace RoseSoft
 {
     partial class VentanaDeLogin
     {
@@ -193,6 +195,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void VentanaDeLogin_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

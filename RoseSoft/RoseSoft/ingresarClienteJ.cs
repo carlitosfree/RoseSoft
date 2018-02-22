@@ -52,7 +52,7 @@ namespace RoseSoft
                             string strDate = DateTime.Now.ToString("yyyy-MM-dd");
                             MessageBox.Show("Registrado");
                             txtIdentificacion.Text = "";
-                            txtApellidos.Text = ""; 
+                            txtApellidos.Text = "";
                             txtCiudad.Text = "";
                             txtDireccion.Text = "";
                             txtPais.Text = "";
@@ -77,12 +77,12 @@ namespace RoseSoft
                 MessageBox.Show("cedula de identidad no valida");
             }
 
-            
+
         }
 
         private void txtIdentificacion_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtIdentificacion_KeyPress(object sender, KeyPressEventArgs e)
@@ -120,7 +120,7 @@ namespace RoseSoft
             validar.SoloNumeros(e);
         }
 
-       
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -185,56 +185,56 @@ namespace RoseSoft
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            string cadena = txtIdentificacion.Text;
-            int sitioDeCorte = 10;
-            string parte1 = cadena.Substring(0, sitioDeCorte);
-            if (validar.VerificarCedula(parte1) == true)
-            {
+            
                 string consutar = bd.selectstring("select CEDULACN from PERSONJURIDICA WHERE RUCCJ =" + txtIdentificacion.Text + "");
                 string agregar = "INSERT INTO PERSONAJURIDICA (RUCCJ, RAZONSOCIALCJ, NUMEROTELEFONOCJ,EMAILCJ,DIRECCIONCJ, CIUDADCJ, PAISCJ) VALUES " +
-                " (" + txtIdentificacion.Text + ",'" +
-                txtApellidos.Text + "','" + txtTelefono.Text +
-                "','" + txtEmail.Text + "','" + txtDireccion.Text + "','" + txtCiudad.Text + "','" + txtPais.Text + "')";
-                MessageBox.Show(agregar);
+                 " (" + txtIdentificacion.Text + ",'" + txtApellidos.Text + "','" + txtTelefono.Text +
+                    "','" + txtEmail.Text + "','" + txtDireccion.Text + "','" + txtCiudad.Text + "','" + txtPais.Text + "')";
+
                 if (txtIdentificacion.Text.Equals("") || txtEmail.Text.Equals("") ||
-                txtApellidos.Text.Equals("") || txtPais.Text.Equals("") || txtCiudad.Text.Equals("") || txtDireccion.Text.Equals("") || txtTelefono.Text.Equals(""))
+                    txtApellidos.Text.Equals("") || txtPais.Text.Equals("") || txtCiudad.Text.Equals("") || txtDireccion.Text.Equals("") || txtTelefono.Text.Equals(""))
                 {
                     MessageBox.Show("Error uno o mas campos vacios");
                 }
 
                 else
                 {
-                    if (consutar == txtIdentificacion.Text)
+                    string cadena = txtIdentificacion.Text;
+                    int sitioDeCorte = 10;
+                    string parte1 = cadena.Substring(0, sitioDeCorte);
+                    if (validar.VerificarCedula(parte1) == true)
                     {
-
-                        MessageBox.Show("DATOS YA REGISTRADOS");
-                    }
-                    else
-                    {
-                        MessageBox.Show(bd.executecommand(agregar) + "..");
-                        if (bd.executecommand(agregar))
+                        if (consutar == txtIdentificacion.Text)
                         {
-                            MessageBox.Show("Registrado");
-                            txtIdentificacion.Text = "";
-                            txtApellidos.Text = "";
-                            txtCiudad.Text = "";
-                            txtDireccion.Text = "";
-                            txtPais.Text = "";
-                            txtTelefono.Text = "";
-                            txtEmail.Text = "";
+
+                            MessageBox.Show("DATOS YA REGISTRADOS");
                         }
                         else
                         {
-                            MessageBox.Show("Error al agregar");
+                            MessageBox.Show(bd.executecommand(agregar) + "..");
+                            if (bd.executecommand(agregar))
+                            {
+                                MessageBox.Show("Registrado");
+                                txtIdentificacion.Text = "";
+                                txtApellidos.Text = "";
+                                txtCiudad.Text = "";
+                                txtDireccion.Text = "";
+                                txtPais.Text = "";
+                                txtTelefono.Text = "";
+                                txtEmail.Text = "";
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error al agregar");
+                            }
                         }
                     }
+                    else
+                    {
+                        MessageBox.Show("RUC no válido");
+                    }
                 }
-
-            }
-            else
-            {
-                MessageBox.Show("RUC no válido");
-            }
+            
         }
 
         private void txtIdentificacion_Leave(object sender, EventArgs e)
