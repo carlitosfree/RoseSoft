@@ -173,63 +173,64 @@ namespace RoseSoft
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (validar.VerificarCedula(txtIdentificacion.Text) == true)
+            
+                string consutar = bd.selectstring("select CEDULACN from PERSONANATURAL WHERE CEDULACN =" +
+                txtIdentificacion.Text + "");
+                string agregar = "INSERT INTO PERSONANATURAL (CEDULACN, NOMBRESCN, APELLIDOSCN, DIRECCIONCN, NUMEROTELEFONOCN, EMAILCN, CIUDADCN, PAISCN) VALUES " +
+                " (" + txtIdentificacion.Text + ",'" +
+                txtNombre.Text + "','" + txtApellidos.Text + "','" + txtDireccion.Text +
+                "','" + txtTelefono.Text + "','" + txtEmail.Text + "','" + txtCiudad.Text + "','" + txtPais.Text + "' )";
+            // MessageBox.Show(agregar);
+            if (txtNombre.Text.Equals("") || txtIdentificacion.Text.Equals("") || txtEmail.Text.Equals("") ||
+            txtApellidos.Text.Equals("") || txtPais.Text.Equals("") || txtCiudad.Text.Equals("") || txtDireccion.Text.Equals("") || txtTelefono.Text.Equals(""))
             {
-                if (validar.validarEmail(txtEmail.Text) == true)
-                {
-
-
-                    string consutar = bd.selectstring("select CEDULACN from PERSONANATURAL WHERE CEDULACN =" +
-                        txtIdentificacion.Text + "");
-
-                    string agregar = "INSERT INTO PERSONANATURAL (CEDULACN, NOMBRESCN, APELLIDOSCN, DIRECCIONCN, NUMEROTELEFONOCN, EMAILCN, CIUDADCN, PAISCN) VALUES " +
-                    " (" + txtIdentificacion.Text + ",'" +
-                    txtNombre.Text + "','" + txtApellidos.Text + "','" + txtDireccion.Text +
-                    "','" + txtTelefono.Text + "','" + txtEmail.Text + "','" + txtCiudad.Text + "','" + txtPais.Text + "' )";
-
-                    // MessageBox.Show(agregar);
-                    if (txtNombre.Text.Equals("") || txtIdentificacion.Text.Equals("") || txtEmail.Text.Equals("") ||
-                    txtApellidos.Text.Equals("") || txtPais.Text.Equals("") || txtCiudad.Text.Equals("") || txtDireccion.Text.Equals("") || txtTelefono.Text.Equals(""))
-                    {
-                        MessageBox.Show("Error uno o más campos vacíos");
-                    }
-
-                    else
-                    {
-                        if (consutar == txtIdentificacion.Text)
-                        {
-                            MessageBox.Show("DATOS YA REGISTRADOS");
-                        }
-                        else
-                        {
-                            //  MessageBox.Show(bd.executecommand(agregar) + "..");
-                            if (bd.executecommand(agregar))
-                            {
-                                MessageBox.Show("Registrado");
-                                txtIdentificacion.Text = "";
-                                txtApellidos.Text = "";
-                                txtNombre.Text = "";
-                                txtCiudad.Text = "";
-                                txtDireccion.Text = "";
-                                txtPais.Text = "";
-                                txtTelefono.Text = "";
-                                txtEmail.Text = "";
-                            }
-                            else
-                            {
-                                MessageBox.Show("Error al agregar");
-                            }
-                        }
-
-                    }
-                    MessageBox.Show("Email incorrecto");
-                }
+                MessageBox.Show("Error uno o más campos vacíos");
             }
             else
             {
-                MessageBox.Show("Cédula de identidad no válida");
+                if (validar.VerificarCedula(txtIdentificacion.Text) == true)
+                {
+                    if (consutar == txtIdentificacion.Text)
+                    {
+                        MessageBox.Show("Número de cédula ya existente");
+                        txtIdentificacion.Text = "";
+                        txtApellidos.Text = "";
+                        txtNombre.Text = "";
+                        txtCiudad.Text = "";
+                        txtDireccion.Text = "";
+                        txtPais.Text = "";
+                        txtTelefono.Text = "";
+                        txtEmail.Text = "";
+
+                    }
+                    else
+                    {
+                        //  MessageBox.Show(bd.executecommand(agregar) + "..");
+                        if (bd.executecommand(agregar))
+                        {
+                            MessageBox.Show("Registrado");
+                            txtIdentificacion.Text = "";
+                            txtApellidos.Text = "";
+                            txtNombre.Text = "";
+                            txtCiudad.Text = "";
+                            txtDireccion.Text = "";
+                            txtPais.Text = "";
+                            txtTelefono.Text = "";
+                            txtEmail.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al agregar");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Cédula de identidad no válida");
+                }
             }
 
+            
         }
 
         private void registrarCliente_Load_1(object sender, EventArgs e)

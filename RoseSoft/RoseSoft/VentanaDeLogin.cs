@@ -21,20 +21,7 @@ namespace RoseSoft
 
         private void bIngresar_Click(object sender, EventArgs e)
         {
-            string usuario = "rosas1";
-            string contraseña = "12345";
-            Menu menu = new Menu();
-            if (txtUsuario.Text == usuario & txtPassword.Text == contraseña)
-            {
-                menu.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Datos Incorrectos");
-                txtUsuario.Text = "";
-                txtPassword.Text = "";
-            }
+           
         }
 
         private void bSalir_Click(object sender, EventArgs e)
@@ -51,7 +38,7 @@ namespace RoseSoft
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
             IsKeyLocked(Keys.CapsLock);
-            if (e.KeyChar== Convert.ToChar(Keys.Enter))
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 if (txtUsuario.Text.Equals("") && txtPassword.Text.Equals(""))
                 {
@@ -61,13 +48,14 @@ namespace RoseSoft
                 {
                     Menu menu = new Menu();
                     string usuario = (bd.selectstring("select USUARIO FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
-                    
+                   // MessageBox.Show(usuario);
                     if (txtUsuario.Text == usuario)
                     {
                         string contraseña = (bd.selectstring("select CONTRASENA FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
-                       
+                       // MessageBox.Show(contraseña);
                         if (txtPassword.Text == contraseña)
                         {
+                            MessageBox.Show("Bienvenidos al Sistema RoseSoft");
                             menu.Show();
                             this.Hide();
                         }
@@ -85,7 +73,7 @@ namespace RoseSoft
                     }
                 }
             }
-            
+
         }
 
         private void txtPassword_TextChanged_1(object sender, EventArgs e)
@@ -138,13 +126,14 @@ namespace RoseSoft
             {
                 Menu menu = new Menu();
                 string usuario = (bd.selectstring("select USUARIO FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
-                MessageBox.Show(usuario);
+             
                 if (txtUsuario.Text == usuario)
                 {
                     string contraseña = (bd.selectstring("select CONTRASENA FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
-                    MessageBox.Show(contraseña);
+        
                     if (txtPassword.Text == contraseña)
                     {
+                        MessageBox.Show("Bienvenidos al Sistema RoseSoft");
                         menu.Show();
                         this.Hide();
                     }

@@ -190,10 +190,6 @@ namespace RoseSoft
             string parte1 = cadena.Substring(0, sitioDeCorte);
             if (validar.VerificarCedula(parte1) == true)
             {
-                if (validar.validarEmail(txtEmail.Text) == true)
-                {
-
-
                     string consutar = bd.selectstring("select CEDULACN from PERSONJURIDICA WHERE RUCCJ =" + txtIdentificacion.Text + "");
                     string agregar = "INSERT INTO PERSONAJURIDICA (RUCCJ, RAZONSOCIALCJ, NUMEROTELEFONOCJ,EMAILCJ,DIRECCIONCJ, CIUDADCJ, PAISCJ) VALUES " +
                     " (" + txtIdentificacion.Text + ",'" +
@@ -234,8 +230,8 @@ namespace RoseSoft
                         }
 
                     }
-                    MessageBox.Show("Email incorrecto");
-                }
+                    
+                
             }
             else
             {
