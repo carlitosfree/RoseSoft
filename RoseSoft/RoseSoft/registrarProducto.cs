@@ -17,7 +17,7 @@ namespace RoseSoft
         public registrarProducto()
         {
             InitializeComponent();
-            /*
+            
             string sql;
             comboBox3.ValueMember = "NOMBREM";
             sql = "SELECT NOMBREM FROM MERCADO ORDER BY NOMBREM";
@@ -35,7 +35,7 @@ namespace RoseSoft
             sql2 = "SELECT NOMBRETT FROM TAMANIOTALLO";
 
             comboBox1.DataSource = bd.SelectDataTable(sql2);
-            */
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

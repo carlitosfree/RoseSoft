@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,13 +15,13 @@ namespace RoseSoft
         public VentanaDeLogin()
         {
             InitializeComponent();
-
+           
         }
         BaseDeDatos bd = new BaseDeDatos();
 
         private void bIngresar_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void bSalir_Click(object sender, EventArgs e)
@@ -48,11 +48,11 @@ namespace RoseSoft
                 {
                     Menu menu = new Menu();
                     string usuario = (bd.selectstring("select USUARIO FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
-                    // MessageBox.Show(usuario);
+                   // MessageBox.Show(usuario);
                     if (txtUsuario.Text == usuario)
                     {
                         string contraseña = (bd.selectstring("select CONTRASENA FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
-                        // MessageBox.Show(contraseña);
+                       // MessageBox.Show(contraseña);
                         if (txtPassword.Text == contraseña)
                         {
                             MessageBox.Show("Bienvenidos al Sistema RoseSoft");
@@ -77,7 +77,7 @@ namespace RoseSoft
         }
 
         private void txtPassword_TextChanged_1(object sender, EventArgs e)
-        {
+        {     
             txtPassword.PasswordChar = '*';
         }
         Point fromPosicion;
@@ -108,14 +108,14 @@ namespace RoseSoft
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-
+            
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
             pictureBox1.Size = new Size(54, 51);
         }
-
+        
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             if (txtUsuario.Text.Equals("") && txtPassword.Text.Equals(""))
@@ -126,11 +126,11 @@ namespace RoseSoft
             {
                 Menu menu = new Menu();
                 string usuario = (bd.selectstring("select USUARIO FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
-
+             
                 if (txtUsuario.Text == usuario)
                 {
                     string contraseña = (bd.selectstring("select CONTRASENA FROM USUARIOS WHERE  USUARIO ='" + txtUsuario.Text + "';"));
-
+        
                     if (txtPassword.Text == contraseña)
                     {
                         MessageBox.Show("Bienvenidos al Sistema RoseSoft");
@@ -149,7 +149,7 @@ namespace RoseSoft
                     txtUsuario.Text = "";
                     txtPassword.Text = "";
                 }
-            }
+            } 
         }
 
         private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
@@ -160,13 +160,13 @@ namespace RoseSoft
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             pictureBox2.Size = new Size(54, 51);
-
+            
         }
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
             pictureBox2.Size = new Size(60, 57);
-
+            
         }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
@@ -180,4 +180,4 @@ namespace RoseSoft
         }
     }
 }
-
+ 

@@ -31,36 +31,45 @@ namespace RoseSoft
         }
         public void buscar()
         {
-            if (comboBox1_buscar.Text.Equals("RUC"))
+            if (comboBox1_buscar.Text.Equals("RAZÓN SOCIAL"))
             {
-                string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA WHERE RUCCJ='" + textBox9_Buscar.Text + "'";
-                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
-            }
-            else if (comboBox1_buscar.Text.Equals("NOMBRE"))
-            {
-                string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA WHERE RAZONSOCIALCJ='" + textBox9_Buscar.Text + "'";
-                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
+                
+                string consultar = bd.selectstring("SELECT RAZONSOCIALCJ FROM PERSONAJURIDICA WHERE RAZONSOCIALCJ='" + textBox9_Buscar.Text + "'");
+                
+                     string sql;
+                        sql = "SELECT * FROM PERSONAJURIDICA WHERE RAZONSOCIALCJ LIKE '" + textBox9_Buscar.Text + "%'";
+                        dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
 
-            }
-        }
-
-        private void textBox9_Buscar_TextChanged(object sender, EventArgs e)
-        {
-            if (comboBox1_buscar.Text.Equals("NOMBRE EMPRESA"))
-            {
-
-                string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA WHERE RAZONSOCIALCJ LIKE '" + textBox9_Buscar.Text + "%'";
-                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
             }
 
             else if (comboBox1_buscar.Text.Equals("RUC"))
             {
 
                 string sql;
-                sql = "SELECT* FROM PERSONAJURIDICA WHERE RUCCJ LIKE '" + textBox9_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONAJURIDICA WHERE RUCCJ= "+textBox9_Buscar.Text+"";
+                dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
+
+            }
+
+        }
+
+        private void textBox9_Buscar_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBox1_buscar.Text.Equals("RAZÓN SOCIAL"))
+            {
+                
+                    string sql;
+                    sql = "SELECT * FROM PERSONAJURIDICA WHERE RAZONSOCIALCJ LIKE'" + textBox9_Buscar.Text + "%'";
+                    dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
+               
+
+            }
+
+            else if (comboBox1_buscar.Text.Equals("RUC"))
+            {
+
+                string sql;
+                sql = "SELECT * FROM PERSONAJURIDICA WHERE RUCCJ LIKE'" + textBox9_Buscar.Text + "%'";
                 dataGridView1_Proveedor.DataSource = bd.SelectDataTable(sql);
 
 
@@ -75,12 +84,13 @@ namespace RoseSoft
             DataGridViewRow dgv = dataGridView1_Proveedor.Rows[e.RowIndex];
             txtIdentificacion.Text = dgv.Cells[0].Value.ToString();
             txtApellidos.Text = dgv.Cells[1].Value.ToString();
-            txtCiudad.Text = dgv.Cells[3].Value.ToString();
-            txtDireccion.Text = dgv.Cells[4].Value.ToString();
-            txtPais.Text = dgv.Cells[5].Value.ToString();
-            txtTelefono.Text = dgv.Cells[6].Value.ToString();
-            txtEmail.Text = dgv.Cells[7].Value.ToString();
+            txtDireccion.Text = dgv.Cells[2].Value.ToString();
+            txtTelefono.Text = dgv.Cells[3].Value.ToString();
+            txtEmail.Text = dgv.Cells[4].Value.ToString();
+            txtCiudad.Text = dgv.Cells[5].Value.ToString();
+            txtPais.Text = dgv.Cells[6].Value.ToString();
             txtIdentificacion.Enabled = false;
+
         }
 
         private void txt2_KeyPress(object sender, KeyPressEventArgs e)
@@ -168,13 +178,69 @@ namespace RoseSoft
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+
+            
             if (comboBox1_buscar.Text.Equals("") || textBox9_Buscar.Text.Equals(""))
             {
-                MessageBox.Show("Ingrese número de cédula");
+                MessageBox.Show("Ingrese datos a buscar");
             }
             else
             {
-                buscar();
+                string consultar = bd.selectstring("select RAZONSOCIALCJ from PERSONAJURIDICA where RAZONSOCIALCJ ='"+textBox9_Buscar.Text+"'");
+                if (consultar.Equals(textBox9_Buscar.Text))
+                {
+                    buscar();
+                }
+                else
+                {
+                    MessageBox.Show("Dato no encontrado");
+                }
+
+            }
+        }
+
+        private void txtApellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txtPais_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.SoloLetras(e);
+        }
+
+        private void txtCiudad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.SoloLetras(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.SoloNumeros(e);
+        }
+
+        private void textBox9_Buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarSoloLetrasSoloNumeros validar = new ValidarSoloLetrasSoloNumeros();
+
+            if (comboBox1_buscar.Text.Equals("RUC"))
+            {
+                validar.SoloNumeros(e);
+            }
+        }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) || e.KeyChar == Convert.ToChar(Keys.Tab))
+            {
+                if (validar.validarEmail(txtEmail.Text))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Email no válido");
+                }
             }
         }
     }

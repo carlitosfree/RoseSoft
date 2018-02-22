@@ -56,7 +56,7 @@ namespace RoseSoft
             {
 
                 string sql;
-                sql = "SELECT * FROM PERSONANATURAL WHERE NOMBRESCN LIKE '" + textBox9_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONANATURAL WHERE NOMBRESCN LIKE '" + textBox9_Buscar.Text +"%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
             }
 
@@ -64,7 +64,7 @@ namespace RoseSoft
             {
 
                 string sql;
-                sql = "SELECT* FROM PERSONANATURAL WHERE CEDULACN LIKE '" + textBox9_Buscar.Text + "%'";
+                sql = "SELECT* FROM PERSONANATURAL WHERE CEDULACN LIKE'"+ textBox9_Buscar.Text+"%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -161,11 +161,54 @@ namespace RoseSoft
             }
             else
             {
-                buscar();
+                string consultar = bd.selectstring("select RAZONSOCIALCJ from PERSONAJURIDICA where RAZONSOCIALCJ ='" + textBox9_Buscar.Text + "'");
+                if (consultar.Equals(textBox9_Buscar.Text))
+                {
+                    buscar();
+                }
+                else
+                {
+                    MessageBox.Show("Dato no encontrado");
+                }
+
             }
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_Buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarSoloLetrasSoloNumeros validar = new ValidarSoloLetrasSoloNumeros();
+
+            if (comboBox1_buscar.Text.Equals("NOMBRE"))
+            {
+                validar.SoloLetras(e);
+            }
+            if (comboBox1_buscar.Text.Equals("NÚMERO DE CÉDULA"))
+            {
+                validar.SoloNumeros(e);
+            }
+        }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) || e.KeyChar == Convert.ToChar(Keys.Tab))
+            {
+                if (validar.validarEmail(txtEmail.Text))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Email no válido");
+                }
+            }
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
         {
 
         }

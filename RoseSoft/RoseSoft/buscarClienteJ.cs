@@ -75,7 +75,6 @@ namespace RoseSoft
             {
 
                 string sql;
-                //SELECT * FROM CLIENTE WHERE NOMBRE LIKE 'C%';
                 sql = "SELECT * FROM PERSONAJURIDICA  WHERE RAZONSOCIALCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
@@ -83,29 +82,11 @@ namespace RoseSoft
             else if (comboBox1_Buscar.Text.Equals("RUC"))
             {
                 string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA  WHERE RUCCJ LIKE '" + textBox1_Buscar.Text + "%'";
+                sql = "SELECT * FROM PERSONAJURIDICA WHERE RUCCJ= " + textBox1_Buscar.Text + "";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
-
             }
-            else if (comboBox1_Buscar.Text.Equals("PAÍS"))
-            {
-
-                string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA WHERE PAISCJ LIKE '" + textBox1_Buscar.Text + "%'";
-                dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
-
-
-            }
-
-            else if (comboBox1_Buscar.Text.Equals("CIUDAD"))
-            {
-                string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA WHERE CIUDADCJ LIKE '" + textBox1_Buscar.Text + "%'";
-                dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
-
-
-            }
+            
         }
 
         private void textBox1_Buscar_TextChanged(object sender, EventArgs e)
@@ -114,33 +95,17 @@ namespace RoseSoft
             {
 
                 string sql;
-                //SELECT * FROM CLIENTE WHERE NOMBRE LIKE 'C%';
                 sql = "SELECT * FROM PERSONAJURIDICA WHERE RAZONSOCIALCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
+
             }
+
             else if (comboBox1_Buscar.Text.Equals("RUC"))
             {
+
                 string sql;
                 sql = "SELECT * FROM PERSONAJURIDICA WHERE RUCCJ LIKE '" + textBox1_Buscar.Text + "%'";
-                dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
-
-
-            }
-            else if (comboBox1_Buscar.Text.Equals("PAÍS"))
-            {
-
-                string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA WHERE PAISCJ LIKE '" + textBox1_Buscar.Text + "%'";
-                dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
-
-
-            }
-
-            else if (comboBox1_Buscar.Text.Equals("CIUDAD"))
-            {
-                string sql;
-                sql = "SELECT * FROM PERSONAJURIDICA WHERE CIUDADCJ LIKE '" + textBox1_Buscar.Text + "%'";
                 dataGridView1_Cliente.DataSource = bd.SelectDataTable(sql);
 
 
@@ -161,11 +126,20 @@ namespace RoseSoft
         {
             if (comboBox1_Buscar.Text.Equals("") || textBox1_Buscar.Text.Equals(""))
             {
-                MessageBox.Show("Ingrese parametros de busqueda");
+                MessageBox.Show("Ingrese datos a buscar");
             }
             else
             {
-                buscar();
+                string consultar = bd.selectstring("select RAZONSOCIALCJ from PERSONAJURIDICA where RAZONSOCIALCJ ='" + textBox1_Buscar.Text + "'");
+                if (consultar.Equals(textBox1_Buscar.Text))
+                {
+                    buscar();
+                }
+                else
+                {
+                    MessageBox.Show("Dato no encontrado");
+                }
+
             }
         }
         private void pictureBox2_MouseHover(object sender, EventArgs e)
@@ -192,6 +166,16 @@ namespace RoseSoft
         private void textBox1_Buscar_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_Buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarSoloLetrasSoloNumeros validar = new ValidarSoloLetrasSoloNumeros();
+
+            if (comboBox1_Buscar.Text.Equals("RUC"))
+            {
+                validar.SoloNumeros(e);
+            }
         }
     }
 }

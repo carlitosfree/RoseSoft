@@ -140,7 +140,9 @@ namespace RoseSoft
         {
             return true;
         }
+
         public bool validarEmail(string email)
+
         {
             string expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
 
