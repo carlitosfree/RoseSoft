@@ -256,5 +256,10 @@ namespace RoseSoft
         {
            
         }
+
+        private void registrarProveedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -183,5 +183,10 @@ namespace RoseSoft
                 MessageBox.Show("Error al actualizar");
             }
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

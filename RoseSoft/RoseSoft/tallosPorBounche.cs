@@ -110,7 +110,10 @@ namespace RoseSoft
             pictureBox2.Size = new Size(73, 49);
         }
 
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
 
+        }
     }
 
 }

@@ -254,7 +254,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.DarkRed;
             this.groupBox2.Location = new System.Drawing.Point(540, 58);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(348, 271);
+            this.groupBox2.Size = new System.Drawing.Size(442, 271);
             this.groupBox2.TabIndex = 81;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Cliente";
@@ -266,17 +266,17 @@
             this.txtCiudad.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCiudad.Location = new System.Drawing.Point(151, 126);
             this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(184, 20);
+            this.txtCiudad.Size = new System.Drawing.Size(285, 20);
             this.txtCiudad.TabIndex = 64;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label10.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Lavender;
             this.label10.Location = new System.Drawing.Point(14, 126);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 23);
+            this.label10.Size = new System.Drawing.Size(64, 26);
             this.label10.TabIndex = 70;
             this.label10.Text = "Ciudad";
             // 
@@ -287,17 +287,17 @@
             this.txtPais.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPais.Location = new System.Drawing.Point(151, 100);
             this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(184, 20);
+            this.txtPais.Size = new System.Drawing.Size(285, 20);
             this.txtPais.TabIndex = 63;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label8.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Lavender;
             this.label8.Location = new System.Drawing.Point(14, 100);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 23);
+            this.label8.Size = new System.Drawing.Size(42, 26);
             this.label8.TabIndex = 68;
             this.label8.Text = "País";
             // 
@@ -308,17 +308,17 @@
             this.txtEmail.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(151, 204);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(184, 20);
+            this.txtEmail.Size = new System.Drawing.Size(285, 20);
             this.txtEmail.TabIndex = 69;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label5.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Lavender;
             this.label5.Location = new System.Drawing.Point(14, 204);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 23);
+            this.label5.Size = new System.Drawing.Size(64, 26);
             this.label5.TabIndex = 65;
             this.label5.Text = "E-mail";
             // 
@@ -327,9 +327,9 @@
             this.txtDireccion.BackColor = System.Drawing.SystemColors.Window;
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDireccion.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(151, 152);
+            this.txtDireccion.Location = new System.Drawing.Point(151, 151);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(184, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(285, 20);
             this.txtDireccion.TabIndex = 66;
             // 
             // txtTelefono
@@ -337,9 +337,9 @@
             this.txtTelefono.BackColor = System.Drawing.SystemColors.Window;
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(151, 178);
+            this.txtTelefono.Location = new System.Drawing.Point(170, 178);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(184, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(266, 20);
             this.txtTelefono.TabIndex = 67;
             // 
             // txtApellidos
@@ -349,7 +349,7 @@
             this.txtApellidos.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos.Location = new System.Drawing.Point(151, 72);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(184, 20);
+            this.txtApellidos.Size = new System.Drawing.Size(285, 20);
             this.txtApellidos.TabIndex = 62;
             // 
             // txtIdentificacion
@@ -359,50 +359,50 @@
             this.txtIdentificacion.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdentificacion.Location = new System.Drawing.Point(214, 43);
             this.txtIdentificacion.Name = "txtIdentificacion";
-            this.txtIdentificacion.Size = new System.Drawing.Size(121, 20);
+            this.txtIdentificacion.Size = new System.Drawing.Size(222, 20);
             this.txtIdentificacion.TabIndex = 60;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label7.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Lavender;
             this.label7.Location = new System.Drawing.Point(14, 152);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 23);
+            this.label7.Size = new System.Drawing.Size(82, 26);
             this.label7.TabIndex = 59;
             this.label7.Text = "Dirección";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label6.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Lavender;
             this.label6.Location = new System.Drawing.Point(6, 178);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 23);
+            this.label6.Size = new System.Drawing.Size(164, 26);
             this.label6.TabIndex = 58;
             this.label6.Text = "Número de Teléfono";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label4.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Lavender;
             this.label4.Location = new System.Drawing.Point(14, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 23);
+            this.label4.Size = new System.Drawing.Size(107, 26);
             this.label4.TabIndex = 57;
             this.label4.Text = "Razón Social";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label9.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Lavender;
             this.label9.Location = new System.Drawing.Point(14, 43);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 23);
+            this.label9.Size = new System.Drawing.Size(45, 26);
             this.label9.TabIndex = 55;
             this.label9.Text = "RUC";
             // 
@@ -412,7 +412,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RoseSoft.Properties.Resources.img_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(900, 459);
+            this.ClientSize = new System.Drawing.Size(994, 459);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);

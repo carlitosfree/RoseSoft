@@ -239,5 +239,10 @@ namespace RoseSoft
                 txtIdentificacion.Text = "";
             }
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -221,7 +221,7 @@
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(155, 148);
+            this.textBox3.Location = new System.Drawing.Point(182, 163);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(156, 20);
             this.textBox3.TabIndex = 80;
@@ -229,33 +229,33 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(12, 41);
+            this.label3.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Lavender;
+            this.label3.Location = new System.Drawing.Point(6, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 23);
+            this.label3.Size = new System.Drawing.Size(156, 26);
             this.label3.TabIndex = 67;
             this.label3.Text = "Número de Bonche";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label8.Location = new System.Drawing.Point(12, 149);
+            this.label8.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Lavender;
+            this.label8.Location = new System.Drawing.Point(22, 157);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 23);
+            this.label8.Size = new System.Drawing.Size(54, 26);
             this.label8.TabIndex = 79;
             this.label8.Text = "Stock";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label4.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Lavender;
             this.label4.Location = new System.Drawing.Point(12, 68);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 23);
+            this.label4.Size = new System.Drawing.Size(81, 26);
             this.label4.TabIndex = 68;
             this.label4.Text = "Variedad";
             // 
@@ -266,7 +266,7 @@
             this.comboBox3.Items.AddRange(new object[] {
             "Nacional ",
             "Internacional"});
-            this.comboBox3.Location = new System.Drawing.Point(155, 205);
+            this.comboBox3.Location = new System.Drawing.Point(182, 222);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(156, 27);
             this.comboBox3.TabIndex = 78;
@@ -274,33 +274,34 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(12, 95);
+            this.label5.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Lavender;
+            this.label5.Location = new System.Drawing.Point(6, 102);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 23);
+            this.label5.Size = new System.Drawing.Size(142, 26);
             this.label5.TabIndex = 69;
             this.label5.Text = "Tamaño del Tallo";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(12, 203);
+            this.label7.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Lavender;
+            this.label7.Location = new System.Drawing.Point(22, 220);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 23);
+            this.label7.Size = new System.Drawing.Size(77, 26);
             this.label7.TabIndex = 77;
             this.label7.Text = "Mercado";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label6.Location = new System.Drawing.Point(12, 176);
+            this.label6.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Lavender;
+            this.label6.Location = new System.Drawing.Point(21, 190);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 23);
+            this.label6.Size = new System.Drawing.Size(115, 26);
             this.label6.TabIndex = 70;
             this.label6.Text = "Fecha Ingreso";
             // 
@@ -309,7 +310,7 @@
             this.dateTimePicker1.CustomFormat = "yyyy/MM/dd";
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(155, 173);
+            this.dateTimePicker1.Location = new System.Drawing.Point(182, 189);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(156, 27);
             this.dateTimePicker1.TabIndex = 76;
@@ -318,11 +319,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label9.Location = new System.Drawing.Point(12, 122);
+            this.label9.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Lavender;
+            this.label9.Location = new System.Drawing.Point(12, 128);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(127, 23);
+            this.label9.Size = new System.Drawing.Size(145, 26);
             this.label9.TabIndex = 71;
             this.label9.Text = "Tallos por Bonche";
             // 
@@ -334,7 +335,7 @@
             "20",
             "25",
             "30"});
-            this.comboBox2.Location = new System.Drawing.Point(155, 116);
+            this.comboBox2.Location = new System.Drawing.Point(182, 130);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(156, 27);
             this.comboBox2.TabIndex = 75;
@@ -343,7 +344,7 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(155, 34);
+            this.textBox1.Location = new System.Drawing.Point(182, 42);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(156, 20);
             this.textBox1.TabIndex = 72;
@@ -361,7 +362,7 @@
             "100",
             "110",
             "120"});
-            this.comboBox1.Location = new System.Drawing.Point(155, 84);
+            this.comboBox1.Location = new System.Drawing.Point(182, 97);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(156, 27);
             this.comboBox1.TabIndex = 74;
@@ -370,10 +371,11 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(155, 59);
+            this.textBox2.Location = new System.Drawing.Point(182, 68);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(156, 20);
             this.textBox2.TabIndex = 73;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // pictureBox3
             // 
