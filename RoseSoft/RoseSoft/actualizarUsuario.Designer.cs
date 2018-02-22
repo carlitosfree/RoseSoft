@@ -1,4 +1,4 @@
-﻿namespace RoseSoft
+namespace RoseSoft
 {
     partial class actualizarUsuario
     {

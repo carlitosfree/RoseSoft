@@ -89,5 +89,10 @@ namespace RoseSoft
         {
             this.Dispose();
         }
+
+        private void ActualizarProducto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
