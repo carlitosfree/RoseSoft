@@ -52,30 +52,30 @@ namespace RoseSoft
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label1.Location = new System.Drawing.Point(340, 131);
+            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label1.Location = new System.Drawing.Point(47, 161);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 21);
+            this.label1.Size = new System.Drawing.Size(63, 21);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Usuario: ";
+            this.label1.Text = "Login: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label2.Location = new System.Drawing.Point(325, 186);
+            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label2.Location = new System.Drawing.Point(47, 191);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 21);
+            this.label2.Size = new System.Drawing.Size(100, 21);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Contraseña: ";
+            this.label2.Text = "Password: ";
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Forte", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.SpringGreen;
-            this.txtUsuario.Location = new System.Drawing.Point(472, 134);
+            this.txtUsuario.Location = new System.Drawing.Point(159, 161);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(146, 25);
             this.txtUsuario.TabIndex = 4;
@@ -86,7 +86,7 @@ namespace RoseSoft
             this.txtPassword.BackColor = System.Drawing.SystemColors.Window;
             this.txtPassword.Font = new System.Drawing.Font("Forte", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.SpringGreen;
-            this.txtPassword.Location = new System.Drawing.Point(472, 189);
+            this.txtPassword.Location = new System.Drawing.Point(159, 191);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(146, 25);
             this.txtPassword.TabIndex = 5;
@@ -98,7 +98,7 @@ namespace RoseSoft
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::RoseSoft.Properties.Resources.salir;
-            this.pictureBox1.Location = new System.Drawing.Point(564, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(589, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(54, 51);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -115,7 +115,7 @@ namespace RoseSoft
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox2.Image = global::RoseSoft.Properties.Resources.confirm;
-            this.pictureBox2.Location = new System.Drawing.Point(433, 235);
+            this.pictureBox2.Location = new System.Drawing.Point(251, 222);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(54, 51);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -131,12 +131,12 @@ namespace RoseSoft
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Brush Script MT", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(78, 161);
+            this.label3.Font = new System.Drawing.Font("Brush Script MT", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label3.Location = new System.Drawing.Point(391, 194);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 46);
+            this.label3.Size = new System.Drawing.Size(171, 59);
             this.label3.TabIndex = 81;
             this.label3.Text = "RoseSoft";
             // 
@@ -145,7 +145,7 @@ namespace RoseSoft
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Forte", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(428, 117);
+            this.label4.Location = new System.Drawing.Point(115, 144);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 30);
@@ -155,9 +155,9 @@ namespace RoseSoft
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::RoseSoft.Properties.Resources._28235760_1908947449176994_805060585_n;
-            this.pictureBox3.Location = new System.Drawing.Point(57, 16);
+            this.pictureBox3.Location = new System.Drawing.Point(356, 12);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(172, 131);
+            this.pictureBox3.Size = new System.Drawing.Size(236, 179);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 79;
             this.pictureBox3.TabStop = false;
@@ -166,9 +166,9 @@ namespace RoseSoft
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::RoseSoft.Properties.Resources.img_2;
+            this.BackgroundImage = global::RoseSoft.Properties.Resources.login2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(645, 311);
+            this.ClientSize = new System.Drawing.Size(647, 285);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox3);
