@@ -405,5 +405,11 @@
   <ItemGroup>
     <None Include="Resources\RoseSoft.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Soft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28235760_1908947449176994_805060585_n.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

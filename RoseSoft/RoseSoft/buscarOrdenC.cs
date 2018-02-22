@@ -47,5 +47,9 @@ namespace RoseSoft
             pictureBox4.Size = new Size(73, 49);
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
