@@ -36,22 +36,22 @@ namespace RoseSoft
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
-           
+
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             txtIdentificacion.MaxLength = 10;
             if (txtIdentificacion.TextLength == 10)
-            { 
+            {
                 if (validar.VerificarCedula(txtIdentificacion.Text) == true)
                 {
                 }
                 else
                 {
-                     MessageBox.Show("Cédula de identidad no válida");
-                     txtIdentificacion.Text = "";
+                    MessageBox.Show("Cédula de identidad no válida");
+                    txtIdentificacion.Text = "";
                 }
 
             }
@@ -105,13 +105,13 @@ namespace RoseSoft
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-           
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -143,12 +143,12 @@ namespace RoseSoft
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
-            pictureBox2.Size = new Size(79,55);
+            pictureBox2.Size = new Size(79, 55);
         }
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox2.Size = new Size(73,49);
+            pictureBox2.Size = new Size(73, 49);
         }
 
         private void pictureBox3_MouseHover(object sender, EventArgs e)
@@ -173,32 +173,39 @@ namespace RoseSoft
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (validar.VerificarCedula(txtIdentificacion.Text) == true)
+
+            string consutar = bd.selectstring("select CEDULACN from PERSONANATURAL WHERE CEDULACN =" +
+            txtIdentificacion.Text + "");
+            string agregar = "INSERT INTO PERSONANATURAL (CEDULACN, NOMBRESCN, APELLIDOSCN, DIRECCIONCN, NUMEROTELEFONOCN, EMAILCN, CIUDADCN, PAISCN) VALUES " +
+            " (" + txtIdentificacion.Text + ",'" +
+            txtNombre.Text + "','" + txtApellidos.Text + "','" + txtDireccion.Text +
+            "','" + txtTelefono.Text + "','" + txtEmail.Text + "','" + txtCiudad.Text + "','" + txtPais.Text + "' )";
+            // MessageBox.Show(agregar);
+            if (txtNombre.Text.Equals("") || txtIdentificacion.Text.Equals("") || txtEmail.Text.Equals("") ||
+            txtApellidos.Text.Equals("") || txtPais.Text.Equals("") || txtCiudad.Text.Equals("") || txtDireccion.Text.Equals("") || txtTelefono.Text.Equals(""))
             {
-                string consutar = bd.selectstring("select CEDULACN from PERSONANATURAL WHERE CEDULACN =" + 
-                    txtIdentificacion.Text + "");
-
-                string agregar = "INSERT INTO PERSONANATURAL (CEDULACN, NOMBRESCN, APELLIDOSCN, DIRECCIONCN, NUMEROTELEFONOCN, EMAILCN, CIUDADCN, PAISCN) VALUES " +
-                " (" + txtIdentificacion.Text + ",'" +
-                txtNombre.Text + "','" + txtApellidos.Text + "','" + txtDireccion.Text +
-                "','" + txtTelefono.Text + "','" + txtEmail.Text + "','" + txtCiudad.Text + "','" + txtPais.Text + "' )";
-                
-               // MessageBox.Show(agregar);
-                if (txtNombre.Text.Equals("") || txtIdentificacion.Text.Equals("") || txtEmail.Text.Equals("") ||
-                txtApellidos.Text.Equals("") || txtPais.Text.Equals("") || txtCiudad.Text.Equals("") || txtDireccion.Text.Equals("") || txtTelefono.Text.Equals(""))
-                {
-                    MessageBox.Show("Error uno o mas campos vacios");
-                }
-
-                else
+                MessageBox.Show("Error uno o más campos vacíos");
+            }
+            else
+            {
+                if (validar.VerificarCedula(txtIdentificacion.Text) == true)
                 {
                     if (consutar == txtIdentificacion.Text)
                     {
-                        MessageBox.Show("DATOS YA REGISTRADOS");
+                        MessageBox.Show("Número de cédula ya existente");
+                        txtIdentificacion.Text = "";
+                        txtApellidos.Text = "";
+                        txtNombre.Text = "";
+                        txtCiudad.Text = "";
+                        txtDireccion.Text = "";
+                        txtPais.Text = "";
+                        txtTelefono.Text = "";
+                        txtEmail.Text = "";
+
                     }
                     else
                     {
-                      //  MessageBox.Show(bd.executecommand(agregar) + "..");
+                        //  MessageBox.Show(bd.executecommand(agregar) + "..");
                         if (bd.executecommand(agregar))
                         {
                             MessageBox.Show("Registrado");
@@ -217,12 +224,12 @@ namespace RoseSoft
                         }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Cédula de identidad no válida");
+                }
+            }
 
-            }
-            else
-            {
-                MessageBox.Show("Cédula de identidad no válida");
-            }
 
         }
 
@@ -238,6 +245,33 @@ namespace RoseSoft
                 MessageBox.Show("Cédula de identidad no válida");
                 txtIdentificacion.Text = "";
             }
+        }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) || e.KeyChar == Convert.ToChar(Keys.Tab))
+            {
+                if (validar.validarEmail(txtEmail.Text))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Email no válido");
+                }
+            }
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TabIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
