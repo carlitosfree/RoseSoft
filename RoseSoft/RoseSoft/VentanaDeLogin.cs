@@ -148,6 +148,7 @@ namespace RoseSoft
                     MessageBox.Show("Usuario no existe");
                     txtUsuario.Text = "";
                     txtPassword.Text = "";
+                
                 }
             } 
         }

@@ -406,10 +406,7 @@
     <None Include="Resources\RoseSoft.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Soft.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\28235760_1908947449176994_805060585_n.png" />
+    <None Include="Resources\login2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login2.jpg" />
