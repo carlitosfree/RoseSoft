@@ -12,9 +12,9 @@
              title="Llenar el Nombre"
              minlength="3"
              maxlength="15"
-             placeholder="{{nombre}}"
+             placeholder="{{nombreChongoris}}"
              #nombreInput ="ngModel"
-             [(ngModel)]="nombre">
+             [(ngModel)]="nombreChongoris">
     </div>
     <div *ngIf="nombreInput.touched && nombreInput.dirty && nombreInput.errors">
       <p *ngIf="nombreInput.errors.required ">
@@ -29,16 +29,16 @@
     </div>
     <br>
     <div>
-      <label for="apellidoId">Apellido: </label>
+      <label for="apellidoId">Direccion: </label>
       <input id="apellidoId"
              type="text"
              name="apellido"
              required
-             placeholder="{{apellido}}"
+             placeholder="{{direccion}}"
              title="Llenar el Apellido"
              minlength="3"
              maxlength="15"
-             [(ngModel)]="apellido"
+             [(ngModel)]="direccion"
              #apellidoI = "ngModel">
     </div>
     <div *ngIf="apellidoI.touched && apellidoI.dirty && apellidoI.errors">
@@ -54,13 +54,13 @@
     </div>
     <br>
     <div>
-      <label for="fechaNacimiento">Fecha de nacimiento: </label>
+      <label for="fechaNacimiento">Fecha de apertura: </label>
       <input id="fechaNacimiento"
              type="date"
              required
-             placeholder="{{fechaNacimiento}}"
+             placeholder="{{fechaApertura}}"
              name="fechaNacimiento"
-             [(ngModel)]="fechaNacimiento"
+             [(ngModel)]="fechaApertura"
              #fechaI = "ngModel"
              max="2020-02-19"
       >
@@ -72,16 +72,16 @@
     </div>
     <br>
     <div>
-      <label for="numeroMedalla">Numero de Medallas: </label>
+      <label for="numeroMedalla">Numero de Estrellas: </label>
       <input id="numeroMedalla"
              type="number"
              name="numeroMedalla"
-             placeholder="{{numeroMedalla}}"
+             placeholder="{{numeroEstrellas}}"
              required
              title="Colocar el numero de medallas"
              min="0"
              max="120"
-             [(ngModel)]="numeroMedalla"
+             [(ngModel)]="numeroEstrellas"
              #medallasId = 'ngModel'>
     </div>
     <div *ngIf="medallasId.touched && medallasId.dirty && medallasId.errors">
@@ -89,13 +89,14 @@
         Este campo es requerido.
     </div>
     <br>
+    <!--
     <div>
-      <label for="campeonActual">Campeón actual: </label>
+      <label for="campeonActual">Horario de apertura: </label>
       <select name="campeonActualol"
               id="campeonActual"
               required
               #campeonI = "ngModel"
-              [(ngModel)]="campeonActual"
+              [(ngModel)]="horarioApertura"
       >
         <option>Si</option>
         <option>No</option>
@@ -104,6 +105,31 @@
     <div *ngIf="campeonI.touched && campeonI.dirty && campeonI.errors">
       <p *ngIf="campeonI.errors.required ">
         Este campo es requerido.
+    </div>
+-->
+    <div>
+      <label for="campeonActualol">Horario de apertura: </label>
+      <input id="campeonActualol"
+             type="text"
+             name="campeonActual"
+             placeholder="{{horarioApertura}}"
+             required
+             title="Colocar el horario de apertura"
+             minlength="3"
+             maxlength="15"
+             [(ngModel)]="horarioApertura"
+             #campeonId = 'ngModel'>
+    </div>
+    <div *ngIf="campeonId.touched && campeonId.dirty && campeonId.errors">
+      <p *ngIf="campeonId.errors.required ">
+        Este campo es requerido.
+      </p>
+      <p *ngIf="campeonId.errors.minlength ">
+        llenar con un minimo de 2 caracteres
+      </p>
+      <p *ngIf="campeonId.errors.maxlength ">
+        Llenar con un maximo de 200 caracteres
+      </p>
     </div>
     <br>
   </form>

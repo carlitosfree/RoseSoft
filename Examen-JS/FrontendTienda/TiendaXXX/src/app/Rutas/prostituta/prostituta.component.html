@@ -1,0 +1,64 @@
+<h1>Gestion Cariñosa</h1>
+
+<span class="ui-float-label">
+  <input id="float-input"
+         type="text"
+         size="30"
+         [(ngModel)]="busquedaProstituta"
+         pInputText>
+  <label for="float-input"> Busque una CARIÑOSA por nombre </label>
+  <p-button label="Buscar" (onClick)="escucharParametros()"></p-button>
+</span>
+<br>
+<p-button label="Registrar Cariñosa" (click)="ingresar()"></p-button>
+<br>
+<br>
+<div class="ui-g">
+  <div class="ui-g-4">
+    <label for="fechaC">Fecha de ingreso: </label>
+    <input type="date"
+           id="fechaC"
+           pInputText
+           name="fechaIngreso"
+           [(ngModel)]="fechaIngresoFiltrado"
+           max="2020-02-19"
+
+    >
+  </div>
+</div>
+<br>
+<p-table [value]="protistutasFiltrados()"
+         [paginator]="true"
+         [rows]="filas">
+  <ng-template pTemplate="caption">
+    Lista de Cariñosas
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Numero</th>
+      <th>Nombre</th>
+      <th>Poder Uno</th>
+      <th>Fecha Ingreso</th>
+      <th>Nivel</th>
+      <th>Precio</th>
+      <th>Acciones</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-cariniosa>
+    <tr>
+      <td>{{cariniosa.numero}}</td>
+      <td>{{cariniosa.nombre}}</td>
+      <td>{{cariniosa.poderUno}}</td>
+      <td>{{cariniosa.fechaIngreso}}</td>
+      <td>{{cariniosa.nivel}}</td>
+      <td>{{cariniosa.precio | currency}}</td>
+      <td>
+        <p-button label="EDITAR" (click)="editar(cariniosa)"></p-button>
+        <p-button label="ELIMINAR" (click)="eliminar(cariniosa)" styleClass="ui-button-danger"></p-button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+<br>
+<router-outlet></router-outlet>
+<p-button styleClass="ui-button-warning" label="Volver a inicio" (onClick)="volver() " ></p-button>

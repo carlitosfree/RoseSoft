@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
 })
 
 export class ChongoRestService {
-  url = environment.url + 'entrenador';
+  url = environment.url + 'chongo';
   constructor(
     private readonly _httpClient: HttpClient,
   ) {

@@ -1,14 +1,14 @@
 import {Injectable} from '@angular/core';
-import {environment} from "../../environments/environment";
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {environment} from '../../environments/environment';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class ProstitutaRestService {
-  url = environment.url + 'pokemon';
+  url = environment.url + 'prostituta';
   constructor(
     private readonly _httpClient: HttpClient,
   ) {
@@ -30,7 +30,7 @@ export class ProstitutaRestService {
       );
   }
   ingresar(datos): Observable<any> {
-    console.log('Esto recibe el insertar: ',datos)
+    console.log('Esto recibe el insertar: ', datos);
     const ingresarUrl = this.url;
     return this._httpClient
       .post(
@@ -38,7 +38,7 @@ export class ProstitutaRestService {
         datos,
       );
   }
-  buscar(busqueda: string): Observable<any>{
+  buscar(busqueda: string): Observable<any> {
     let consulta = '';
     if (busqueda) {
       consulta = '?nombre=' + busqueda;
@@ -49,13 +49,13 @@ export class ProstitutaRestService {
         buscarUrl
       );
   }
-  buscarPorEntrenador(busqueda, nombrePokemon): Observable<any>{
+  buscarPorEntrenador(busqueda, nombrePokemon): Observable<any> {
 
     let consulta = '';
     if (busqueda) {
       consulta = '?' + busqueda;
     }
-    if(nombrePokemon) {
+    if (nombrePokemon) {
       consulta = consulta + '&nombre=' + nombrePokemon;
     }
     const urlBuscar = this.url + consulta;

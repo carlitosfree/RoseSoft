@@ -11,8 +11,8 @@ import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
 import {InputTextModule} from 'primeng/inputtext';
 import {AuthService} from './Services/auth/auth.service';
-import { PokemonComponent } from './Rutas/prostituta/pokemon.component';
-import { EntrenadorComponent } from './Rutas/chongo/entrenador.component';
+import { ProstitutaComponent } from './Rutas/prostituta/prostituta.component';
+import { ChongoComponent } from './Rutas/chongo/chongo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ProstitutaRestService} from './Services/prostituta-rest.service';
 import { ModalEditarProstitutaComponent } from './modales/modal-editar-prostituta/modal-editar-prostituta.component';
@@ -37,8 +37,8 @@ import { ModalEditarUsuarioComponent } from './modales/modal-editar-usuario/moda
     AppComponent,
     ModalEditarProstitutaComponent,
     RutaLoginComponent,
-    PokemonComponent,
-    EntrenadorComponent,
+    ProstitutaComponent,
+    ChongoComponent,
     ModalEditarChongoComponent,
     TiendaComponent,
     UsuarioComponent,

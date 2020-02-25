@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-modal-editar-prostituta',
@@ -10,11 +10,11 @@ export class ModalEditarProstitutaComponent implements OnInit {
 numero = '';
 nombre = '';
 poderUno = '';
-poderDos = '';
-fechaCaptura = '';
+// poderDos = '';
+fechaIngreso = '';
 nivel = '';
 precio = '';
-idEntrenador = '';
+idChongo = '';
 crear = false;
 
 
@@ -29,14 +29,14 @@ crear = false;
       this.numero = this.data.prostituta.numero;
       this.nombre = this.data.prostituta.nombre;
       this.poderUno = this.data.prostituta.poderUno;
-      this.poderDos = this.data.prostituta.poderDos;
-      this.fechaCaptura = this.data.prostituta.fechaCaptura;
+      // this.poderDos = this.data.prostituta.poderDos;
+      this.fechaIngreso = this.data.prostituta.fechaIngreso;
       this.nivel = this.data.prostituta.nivel;
       this.precio = this.data.prostituta.precio;
-      this.idEntrenador = this.data.prostituta.idEntrenador.id;
+      this.idChongo = this.data.prostituta.idChongo.id;
     } else {
      this.crear = true;
-     this.idEntrenador = this.data;
+     this.idChongo = this.data;
     }
   }
   cancelar() {
@@ -48,11 +48,11 @@ crear = false;
       numero: this.numero,
       nombre: this.nombre,
       poderUno: this.poderUno,
-      poderDos: this.poderDos,
-      fechaCaptura: this.fechaCaptura,
+      // poderDos: this.poderDos,
+      fechaIngreso: this.fechaIngreso,
       nivel: this.nivel,
       precio: this.precio,
-      idEntrenador: this.idEntrenador
+      idChongo: this.idChongo
     });
   }
 

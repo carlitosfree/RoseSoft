@@ -1,0 +1,104 @@
+<br>
+<p-card header="CHONGUITOS RICOS">
+<span class="ui-float-label">
+  <input id="float-input"
+         type="text"
+         size="30"
+         [(ngModel)]="busquedaChongo"
+         style="height: 40px"
+         pInputText>
+  <label for="float-input"> Buscar por un CHONGO por nombre </label>
+  <p-button label="Buscar" (onClick)="buscar()"></p-button>
+</span>
+<br>
+<p-button label="Registrar Chongo" (click)="ingresar()"></p-button>
+<br>
+<br>
+<p-table [value]="chongo"
+         [paginator]="true"
+         [rows]="filas">
+  <ng-template pTemplate="caption">
+    Lista de Chongos
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Nombre</th>
+      <th>Direcion</th>
+      <th>Fecha Apertura</th>
+      <th>Numero Estrellas</th>
+      <th>Horario de Apertura</th>
+      <th>Acciones</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-chongo>
+    <tr>
+      <td>{{chongo.nombreChongoris}}</td>
+      <td>{{chongo.direccion}}</td>
+      <td>{{chongo.fechaApertura}}</td>
+      <td>{{chongo.numeroEstrellas}}</td>
+      <td>{{chongo.horarioApertura}}</td>
+      <td>
+        <p-button label="EDITAR" (click)="editar(chongo)"  styleClass="ui-button-primary"></p-button>
+        <p-button label="ELIMINAR" (click)="eliminar(chongo)" styleClass="ui-button-warning"></p-button>
+        <a [routerLink]="['/chongo',
+        chongo.id,
+        'prostituta']">
+          <p-button label="GESTION CARIÑOSAS"  styleClass="ui-button-success"></p-button>
+        </a>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+</p-card>
+<br>
+<p-card header="USUARIOS REGISTRADOS EN EL SISTEMA">
+<span class="ui-float-label">
+  <input id="float-input2"
+         type="text"
+         size="30"
+         [(ngModel)]="busquedaApellido"
+         style="height: 40px"
+         pInputText>
+  <label for="float-input2"> Buscar por apellido </label>
+  <p-button label="Buscar" (onClick)="buscarApellido()"></p-button>
+</span>
+  <br>
+  <p-table [value]="usuarios"
+           [paginator]="true"
+           [rows]="filas">
+    <ng-template pTemplate="caption">
+      Lista de usuarios registrados
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Nickname</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Correo</th>
+        <th>Edad</th>
+        <th>Rol</th>
+        <th>Acción</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-usuario>
+      <tr>
+        <td>{{usuario.nickname}}</td>
+        <td>{{usuario.nombre}}</td>
+        <td>{{usuario.apellido}}</td>
+        <td>{{usuario.correo}}</td>
+        <td>{{usuario.edad}}</td>
+        <td>{{usuario.rol}}</td>
+        <td>
+          <p-button label="EDITAR" (click)="editarU(usuario)"  styleClass="ui-button-primary"></p-button>
+          <p-button label="ELIMINAR" (click)="eliminarU(usuario)" styleClass="ui-button-warning"></p-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p-card>
+<br>
+<router-outlet></router-outlet>
+<br>
+<p-button styleClass="ui-button-success" label="Salir" (onClick)="salir()"></p-button>
+
+

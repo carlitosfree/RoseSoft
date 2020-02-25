@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {RutaLoginComponent} from "./Rutas/ruta-login/ruta-login.component";
-import {PokemonComponent} from "./Rutas/prostituta/pokemon.component";
-import {EntrenadorComponent} from "./Rutas/chongo/entrenador.component";
+import {ProstitutaComponent} from "./Rutas/prostituta/prostituta.component";
+import {ChongoComponent} from "./Rutas/chongo/chongo.component";
 import {TiendaComponent} from "./Rutas/tienda/tienda.component";
 import {UsuarioComponent} from "./Rutas/usuario/usuario.component";
 import {EstaLogueadoPolicy} from "./politicas/esta-logueado.policy";
@@ -16,14 +16,14 @@ const routes: Routes = [
   },
   {
     path: 'chongo',
-    component: EntrenadorComponent,
+    component: ChongoComponent,
     canActivate: [
       EstaLogueadoAdminPolicy
     ]
   },
   {
     path: 'chongo/:idChongo/prostituta',
-    component: PokemonComponent,
+    component: ProstitutaComponent,
     canActivate: [
       EstaLogueadoAdminPolicy
     ]

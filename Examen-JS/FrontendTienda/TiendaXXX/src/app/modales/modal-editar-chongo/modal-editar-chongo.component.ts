@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-modal-editar-chongo',
@@ -7,11 +7,11 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
   styleUrls: ['./modal-editar-chongo.component.scss']
 })
 export class ModalEditarChongoComponent implements OnInit {
-  nombre = '';
-  apellido = '';
-  fechaNacimiento = '';
-  numeroMedalla = '';
-  campeonActual = '';
+  nombreChongoris = '';
+  direccion = '';
+  fechaApertura = '';
+  numeroEstrellas = '';
+  horarioApertura = '';
   crear = false;
   constructor(
     public dialogRef: MatDialogRef<ModalEditarChongoComponent>,
@@ -20,11 +20,11 @@ export class ModalEditarChongoComponent implements OnInit {
   ngOnInit(): void {
     console.log('datos en modal: ', this.data);
     if (this.data) {
-      this.nombre = this.data.chongo.nombre;
-      this.apellido = this.data.chongo.apellido;
-      this.fechaNacimiento = this.data.chongo.fechaNacimiento;
-      this.numeroMedalla = this.data.chongo.numeroMedalla;
-      this.campeonActual = this.data.chongo.campeonActual;
+      this.nombreChongoris = this.data.chongo.nombreChongoris;
+      this.direccion = this.data.chongo.direccion;
+      this.fechaApertura = this.data.chongo.fechaApertura;
+      this.numeroEstrellas = this.data.chongo.numeroEstrellas;
+      this.horarioApertura = this.data.chongo.horarioApertura;
     } else {
       this.crear = true;
     }
@@ -35,11 +35,11 @@ export class ModalEditarChongoComponent implements OnInit {
 
   aceptar() {
     this.dialogRef.close({
-      nombre: this.nombre,
-      apellido: this.apellido,
-      fechaNacimiento: this.fechaNacimiento,
-      numeroMedalla: this.numeroMedalla,
-      campeonActual: this.campeonActual,
+      nombreChongoris: this.nombreChongoris,
+      direccion: this.direccion,
+      fechaApertura: this.fechaApertura,
+      numeroEstrellas: this.numeroEstrellas,
+      horarioApertura: this.horarioApertura,
     });
   }
 

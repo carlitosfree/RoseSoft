@@ -20,6 +20,7 @@
       <p *ngIf="numeroId.errors.required ">
         Este campo es requerido.
     </div>
+
     <br>
     <div>
       <label for="nombreId">Nombre: </label>
@@ -45,6 +46,7 @@
         Llenar con un maximo de 200 caracteres
       </p>
     </div>
+
     <br>
     <div>
       <label for="poderUnoId">Poder Uno: </label>
@@ -70,6 +72,7 @@
         Llenar con un maximo de 200 caracteres
       </p>
     </div>
+    <!--
     <br>
     <div>
       <label for="poderDos">Poder Dos: </label>
@@ -95,15 +98,16 @@
         Llenar con un maximo de 200 caracteres
       </p>
     </div>
+     -->
     <br>
     <div>
-      <label for="fechaCapturaId">Fecha Captura: </label>
+      <label for="fechaCapturaId">Fecha Ingreso: </label>
       <input id="fechaCapturaId"
              type="date"
              name="fechaCaptura"
              required
-             placeholder="{{fechaCaptura}}"
-             [(ngModel)]="fechaCaptura"
+             placeholder="{{fechaIngreso}}"
+             [(ngModel)]="fechaIngreso"
              #fechaI = "ngModel"
              max="2020-02-19">
     </div>
@@ -112,6 +116,7 @@
         Este campo es requerido.
       </p>
     </div>
+
     <br>
     <div>
       <label for="nivelId">Nivel: </label>

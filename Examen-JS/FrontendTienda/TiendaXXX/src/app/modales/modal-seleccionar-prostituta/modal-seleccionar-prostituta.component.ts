@@ -8,8 +8,8 @@ import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog
   styleUrls: ['./modal-seleccionar-prospituta.component.scss']
 })
 export class ModalSeleccionarProstitutaComponent implements OnInit {
-  pokemones: any = [];
-  busquedaPokemon = '';
+  prostituta: any = [];
+  busquedaProstituta = '';
   filas = 5;
   url = 'http://localhost:1338';
   cantidad = 1;
@@ -21,37 +21,37 @@ export class ModalSeleccionarProstitutaComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const urlPokemon = this.url + '/prostituta';
-    const pokemon$ = this._httpClient
-      .get(urlPokemon);
-    pokemon$
+    const urlProstituta = this.url + '/prostituta';
+    const prostituta$ = this._httpClient
+      .get(urlProstituta);
+    prostituta$
       .subscribe(
-        (pokemones: any[]) => {
-          console.log('Pokemones actuales en la base: ', pokemones);
-          this.pokemones = pokemones;
+        (prostituta: any[]) => {
+          console.log('Pokemones actuales en la base: ', prostituta);
+          this.prostituta = prostituta;
         },
         (error) => {
           console.error({
-            error: error,
-            mensaje: 'Error consultando chongo',
+            error : error,
+            mensaje : 'Error consultando chongo',
           });
         }
       );
   }
   buscar() {
     let consulta = '';
-    if (this.busquedaPokemon) {
-      consulta = '?nombre='+this.busquedaPokemon;
+    if (this.busquedaProstituta) {
+      consulta = '?nombre=' + this.busquedaProstituta;
     }
-    const urlBuscarPokemon = this.url + '/prostituta' + consulta;
-    const pokemonesABuscar$ = this._httpClient
+    const urlBuscarProstituta = this.url + '/prostituta' + consulta;
+    const prostitutasABuscar$ = this._httpClient
       .get(
-        urlBuscarPokemon
+        urlBuscarProstituta
       );
-    pokemonesABuscar$
+    prostitutasABuscar$
       .subscribe(
-        (pokemonesEncontrados) => {
-          this.pokemones = pokemonesEncontrados;
+        (protistutasEncontrados) => {
+          this.prostituta = protistutasEncontrados;
         },
         (error) => {
           console.log('Error: ', error);
@@ -61,14 +61,14 @@ export class ModalSeleccionarProstitutaComponent implements OnInit {
   cancelar() {
     this.dialogRef.close(); // cerrar la ventana del modal
   }
-  enviar(pokemon) {
+  enviar(protistuta) {
     this.dialogRef.close({
-      nombre: pokemon.nombre,
-      precio: pokemon.precio,
-      idEntrenador: pokemon.idEntrenador.id,
-      idPokemon: pokemon.id,
+      nombre: protistuta.nombre,
+      precio: protistuta.precio,
+      idChongo: protistuta.idChongo.id,
+      idProtistuta: protistuta.id,
       cantidad: this.cantidad,
-      subtotal: this.cantidad * pokemon.precio
+      subtotal: this.cantidad * protistuta.precio
     });
   }
 }

@@ -5,23 +5,23 @@
   <input id="float-input"
          type="text"
          size="30"
-         [(ngModel)]="busquedaPokemon"
+         [(ngModel)]="busquedaProstituta"
          pInputText>
   <label for="float-input"> Buscar por nombre </label>
   <p-button label="Buscar" (onClick)="buscar()"></p-button>
 </span>
 <br>
-<p-table [value]="pokemones"
+<p-table [value]="prostituta"
          [paginator]="true"
          [rows]="filas">
   <ng-template pTemplate="caption">
-    Seleccionar Pokemon
+    Seleccionar Prostituta
   </ng-template>
   <ng-template pTemplate="header">
     <tr>
       <th>Nombre</th>
-      <th>Poder Uno</th>
-      <th>Poder Dos</th>
+      <th>Promocion Una</th>
+      <th>Promocion Dos</th>
       <th>Nivel</th>
       <th>Precio</th>
       <th>Acciones</th>
@@ -29,13 +29,13 @@
   </ng-template>
   <ng-template pTemplate="body" let-pokemon>
     <tr>
-      <td>{{pokemon.nombre}}</td>
-      <td>{{pokemon.poderUno}}</td>
-      <td>{{pokemon.poderDos}}</td>
-      <td>{{pokemon.nivel}}</td>
-      <td>{{pokemon.precio}}</td>
+      <td>{{prostituta.nombre}}</td>
+      <td>{{prostituta.promocionUna}}</td>
+      <td>{{prostituta.promocionDos}}</td>
+      <td>{{prostituta.nivel}}</td>
+      <td>{{prostituta.precio}}</td>
       <td>
-        <p-button label="SELECCIONAR" (click)="enviar(pokemon)"></p-button>
+        <p-button label="SELECCIONAR" (click)="enviar(prostituta)"></p-button>
       </td>
     </tr>
   </ng-template>

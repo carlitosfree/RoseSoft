@@ -75,6 +75,7 @@ export class RutaLoginComponent implements OnInit {
 
   registrarUsuarioHttp(usuario) {
 
+
   }
 
 }

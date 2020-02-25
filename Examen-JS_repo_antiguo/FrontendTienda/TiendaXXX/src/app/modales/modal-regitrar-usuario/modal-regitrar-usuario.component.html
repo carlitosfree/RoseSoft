@@ -1,0 +1,194 @@
+<h1 mat-dialog-title>REGISTRAR USUARIO</h1>
+
+<form #usuarioFormulario ="ngForm">
+  <div mat-dialog-content>
+    <div class="ui-g">
+      <div class="ui-g-3"></div>
+      <div class="ui-g-6">
+        <label for="nicknameId">
+          Nickname:
+        </label>
+        <input id="nicknameId"
+               type="text"
+               name="nickname"
+               required
+               placeholder="Ej: Mikets"
+               title="Llenar el nickname"
+               minlength="3"
+               maxlength="15"
+               [(ngModel)]="nickname"
+               #nicknameInput = "ngModel"
+               style="width: 100%; height: 90%"
+        >
+      </div>
+      <div *ngIf="nicknameInput.touched && nicknameInput.dirty && nicknameInput.errors">
+        <p *ngIf="nicknameInput.errors.required ">
+          Este campo es requerido.
+        </p>
+        <p *ngIf="nicknameInput.errors.minlength ">
+          llenar con un minimo de 2 caracteres
+        </p>
+        <p *ngIf="nicknameInput.errors.maxlength ">
+          Llenar con un maximo de 200 caracteres
+        </p>
+      </div>
+      <div class="ui-g-3"></div>
+    </div>
+    <br>
+    <div class="ui-g">
+      <div class="ui-g-6">
+        <label for="nombreId">
+          Nombre:
+        </label>
+        <input id="nombreId"
+               type="text"
+               name="nombre"
+               required
+               placeholder="Ej: Miguel"
+               title="Llenar el Nombre"
+               minlength="3"
+               maxlength="15"
+               [(ngModel)]="nombre"
+               #nombreInput ="ngModel"
+               style="width: 100%; height: 90%">
+      </div>
+      <div *ngIf="nombreInput.touched && nombreInput.dirty && nombreInput.errors">
+        <p *ngIf="nombreInput.errors.required ">
+          Este campo es requerido.
+        </p>
+        <p *ngIf="nombreInput.errors.minlength ">
+          llenar con un minimo de 2 caracteres
+        </p>
+        <p *ngIf="nombreInput.errors.maxlength ">
+          Llenar con un maximo de 200 caracteres
+        </p>
+      </div>
+      <div class="ui-g-6">
+        <label for="apellidoId">
+          Apellido:
+        </label>
+        <input id="apellidoId"
+               type="text"
+               name="apellido"
+               required
+               placeholder="Ej: Parra"
+               title="Llenar el Apellido"
+               minlength="3"
+               maxlength="15"
+               [(ngModel)]="apellido"
+               #apellidoI = "ngModel"
+               style="width: 100%; height: 90%">
+      </div>
+      <div *ngIf="apellidoI.touched && apellidoI.dirty && apellidoI.errors">
+        <p *ngIf="apellidoI.errors.required ">
+          Este campo es requerido.
+        </p>
+        <p *ngIf="apellidoI.errors.minlength ">
+          llenar con un minimo de 2 caracteres
+        </p>
+        <p *ngIf="apellidoI.errors.maxlength ">
+          Llenar con un maximo de 200 caracteres
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="ui-g">
+      <div class="ui-g-6">
+        <label for="correoId">
+          Correo:
+        </label>
+        <input id="correoId"
+               type="text"
+               name="correo"
+               email="true"
+               required
+               placeholder="Ej: miguel@hotmail.com"
+               title="Llenar el correo"
+               [(ngModel)]="correo"
+               #correoI = "ngModel"
+               style="width: 100%; height: 90%">
+      </div>
+      <div *ngIf="correoI.touched && correoI.dirty && correoI.errors">
+        <p *ngIf="correoI.errors.required ">
+          Este campo es requerido.
+        </p>
+      </div>
+      <div class="ui-g-6">
+        <label for="edadId">
+          Edad:
+        </label>
+        <input id="edadId"
+               type="number"
+               name="edad"
+               pattern="([0-9])+"
+               required
+               placeholder="Ej: 20"
+               title="Llenar la edad"
+               min="0"
+               max="120"
+               [(ngModel)]="edad"
+               #edadI = "ngModel"
+               style="width: 100%; height: 90%">
+      </div>
+      <div *ngIf="edadI.touched && edadI.dirty && edadI.errors">
+        <p *ngIf="edadI.errors.required ">
+          Este campo es requerido.
+      </div>
+    </div>
+      <br>
+      <div class="ui-g">
+        <div class="ui-g-6">
+          <label for="passwordId">
+            Password:
+          </label>
+          <input id="passwordId"
+                 type="password"
+                 name="password"
+                 required
+                 placeholder="Ej: clavesecreta123"
+                 title="Llenar el password"
+                 [(ngModel)]="password"
+                 #passwordInput = "ngModel"
+                 style="width: 100%; height: 90%">
+        </div>
+        <div class="ui-g-6">
+          <label for="passwordConfId">
+            Conf. Password:
+          </label>
+          <input id="passwordConfId"
+                 type="password"
+                 name="password"
+                 required
+                 placeholder="Ej: clavesecreta123"
+                 title="Llenar la confirmacion de password"
+                 [(ngModel)]="passwordConfirmacion"
+                 #passwordConfirmacionInput = "ngModel"
+                 style="width: 100%; height: 90%">
+        </div>
+        <div *ngIf="passwordInput.touched && passwordInput.dirty &&
+        passwordConfirmacionInput.touched && passwordConfirmacionInput.dirty">
+          <p *ngIf="validarPasswordsIguales()">
+            Las passwords no coinciden.
+          </p>
+        </div>
+        <br>
+      </div>
+    </div>
+    <div mat-dialog-actions>
+
+      <div class="ui-g-3"></div>
+      <div class="ui-g-2">
+        <p-button label="Cancelar" styleClass="ui-button-secondary"
+                  (onClick)="cancelar()"></p-button>
+      </div>
+      <div class="ui-g-1"></div>
+      <div class="ui-g-2">
+        <p-button label="Registrar" styleClass="ui-button-sucess"
+                  (onClick)="registrar()" [disabled]="validarPasswordsIguales() ||
+                            (usuarioFormulario.valid && password === '' ||
+                             usuarioFormulario.invalid)"></p-button>
+      </div>
+      <div class="ui-g-3"></div>
+    </div>
+
+</form>
